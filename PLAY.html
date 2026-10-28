@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#215b4d">
+  <meta name="description" content="Jade Clinic 3D — ฝึกสอบถามประวัติและ辨证 16 กลุ่ม 195 เคสจำลอง พร้อมจีน พินอิน ไทย และอังกฤษ">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Jade Clinic">
+  <title>Jade Clinic 3D · ฝึกเป็นหมอจีน</title>
+  <style>@charset "UTF-8";
+:root{--bg:#f5f7f2;--paper:#fffefa;--ink:#223c34;--muted:#687c72;--green:#215b4d;--jade:#448472;--mint:#e5efe3;--line:#dce5d9;--coral:#ce8266;--gold:#b18b48;--danger:#a8473c;--shadow:0 8px 30px #294c3110;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans Thai","Thonburi","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;line-height:1.6}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button,a,input,select,summary{touch-action:manipulation}button{border:0;background:transparent}button:disabled{cursor:default}a{color:var(--green)}:focus-visible{outline:3px solid #ce9952;outline-offset:4px}button:focus-visible{border-radius:10px}.skip-link{position:fixed;top:-100px;z-index:100;background:var(--green);color:white;padding:12px}.skip-link:focus{top:0}
+svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}h1,h2,h3,h4,p{margin:0}h1{font-size:clamp(30px,3.4vw,46px);line-height:1.26;letter-spacing:-1.2px;font-weight:750}h2{font-size:23px;line-height:1.45;letter-spacing:-.4px}h3{font-size:17px;font-weight:680}small{font-size:12px}strong{font-weight:700}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--jade);font-weight:750;text-transform:uppercase}.muted{color:var(--muted)}.small{font-size:13px}.tiny{font-size:11px}.row{display:flex;align-items:center;gap:12px}.between{display:flex;align-items:center;justify-content:space-between;gap:16px}.wrap{flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:16px}.gap-sm{gap:8px}.mb{margin-bottom:24px}.mt{margin-top:20px}.ink-green{color:var(--green)}.chip{font-size:11px;font-weight:650;border-radius:6px;padding:4px 9px;background:#ecf2e8;color:var(--green);display:inline-flex;align-items:center;gap:6px}.chip.gold{color:#876529;background:#f6efd9}.chip.coral{background:#f7e8df;color:#985f43}.pill{border-radius:40px}.tagline{font-size:14px;color:var(--muted);max-width:440px;margin-top:18px;line-height:1.9}
+.shell{display:grid;grid-template-columns:218px minmax(0,1fr);min-height:100dvh}.sidebar{position:sticky;top:0;height:100dvh;background:var(--green);color:#e2eee3;display:flex;flex-direction:column;padding:30px 18px 22px;z-index:20}.brand{display:flex;align-items:center;gap:10px;padding:0 8px;text-decoration:none;color:inherit}.brandmark{height:40px;width:40px;background:#d8eacb;border-radius:13px;color:var(--green);display:grid;place-items:center;flex-shrink:0}.brandmark .ico{width:28px;height:28px}.brand strong{font-size:18px;letter-spacing:-.5px;display:block;line-height:1.2}.brand small{font-size:9px;letter-spacing:2.2px;color:#accdbb}.nav-label{margin:48px 12px 13px;color:#a3c6b4;letter-spacing:1.8px;font-size:10px}.nav{display:flex;flex-direction:column;gap:7px}.nav button{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:13px;color:#d2e2d8;text-align:left;font-size:14px}.nav button .en-nav{font-size:10px;color:#aac7b6;display:block;line-height:1.2}.nav button.active{background:#e6efde;color:var(--green);box-shadow:0 4px 12px #073c2725}.nav button.active .en-nav{color:#56826b}.nav button:hover:not(.active){background:#ffffff0e}.sidebar-bottom{margin-top:auto}.sidebar-card{padding:18px 14px;border:1px solid #63917e55;border-radius:15px;background:#ffffff07;margin-top:28px}.sidebar-card .ico{color:#d1dfaa}.sidebar-card h4{font-size:13px;margin:8px 0 4px}.sidebar-card p{font-size:11px;color:#bbd3c3}.side-help{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#bbd3c3}.workspace{min-width:0;max-width:1700px;width:100%;margin:auto}.topbar{height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--line);background:#f9faf6b0;gap:20px}.top-title{font-size:14px;font-weight:650}.top-title small{display:block;font-size:10px;font-weight:500;letter-spacing:1.5px;color:var(--muted)}.top-settings{display:flex;gap:8px;align-items:center}.toggle{border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:7px 10px;display:flex;align-items:center;gap:8px;font-size:12px;white-space:nowrap}.toggle i{width:25px;height:15px;border-radius:20px;background:#c3cec0;position:relative}.toggle i:after{content:"";position:absolute;background:white;border-radius:50%;width:11px;height:11px;top:2px;left:2px;transition:transform .18s}.toggle[aria-pressed="true"] i{background:var(--jade)}.toggle[aria-pressed="true"] i:after{transform:translateX(10px)}.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}.icon-btn .ico{width:17px;height:17px}.avatar-mini{width:34px;height:34px;border-radius:50%;background:#dfe9d3;display:grid;place-items:center;font-size:16px;margin-left:8px}.top-settings .divider{height:24px;width:1px;background:var(--line);margin:0 5px}
+main{padding:30px 36px 44px;max-width:1470px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr 1.2fr;border:1px solid var(--line);border-radius:23px;background:var(--paper);overflow:hidden;box-shadow:var(--shadow);min-height:398px}.hero-copy{padding:36px 0 30px 32px;position:relative;z-index:1}.hero h1{margin-top:16px}.hero h1 em{font-style:normal;color:var(--jade)}.hero .hero-subtitle{font-size:14px;margin-top:9px;color:var(--jade);font-weight:600}.hero .tagline{max-width:355px;margin-top:16px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:11px;padding:11px 17px;border:1px solid var(--line);font-size:14px;font-weight:620;background:var(--paper);transition:transform .15s,background .15s;min-height:44px;text-decoration:none}.btn .ico{width:18px;height:18px}.btn:hover{background:#edf2e7;transform:translateY(-1px)}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.primary:hover{background:#2d6f5d}.btn.soft{background:var(--mint);color:var(--green);border-color:transparent}.btn.small{font-size:12px;min-height:36px;padding:8px 12px}.btn:disabled{opacity:.4;transform:none}.hero-foot{margin-top:17px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:11px}.hero-foot span+span:before{content:"·";margin-right:12px}.hero-visual{background:radial-gradient(ellipse at center,#e4eee4 0%,#edf3e9 65%,#fafbf2 100%);position:relative;min-width:0}.scene-quote{position:absolute;bottom:61px;right:18px;background:#fffdf1e8;border:1px solid #d6e2c9;border-radius:12px;padding:10px 15px;font-size:11px;box-shadow:var(--shadow);max-width:220px;pointer-events:none}.scene-quote strong{font-size:13px;display:block;color:var(--green)}[data-scene-mount]{height:100%;min-height:330px}#scene-root{width:100%;height:100%;min-height:300px;position:relative;overflow:hidden}#clinic-canvas{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:pan-y;cursor:grab}#clinic-canvas:active{cursor:grabbing}.scene-top{position:absolute;top:16px;left:18px;display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:1.4px;color:#54836b;font-weight:750;pointer-events:none}.scene-top>span:last-child{border:1px solid #b0c6af;padding:0 4px;border-radius:4px;letter-spacing:0}.live-dot{width:6px;height:6px;background:#6aa387;border-radius:50%;box-shadow:0 0 0 3px #6aa38715}.scene-bottom{position:absolute;bottom:13px;left:18px;right:16px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}.scene-instruction{font-size:10px;color:#6f8c78}.scene-controls{display:flex;gap:3px;background:#fffdf5d9;padding:3px;border:1px solid #d3dfcd;border-radius:9px;pointer-events:auto}.scene-controls button{height:28px;width:29px;border-radius:6px;font-size:20px;line-height:1}.scene-controls button:hover{background:var(--mint)}#scene-fallback{position:absolute;inset:0;background:#e7f0e3;text-align:center;padding-top:48px}#scene-fallback[hidden]{display:none}.fallback-doctor{font-size:88px}.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0 30px}.stat{border:1px solid var(--line);border-radius:15px;background:var(--paper);padding:17px 18px;display:flex;align-items:center;gap:14px}.stat-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:#edf3e8;color:var(--jade)}.stat:nth-child(2) .stat-icon{background:#f7eee0;color:var(--gold)}.stat:nth-child(3) .stat-icon{background:#f5e9e0;color:var(--coral)}.stat strong{font-size:24px;line-height:1.1;font-weight:700;letter-spacing:-.8px}.stat p{font-size:11px;color:var(--muted);margin-top:5px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:26px 0 17px}.section-head h2{font-size:20px}.section-head p{font-size:12px;color:var(--muted);margin-top:2px}.link-btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--green);padding:5px 0}.link-btn .ico{width:15px;height:15px}.groups-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.group-card{text-align:left;border-radius:15px;background:var(--paper);border:1px solid var(--line);padding:16px;display:flex;align-items:start;gap:12px;transition:transform .17s,box-shadow .17s;position:relative}.group-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#a6c3ac}.group-card .group-icon{color:#6a9278;background:#edf3e8;width:36px;height:36px;display:grid;place-items:center;border-radius:11px;flex-shrink:0}.group-card:nth-child(4n+2) .group-icon{color:#b28c56;background:#f6eee0}.group-card:nth-child(4n+3) .group-icon{color:#b07d6b;background:#f5eae3}.group-card .zh{font-size:17px;font-weight:650;line-height:1.4}.group-card .py{font-size:10px}.group-card .th{font-size:12px;margin-top:5px}.group-card .en{font-size:10px}.group-card .card-count{font-size:10px;color:var(--muted);margin-top:9px}.group-card .mini-progress{margin-top:8px;height:3px;border-radius:4px;background:#edf1e8;overflow:hidden}.mini-progress>span{display:block;height:100%;background:#7ca489}.home-bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}.promo{border:1px solid var(--line);padding:23px;border-radius:16px;background:#eaf0e4;display:flex;align-items:center;gap:18px}.promo:nth-child(2){background:#f4eee0}.promo>.ico{width:36px;height:36px;color:var(--jade)}.promo p{font-size:12px;color:var(--muted);margin:5px 0 11px}.footer-note{display:flex;gap:8px;font-size:10px;color:#758675;margin-top:24px;align-items:start}.footer-note .ico{width:13px;height:13px;flex-shrink:0;margin-top:2px}
+.ml .zh{display:block;line-height:1.5;overflow-wrap:anywhere}.ml .py{display:block;color:#738d69;font-size:12px;line-height:1.6;font-weight:450;overflow-wrap:anywhere}.ml .th{display:block;font-size:13px;line-height:1.65;margin-top:4px;color:#536c60;font-weight:450}.ml .en{display:block;color:#7e8b7c;font-size:11px;line-height:1.55;font-weight:400;margin-top:2px}.no-pinyin .ml .py,.no-thai .ml .th,.no-english .ml .en{display:none!important}.listen{display:inline-grid;place-items:center;vertical-align:middle;color:var(--jade);width:30px;height:30px;border-radius:50%;background:#edf2e7;margin-left:5px;flex-shrink:0}.listen:hover{background:#dce8d6}.listen .ico{width:14px;height:14px}
+.page-title{margin-bottom:22px}.page-title h1{font-size:30px}.page-title p{font-size:13px;color:var(--muted);margin-top:8px}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px}.field{border:1px solid var(--line);border-radius:10px;min-height:43px;padding:9px 12px;background:var(--paper);color:var(--ink);max-width:100%}.search{flex:1;min-width:180px}.tabs{display:flex;gap:5px;padding:4px;background:#e9eee3;border-radius:11px;width:max-content;max-width:100%;overflow:auto}.tabs button{padding:8px 14px;border-radius:8px;font-size:12px;white-space:nowrap}.tabs button.active{background:var(--paper);box-shadow:0 2px 5px #23482c10;color:var(--green);font-weight:650}.study-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:24px}.group-list{display:flex;flex-direction:column;gap:4px;align-self:start;position:sticky;top:22px;max-height:78dvh;overflow:auto;scrollbar-width:thin}.group-list button{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;text-align:left;font-size:12px;color:#687e6c}.group-list button.active{background:#e4eddc;color:var(--green);font-weight:650}.group-list .number{width:23px;height:23px;background:#eef2e8;border-radius:7px;display:grid;place-items:center;font-size:10px}.study-content{min-width:0}.study-heading{padding:18px 21px;background:#e8efe1;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:20px}.study-heading .ml .zh{font-size:25px;font-weight:600}.study-heading .ml .py{font-size:13px}.study-heading .ml .th{font-size:14px}.study-heading .ico{width:40px;height:40px;color:#7b9c7d}.pattern-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.pattern-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:19px;display:flex;flex-direction:column;position:relative}.pattern-card h3{font-size:17px}.pattern-top{display:flex;align-items:start;justify-content:space-between;gap:8px}.pattern-key{font-size:12px;margin:14px 0;color:#7a6945;line-height:1.9;padding:10px 12px;background:#f6f1df;border-radius:9px}.pattern-card .pattern-actions{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}.pattern-actions button{font-size:12px;color:var(--green)}.pattern-actions .ico{width:15px;height:15px}.read-note{font-size:11px;line-height:1.9;color:#8b7654;padding:10px 15px;border-radius:9px;background:#f5efdf;margin-top:12px}.compare-selects{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.compare-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:23px;min-width:0}.panel .ml .zh{font-size:18px}.section-label{font-size:11px;font-weight:650;letter-spacing:.5px;color:var(--muted);margin:18px 0 9px}.term-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.term-item{padding:11px 13px;border-radius:9px;background:#f1f4ec;border:1px solid transparent}.term-item .ml .zh{font-size:16px}.term-item.key{background:#f7f0dc;border-color:#e9d9b6}.pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.pair-grid .panel{padding:15px;background:#f2f5ed}.pair-grid .ml .zh{font-size:16px}.why-box{padding:16px 18px;border-radius:12px;background:#eaf2e4;margin-top:18px;font-size:13px;line-height:1.95;color:#41624c}.why-box strong{display:block;font-size:12px;color:var(--green);margin-bottom:5px}.flash{min-height:340px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px;margin-top:20px}.flash h3{margin:14px 0;font-size:22px}.flash .ml .zh{font-size:23px}.flash .flash-back{border-top:1px solid var(--line);width:100%;padding-top:20px;margin-top:20px}.glossary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.glossary .term-item{background:var(--paper);border-color:var(--line)}.vocab-label{color:var(--gold);font-size:10px;margin-top:8px}.empty{padding:45px;text-align:center;border:1px dashed #c7d7c0;border-radius:15px;color:var(--muted)}
+.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.case-card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;flex-direction:column}.case-card .case-title{font-size:18px;margin:12px 0 0}.case-card .ml .zh{font-size:20px}.case-meta{display:flex;gap:10px;color:var(--muted);font-size:11px;margin:12px 0 16px}.case-card .btn{width:100%;margin-top:auto}.case-card.complete{border-color:#b2caae}.complete-tick{color:var(--jade);font-size:11px}.case-pages{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:24px}.case-pages .btn{min-width:40px}.legend{color:var(--muted);font-size:11px;line-height:1.8;margin:12px 0}.case-card details{font-size:11px;margin-bottom:14px;color:var(--muted)}.case-card details .ml{padding-top:8px}.case-card summary{cursor:pointer}
+.clinic-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:18px}.case-label{font-size:10px;color:var(--jade);letter-spacing:1.5px;font-weight:700}.clinic-head h1{font-size:24px;letter-spacing:-.4px;margin-top:4px}.score-box{display:flex;align-items:center;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:9px 14px}.score-box>span{font-size:10px;color:var(--muted)}.score-num{font-size:28px;line-height:1.1;color:var(--green);font-weight:750}.score-num.low{color:var(--danger)}.score-box small{font-size:10px;color:var(--muted)}.stepper{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin:18px 0 22px}.stepper>div{height:5px;border-radius:8px;background:#e0e6d8}.stepper .done{background:#82ac8c}.stepper .current{background:#c3a267}.clinic-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:start}.patient-room{height:310px;border:1px solid var(--line);border-radius:18px;background:radial-gradient(ellipse,#e0eadf,#ecf1e7);overflow:hidden;position:relative}.patient-room [data-scene-mount]{min-height:280px}.patient-id{position:absolute;bottom:57px;left:17px;border-radius:10px;border:1px solid #d6dfcb;background:#fffdf3ed;padding:10px 13px;pointer-events:none}.patient-id .ml .zh{font-size:15px}.patient-id .ml .py{font-size:10px}.patient-id .ml .th,.patient-id .ml .en{display:none}.patient-id small{color:var(--muted);font-size:10px}.chart{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}.chart-title{padding:15px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.chart-title h3{font-size:14px}.chart-title small{font-size:10px;color:var(--muted)}.chart-body{padding:17px;max-height:340px;overflow-y:auto;scrollbar-width:thin}.chart-empty{text-align:center;padding:27px 10px;color:var(--muted);font-size:12px}.chart-entry{padding:10px 0;border-bottom:1px dashed var(--line)}.chart-entry:first-child{padding-top:0}.chart-entry:last-child{border:0}.chart-entry>small{display:block;font-size:10px;color:var(--gold);font-weight:650;margin-bottom:5px}.chart-entry .ml .zh{font-size:15px}.chart-entry .ml .py{font-size:11px}.chart-entry .ml .th{font-size:12px}.chart-entry .ml .en{font-size:10px}.negative{padding:9px;background:#f0f3e9;border-radius:8px;margin-top:8px}.education-note{font-size:10px;line-height:1.9;color:var(--muted);margin-top:13px}.question-panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}.question-header{display:flex;align-items:center;gap:11px}.step-number{width:37px;height:37px;display:grid;place-items:center;background:#e9efdf;color:var(--green);border-radius:12px;font-weight:700;font-size:15px;flex-shrink:0}.question-header h2{font-size:19px}.question-header small{font-size:10px;letter-spacing:.6px;color:var(--muted)}.question-goal{margin:17px 0;padding:12px 14px;border-radius:10px;font-size:12px;background:#f4f1e5;color:#786a48;line-height:1.8}.question-options{display:flex;flex-direction:column;gap:10px}.option{width:100%;border:1px solid #dce4d5;border-radius:12px;padding:14px;display:flex;text-align:left;gap:12px;align-items:start;transition:background .15s,border-color .15s;min-width:0}.option .letter{width:25px;height:25px;display:grid;place-items:center;flex-shrink:0;border-radius:7px;background:#edf1e7;font-size:11px;font-weight:700;color:#688463;margin-top:2px}.option .ml{min-width:0;flex:1}.option .ml .zh{font-size:17px;font-weight:550}.option .ml .py{font-size:11.5px}.option .ml .th{font-size:12px}.option .ml .en{font-size:10.5px}.option:hover:not(:disabled){border-color:#7aab85;background:#f1f5eb}.option.wrong{border-color:#deb2a5;background:#fbefea;opacity:.6}.option.wrong .letter{background:#f4d8cd;color:#9d5644}.option.correct{border-color:#8ab998;background:#edf5e7}.option.correct .letter{color:white;background:var(--jade)}.option.hinted:not(.wrong){border:2px solid #c49c4c;background:#fcf7e6}.option:disabled:not(.wrong):not(.correct){opacity:.45}.feedback{margin-top:17px;padding:15px 16px;border-radius:12px;background:#f8eee8;border:1px solid #edd5c6;font-size:12px;line-height:1.9;animation:slide-in .2s ease}.feedback.good{background:#edf4e5;border-color:#cee1bf}.feedback h3{font-size:13px;margin-bottom:7px;color:#8b5c42}.feedback.good h3{color:var(--green)}.feedback .ml{margin:8px 0}.feedback .ml .zh{font-size:17px}.feedback .explain{font-size:12px;color:#5d705c}.feedback .btn{width:100%;margin-top:14px}.question-tools{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:10px;border-top:1px solid var(--line);padding-top:14px}.question-tools>span{color:var(--muted);font-size:10px}.hint-btn{display:flex;align-items:center;gap:5px;color:#937238;font-size:11px}.hint-btn .ico{width:15px;height:15px}.hint-btn:disabled{opacity:.5}.diagnosis-note{font-size:11px;margin-top:14px;color:var(--muted)}
+.result{max-width:920px;margin:0 auto}.result-banner{text-align:center;border:1px solid #cddfc4;background:linear-gradient(145deg,#edf3e6,#f7f6e7);padding:32px 24px;border-radius:22px}.result-icon{height:66px;width:66px;border-radius:50%;background:#dbe8c7;display:grid;place-items:center;margin:0 auto 13px;font-size:30px}.stars{color:#b3914b;font-size:26px;letter-spacing:5px;margin:12px 0}.result-banner h1{font-size:30px}.result-score{font-size:15px;color:var(--jade)}.result-name{margin:22px auto 0;max-width:550px}.result-name .ml .zh{font-size:28px;font-weight:650}.result-name .ml .py{font-size:15px}.result-evidence{margin:20px 0}.formula{padding:22px;background:#fffefa;border:1px solid var(--line);border-radius:15px;margin-top:20px}.formula .ml .zh{font-size:19px;line-height:1.9}.formula .ml .py{font-size:13px;line-height:1.9}.result-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:25px 0}.mistake-list{margin:15px 0;padding:0;list-style:none}.mistake-list li{padding:12px 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.9}.mistake-list li:last-child{border:0}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.report-card{padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:14px}.report-card strong{font-size:30px;color:var(--green);display:block}.report-card p{font-size:12px;color:var(--muted)}.progress-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}.progress-row{padding:18px;border:1px solid var(--line);border-radius:13px;background:var(--paper)}.progress-row .ml .zh{font-size:18px}.progress-track{height:7px;border-radius:10px;background:#e8eee0;overflow:hidden;margin-top:11px}.progress-track span{height:100%;background:#7b9f79;display:block;border-radius:10px}.progress-row .between small{font-size:10px;color:var(--muted)}.weak-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}.weak-row{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px;background:#f7f2e7;border-radius:10px}.weak-row .ml .zh{font-size:16px}.weak-row .ml .py{font-size:11px}
+dialog{width:min(850px,calc(100% - 30px));max-height:90dvh;padding:0;background:var(--paper);border:1px solid #c6d7bd;border-radius:21px;box-shadow:0 25px 100px #152c2b35;color:var(--ink);overflow:auto}dialog::backdrop{background:#18392f80;backdrop-filter:blur(5px)}.modal-head{padding:22px 25px;border-bottom:1px solid var(--line);display:flex;align-items:start;justify-content:space-between;gap:20px;position:sticky;top:0;background:var(--paper);z-index:2}.modal-head h2{font-size:20px}.modal-body{padding:24px 25px 29px}.modal-head .close{height:32px;width:32px;border:1px solid var(--line);border-radius:9px;font-size:22px;line-height:1;flex-shrink:0}.modal-body .intro-step{display:flex;gap:16px;align-items:start;padding:17px 0;border-bottom:1px solid var(--line)}.intro-step .number{width:31px;height:31px;display:grid;place-items:center;background:var(--mint);border-radius:9px;color:var(--green);font-size:12px;flex-shrink:0}.intro-step p{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.9}.settings-list{display:flex;flex-direction:column;gap:12px}.settings-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid var(--line)}.settings-row p{font-size:11px;color:var(--muted)}#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:#214c40;color:#f9fff2;border:1px solid #8baf86;padding:12px 20px;border-radius:12px;font-size:13px;z-index:100;max-width:90%;opacity:0;pointer-events:none;box-shadow:0 5px 25px #0b322c30;transition:opacity .2s,transform .2s}#toast.show{opacity:1;transform:translate(-50%,0)}.bottom-nav{display:none}.file-input{max-width:100%;margin-top:8px}.screenreader{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.hsktag{display:inline-block;font-size:9px;padding:1px 5px;background:#edf1df;color:#7c865c;border-radius:4px;margin-left:5px}@keyframes slide-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1600px){main{padding-left:48px;padding-right:48px}.hero{grid-template-columns:1fr 1.3fr;min-height:440px}.hero-copy{padding:45px 0 38px 40px}.hero-visual{min-height:440px}.patient-room{height:365px}}
+@media(max-width:1190px){.shell{grid-template-columns:190px minmax(0,1fr)}.sidebar{padding:26px 12px 20px}.brand{padding:0 2px;gap:8px}.brand strong{font-size:17px}.topbar{padding:0 24px}.top-settings{gap:6px}main{padding:25px 24px 38px}.hero-copy{padding:27px 0 26px 25px}.hero{grid-template-columns:1fr 1.05fr;min-height:370px}.hero h1{font-size:36px}.hero .tagline{font-size:13px}.hero-actions .btn{font-size:12px;padding:10px 13px}.groups-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{padding:14px 12px;gap:10px}.stat strong{font-size:22px}.stat-icon{width:33px;height:33px}.stat p{font-size:10px}.study-layout{grid-template-columns:170px minmax(0,1fr);gap:16px}.clinic-grid{gap:15px}.question-panel{padding:18px}.option{padding:12px}.patient-room{height:285px}.report-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:970px){.shell{grid-template-columns:78px minmax(0,1fr)}.sidebar{padding:25px 11px 15px}.brand{justify-content:center;padding:0}.brand>div:last-child,.nav-label,.nav button>span,.sidebar-bottom{display:none}.nav{margin-top:42px}.nav button{justify-content:center;padding:14px 0}.nav button .ico{width:23px;height:23px}.topbar{height:78px}.top-title small{font-size:9px}.top-title{font-size:13px}.avatar-mini{display:none}.stats-strip{gap:10px}.hero{grid-template-columns:1fr 1.05fr}.hero h1{font-size:33px}.hero-copy{padding-left:24px}.hero-foot{gap:8px;font-size:10px}.hero-foot span+span:before{margin-right:8px}.scene-quote{font-size:10px;bottom:51px;right:11px;max-width:180px;padding:8px 11px}.study-layout{grid-template-columns:1fr;gap:16px}.group-list{position:static;flex-direction:row;overflow:auto;max-height:none;gap:6px;padding-bottom:8px}.group-list button{white-space:nowrap;padding:8px 10px;background:#edf1e7}.group-list .number{display:none}.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.clinic-grid{grid-template-columns:.9fr 1.1fr}.option .ml .zh{font-size:16px}.option .ml .py{font-size:11px}.option{gap:9px}.question-header h2{font-size:17px}.patient-room{height:270px}.chart-body{max-height:390px}.term-list{grid-template-columns:1fr 1fr}.glossary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.shell{display:block}.sidebar{display:none}.topbar{height:72px;padding:0 17px;gap:8px;position:sticky;top:0;z-index:30;background:#f7f9f0f0;backdrop-filter:blur(10px)}.top-title{font-size:12px;white-space:nowrap}.top-title small{font-size:8px;letter-spacing:.7px}.top-settings{gap:5px}.top-settings .divider{display:none}.toggle{padding:7px 8px;font-size:10px;gap:6px}.toggle i{width:22px;height:14px}.toggle i:after{height:10px;width:10px}.toggle[aria-pressed=true] i:after{transform:translateX(8px)}.top-settings .help-top{display:none}.top-settings .icon-btn{width:31px;height:32px}.top-settings .icon-btn .ico{width:16px;height:16px}main{padding:20px 16px 105px}.hero{grid-template-columns:1fr;border-radius:19px}.hero-copy{padding:27px 25px 18px}.hero h1{font-size:32px;margin-top:13px;letter-spacing:-1px}.hero h1 br{display:initial}.hero .hero-subtitle{font-size:13px}.hero .tagline{max-width:none;font-size:13px;line-height:1.9;margin-top:12px}.hero-actions{margin-top:19px}.hero-actions .btn{font-size:13px}.hero-foot{margin-top:15px;font-size:10px}.hero-visual{min-height:305px;height:305px}.hero-visual [data-scene-mount]{min-height:305px}.scene-quote{bottom:50px;right:15px;max-width:190px}.stats-strip{grid-template-columns:repeat(2,1fr);margin:15px 0 24px;gap:10px}.stat{padding:15px}.stat strong{font-size:25px}.stat p{font-size:11px}.stat-icon{width:37px;height:37px}.section-head{margin:22px 0 14px}.section-head h2{font-size:19px}.section-head p{font-size:11px}.link-btn{font-size:11px}.groups-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.group-card{padding:13px 11px;gap:9px;border-radius:13px}.group-card .group-icon{width:31px;height:31px;border-radius:9px}.group-card .ico{width:19px;height:19px}.group-card .zh{font-size:17px}.group-card .card-count{font-size:9px}.home-bottom{grid-template-columns:1fr;gap:12px;margin-top:20px}.promo{padding:19px}.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:40;background:#fffefaee;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 7px calc(6px + env(safe-area-inset-bottom));gap:5px;box-shadow:0 -5px 20px #25432908}.bottom-nav button{display:flex;flex:1;flex-direction:column;align-items:center;gap:3px;font-size:10px;padding:7px 0;color:#7a8c78;border-radius:10px;min-height:49px}.bottom-nav .ico{width:20px;height:20px}.bottom-nav button.active{background:#e9f0df;color:var(--green);font-weight:650}#toast{bottom:calc(88px + env(safe-area-inset-bottom));font-size:12px;width:max-content;max-width:90%}.page-title h1{font-size:27px}.page-title p{font-size:12px}.pattern-grid{grid-template-columns:1fr}.pattern-card{padding:18px}.study-heading{padding:16px 18px}.study-heading .ml .zh{font-size:23px}.group-list{margin:0 -3px;padding:0 3px 10px}.toolbar{gap:8px}.toolbar select{font-size:12px;min-height:41px;padding:8px 10px}.search{font-size:12px;min-height:41px}.tabs{width:100%;justify-content:stretch}.tabs button{flex:1;padding:8px 7px;font-size:11px}.compare-columns{grid-template-columns:1fr}.compare-selects{grid-template-columns:1fr}.case-grid{gap:11px}.case-card{padding:14px}.case-card .ml .zh{font-size:18px}.case-card .case-meta{font-size:10px;gap:7px}.case-card .btn{font-size:12px;padding:9px}.case-card .chip{font-size:9px;padding:3px 7px}.case-card details{font-size:10px}.clinic-head{margin-bottom:14px;gap:10px}.clinic-head h1{font-size:20px}.case-label{font-size:8px;letter-spacing:.5px}.score-box{padding:8px 11px;gap:8px}.score-num{font-size:26px}.score-box>span{font-size:9px}.clinic-head .btn{font-size:11px;padding:8px 10px;min-height:37px}.stepper{margin:14px 0 18px}.clinic-grid{grid-template-columns:1fr;gap:16px}.patient-room{height:250px;border-radius:15px}.patient-room [data-scene-mount]{min-height:250px}.patient-room #scene-root{min-height:250px}.patient-id{bottom:48px;left:14px;padding:7px 11px}.patient-id .ml .zh{font-size:13px}.patient-id .ml .py{font-size:9px}.patient-id small{font-size:9px}.chart{margin-top:12px}.chart-title{padding:12px 15px;cursor:pointer}.chart-body{max-height:240px;padding:14px}.chart-body.mobile-collapsed{display:none}.chart-entry{padding:8px 0}.chart-entry .ml .zh{font-size:14px}.chart-entry .ml .py{font-size:10px}.question-panel{padding:19px;border-radius:15px}.question-header h2{font-size:19px}.question-goal{font-size:12px;margin:14px 0}.option .ml .zh{font-size:18px}.option .ml .py{font-size:12px}.option .ml .th{font-size:13px}.option .ml .en{font-size:11px}.option{padding:14px 12px;gap:10px}.education-note{font-size:9px}.clinic-left{display:flex;flex-direction:column}.chart{order:1}.education-note{order:2}.result-banner{padding:26px 18px}.result-banner h1{font-size:27px}.result-name .ml .zh{font-size:25px}.result-name .ml .py{font-size:13px}.formula{padding:19px}.formula .ml .zh{font-size:18px}.formula .ml .py{font-size:12px}.report-card{padding:18px}.report-card strong{font-size:28px}.report-grid{gap:10px}.progress-list{grid-template-columns:1fr}.weak-row{padding:13px;gap:10px}.weak-row .ml .zh{font-size:14px}.weak-row .btn{font-size:11px;padding:8px 11px}.modal-head{padding:18px 20px}.modal-body{padding:20px}.modal-head h2{font-size:19px}.term-list{grid-template-columns:1fr 1fr}.term-item{padding:10px}.term-item .ml .zh{font-size:15px}.term-item .ml .py{font-size:11px}.term-item .ml .th{font-size:12px}.pair-grid{grid-template-columns:1fr 1fr}.pair-grid .panel{padding:12px}.pair-grid .ml .zh{font-size:15px}.flash{padding:24px 18px}.flash .ml .zh{font-size:19px}.footer-note{font-size:9px}}
+@media(max-width:380px){.topbar{padding:0 11px}.top-title{font-size:11px}.toggle{padding:7px 6px;gap:4px;font-size:10px}.top-settings .icon-btn{width:29px}.hero h1{font-size:31px}.hero-copy{padding:24px 20px 17px}.group-card .group-icon{display:none}.hero-actions{gap:7px}.hero-actions .btn{padding:9px 12px}.term-list,.pair-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.top-title small{letter-spacing:0}.option .ml .zh{font-size:17px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+body.reduced-motion *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+@media(max-width:720px){.bottom-nav .en-nav{display:none}.question-panel{scroll-margin-top:86px}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#content">ข้ามไปเนื้อหา</a>
+  <div id="app"></div>
+  <div id="scene-parking" hidden><div id="scene-root"><canvas id="clinic-canvas" aria-label="ฉากคลินิก 3 มิติ ลากซ้ายขวาเพื่อหมุน หรือใช้ปุ่มหมุนมุมกล้อง" role="img"></canvas><div class="scene-top"><span class="live-dot"></span> LIVE CLINIC <span>3D</span></div><div class="scene-bottom"><span class="scene-instruction">ลากเพื่อหมุนฉาก</span><div class="scene-controls"><button data-action="rotate-left" aria-label="หมุนฉากไปซ้าย">↶</button><button data-action="scene-reset" aria-label="มุมกล้องเริ่มต้น">⌂</button><button data-action="rotate-right" aria-label="หมุนฉากไปขวา">↷</button></div></div><div id="scene-fallback" hidden><div class="fallback-doctor">🧑🏻‍⚕️</div><strong>Jade Clinic</strong><p>อุปกรณ์นี้ไม่รองรับ WebGL<br>โหมดเรียนและเกมยังเล่นได้ครบ</p></div></div></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p>โปรดเปิด JavaScript เพื่อเล่นเกมนี้ / Please enable JavaScript.</p></noscript>
+<script>/* Curriculum supplied by the learner. Fictional cases, not a clinical decision tool. */
+(function (root) {
+  'use strict';
+  const L = (zh, py, th, en) => ({ zh, py, th, en });
+  const terms = {};
+  function term(id, text) { terms[id] = L(...text.split('|')); }
+  const rawTerms = {
+    insomnia:'失眠|shīmián|นอนไม่หลับ|Insomnia',
+    restless:'心烦|xīnfán|ร้อนรนใจ กระสับกระส่าย|Mental restlessness',
+    falling:'入睡困难|rùshuì kùnnan|หลับยาก|Difficulty falling asleep',
+    dreams:'多梦|duōmèng|ฝันมาก|Frequent dreams',
+    waking:'容易醒|róngyì xǐng|ตื่นง่าย|Easy awakening',
+    palp:'心悸|xīnjì|ใจสั่น|Palpitations',
+    forget:'健忘|jiànwàng|ขี้ลืม|Forgetfulness',
+    fatigue:'神疲乏力|shénpí fálì|อ่อนเพลีย ไม่มีแรง|Fatigue and lack of strength',
+    appetite:'食欲不振|shíyù bùzhèn|เบื่ออาหาร|Poor appetite',
+    sallow:'面色萎黄|miànsè wěihuáng|ใบหน้าเหลืองซีดหมอง|Sallow complexion',
+    pale:'面色苍白|miànsè cāngbái|หน้าซีด|Pallor',
+    kidney:'腰膝酸软|yāoxī suānruǎn|เอวและเข่าเมื่อยอ่อนแรง|Soreness and weakness of the lower back and knees',
+    tinnitus:'耳鸣|ěrmíng|มีเสียงในหู|Tinnitus',
+    fiveheat:'五心烦热|wǔxīn fánrè|ร้อนฝ่ามือ ฝ่าเท้า และกลางอก|Heat in the palms, soles and chest',
+    nightsweat:'盗汗|dàohàn|เหงื่อออกขณะหลับ|Sweating during sleep',
+    drymouth:'口干|kǒugān|ปากแห้ง|Dry mouth',
+    fright:'容易受惊|róngyì shòujīng|ตกใจง่าย|Easily startled',
+    tightchest:'胸闷|xiōngmèn|แน่นหน้าอก|Chest tightness',
+    nausea:'恶心|ěxīn|คลื่นไส้|Nausea',
+    bitter:'口苦|kǒukǔ|ปากขม|Bitter taste',
+    dizzy:'头晕|tóuyūn|เวียนศีรษะ|Dizziness',
+    phlegm:'痰多|tán duō|เสมหะมาก|Abundant sputum',
+    epifull:'胃脘胀满|wèiwǎn zhàngmǎn|แน่นลิ้นปี่|Epigastric fullness',
+    afterfood:'食后加重|shí hòu jiāzhòng|อาการมากขึ้นหลังอาหาร|Worse after eating',
+    foulbelch:'嗳腐|ǎifǔ|เรอมีกลิ่นอาหารบูด|Foul belching',
+    acid:'吞酸|tūnsuān|มีน้ำรสเปรี้ยวย้อนขึ้นมา|Acid regurgitation',
+    agitation:'烦躁不安|fánzào bù ān|หงุดหงิด กระวนกระวาย|Agitation',
+    ulcers:'口舌生疮|kǒushé shēngchuāng|แผลในปากหรือลิ้น|Mouth or tongue ulcers',
+    thirst:'口渴|kǒukě|กระหายน้ำ|Thirst',
+    darkurine:'小便短赤|xiǎobiàn duǎn chì|ปัสสาวะน้อยสีเข้ม|Scanty dark urine',
+    redface:'面红|miànhóng|หน้าแดง|Facial redness',
+    diarrhea:'腹泻|fùxiè|ท้องเสีย|Diarrhea',
+    recurrent:'反复发作|fǎnfù fāzuò|เป็นซ้ำ ๆ|Recurrent episodes',
+    loose:'大便稀溏|dàbiàn xītáng|อุจจาระเหลวไม่เป็นรูป|Loose stools',
+    bloating:'腹胀|fùzhàng|ท้องอืด|Abdominal bloating',
+    stress:'情绪紧张时加重|qíngxù jǐnzhāng shí jiāzhòng|เครียดแล้วอาการมากขึ้น|Worse with emotional stress',
+    abdominal:'腹痛|fùtòng|ปวดท้อง|Abdominal pain',
+    abdDistend:'腹部胀痛|fùbù zhàngtòng|ปวดแน่นท้อง|Distending abdominal pain',
+    afterstool:'排便后疼痛减轻|páibiàn hòu téngtòng jiǎnqīng|หลังถ่ายแล้วปวดลดลง|Pain relieved after defecation',
+    flankfull:'胸胁胀满|xiōngxié zhàngmǎn|แน่นหน้าอกและชายโครง|Chest and flank fullness',
+    sigh:'善太息|shàn tàixī|ถอนหายใจบ่อย|Frequent sighing',
+    sourstool:'大便酸臭|dàbiàn suānchòu|อุจจาระกลิ่นเปรี้ยวเหม็น|Sour, foul-smelling stools',
+    urgentstool:'泻下急迫|xièxià jípò|ท้องเสียแบบปวดถ่ายเร่งด่วน|Urgent diarrhea',
+    foulstool:'大便臭秽|dàbiàn chòuhuì|อุจจาระเหม็นรุนแรง|Foul-smelling stools',
+    analburn:'肛门灼热|gāngmén zhuórè|แสบร้อนทวารหนัก|Anal burning',
+    yellowurine:'小便短黄|xiǎobiàn duǎn huáng|ปัสสาวะน้อยสีเหลืองเข้ม|Scanty yellow urine',
+    dawn:'五更泄泻|wǔgēng xièxiè|ท้องเสียเช้ามืด|Early-morning diarrhea',
+    coldabd:'腹部冷痛|fùbù lěngtòng|ปวดท้องลักษณะเย็น|Cold abdominal pain',
+    cold:'畏寒|wèihán|ขี้หนาว กลัวหนาว|Cold intolerance',
+    limbs:'肢冷|zhīlěng|แขนขาเย็น|Cold limbs',
+    heavyhead:'头重如裹|tóu zhòng rú guǒ|หนักศีรษะเหมือนมีสิ่งห่อหุ้ม|Head feels heavy as if wrapped',
+    vomiting:'呕吐|ǒutù|อาเจียน|Vomiting',
+    heavy:'身体困重|shēntǐ kùnzhòng|หนักตัว|Body heaviness',
+    headache:'头痛|tóutòng|ปวดศีรษะ|Headache',
+    redeyes:'面红目赤|miànhóng mùchì|หน้าแดง ตาแดง|Red face and eyes',
+    anger:'烦躁易怒|fánzào yì nù|หงุดหงิด โกรธง่าย|Irritability',
+    vertigo:'头晕目眩|tóuyūn mùxuàn|เวียนศีรษะ ตาลาย|Dizziness and visual disturbance',
+    headDistend:'头部胀痛|tóubù zhàngtòng|ปวดศีรษะแน่นตึง|Distending headache',
+    breath:'气短|qìduǎn|หายใจสั้น เหนื่อยง่าย|Shortness of breath',
+    exertion:'劳累后加重|láolèi hòu jiāzhòng|เหนื่อยแล้วอาการมากขึ้น|Worse after exertion',
+    memory:'记忆力减退|jìyìlì jiǎntuì|ความจำลดลง|Memory decline',
+    cough:'咳嗽|késou|ไอ|Cough',
+    heavycough:'咳嗽声重|késou shēng zhòng|ไอเสียงหนัก|Heavy-sounding cough',
+    thinwhite:'痰白清稀|tán bái qīngxī|เสมหะขาวใสเหลว|Thin white sputum',
+    clearnose:'鼻塞流清涕|bísè liú qīngtì|คัดจมูก น้ำมูกใส|Blocked nose with clear discharge',
+    chills:'恶寒|wùhán|หนาวสะท้าน|Aversion to cold / chills',
+    fever:'发热|fārè|มีไข้หรือรู้สึกร้อน|Fever / heat sensation',
+    nosweat:'无汗|wú hàn|ไม่มีเหงื่อ|Absence of sweating',
+    yellowphlegm:'痰黄黏稠|tán huáng niánchóu|เสมหะเหลืองเหนียวข้น|Thick sticky yellow sputum',
+    throat:'咽喉肿痛|yānhóu zhǒngtòng|คอบวมเจ็บ|Sore swollen throat',
+    wind:'恶风|wùfēng|ไม่ทนต่อลม|Aversion to wind',
+    drycough:'干咳无痰|gānké wú tán|ไอแห้ง ไม่มีเสมหะ|Dry cough without sputum',
+    scantphlegm:'痰少而黏|tán shǎo ér nián|เสมหะน้อยเหนียว|Scanty sticky sputum',
+    drythroat:'咽干|yāngān|คอแห้ง|Dry throat',
+    drynose:'鼻燥|bízào|จมูกแห้ง|Dry nose',
+    dryskin:'皮肤干燥|pífū gānzào|ผิวแห้ง|Dry skin',
+    severecough:'咳嗽剧烈|késou jùliè|ไอรุนแรง|Severe cough',
+    highheat:'发热明显|fārè míngxiǎn|มีไข้เด่นชัด|Marked fever',
+    chestpain:'胸痛|xiōngtòng|เจ็บหน้าอก|Chest pain',
+    rapidbreath:'呼吸急促|hūxī jícù|หายใจเร็ว|Rapid breathing',
+    wheeze:'气喘|qìchuǎn|หอบ หายใจลำบาก|Breathlessness / wheezing',
+    worsecold:'遇寒加重|yù hán jiāzhòng|เย็นแล้วอาการมากขึ้น|Worse with cold',
+    weakcough:'咳嗽无力|késou wúlì|ไอไม่มีแรง|Weak cough',
+    lowvoice:'声音低弱|shēngyīn dīruò|เสียงพูดเบาไม่มีแรง|Weak low voice',
+    spontaneous:'自汗|zìhàn|เหงื่อออกเองขณะตื่น|Spontaneous sweating',
+    frequentcolds:'容易感冒|róngyì gǎnmào|เป็นหวัดง่าย|Susceptibility to colds',
+    coldepi:'胃脘冷痛|wèiwǎn lěngtòng|ปวดเย็นบริเวณลิ้นปี่|Cold epigastric pain',
+    warmth:'得温减轻|dé wēn jiǎnqīng|อุ่นแล้วอาการลดลง|Relieved by warmth',
+    warmdrink:'喜热饮|xǐ rèyǐn|ชอบน้ำอุ่น|Prefers warm drinks',
+    nothirst:'口不渴|kǒu bù kě|ไม่กระหายน้ำ|Absence of thirst',
+    epidistend:'胃脘胀痛|wèiwǎn zhàngtòng|ปวดแน่นลิ้นปี่|Distending epigastric pain',
+    belch:'嗳气频繁|ǎiqì pínfán|เรอบ่อย|Frequent belching',
+    burningepi:'胃脘灼热疼痛|wèiwǎn zhuórè téngtòng|ปวดแสบร้อนลิ้นปี่|Burning epigastric pain',
+    sticky:'口黏|kǒunián|ปากเหนียว|Sticky mouth',
+    dullepi:'胃脘隐痛|wèiwǎn yǐntòng|ปวดลิ้นปี่ตื้อ ๆ|Dull epigastric pain',
+    pressure:'喜温喜按|xǐ wēn xǐ àn|อุ่นหรือกดเบา ๆ แล้วสบายขึ้น|Relieved by warmth and gentle pressure',
+    chestheavy:'胸部沉重|xiōngbù chénzhòng|รู้สึกหนักหน้าอก|Chest heaviness',
+    severeChest:'胸痛剧烈|xiōngtòng jùliè|เจ็บหน้าอกรุนแรง|Severe chest pain',
+    chestback:'胸痛彻背|xiōngtòng chè bèi|เจ็บหน้าอกร้าวไปหลัง|Chest pain radiating to the back',
+    chestdistend:'胸部胀痛|xiōngbù zhàngtòng|ปวดแน่นหน้าอก|Distending chest pain',
+    flankdistend:'胁肋胀痛|xiélèi zhàngtòng|ปวดแน่นชายโครง|Distending flank pain',
+    flankburn:'胁肋灼痛|xiélèi zhuótòng|ปวดแสบร้อนชายโครง|Burning flank pain',
+    flankstab:'胁肋刺痛|xiélèi cìtòng|ปวดชายโครงเหมือนเข็มแทง|Stabbing flank pain',
+    fixed:'疼痛固定不移|téngtòng gùdìng bù yí|ปวดตำแหน่งเดิมไม่เคลื่อน|Pain fixed in location',
+    nightworse:'夜间加重|yèjiān jiāzhòng|อาการมากขึ้นกลางคืน|Worse at night',
+    dullabd:'腹痛隐隐|fùtòng yǐnyǐn|ปวดท้องตื้อ ๆ|Dull abdominal pain',
+    stabbing:'刺痛|cìtòng|ปวดเหมือนเข็มแทง|Stabbing pain',
+    resistpressure:'拒按|jù àn|กดแล้วปวดมาก ไม่ชอบให้กด|Pain aggravated by pressure',
+    lowercold:'少腹冷痛|shàofù lěngtòng|ปวดเย็นบริเวณท้องน้อยด้านข้าง|Cold lower lateral abdominal pain',
+    genital:'疼痛牵引睾丸或阴部|téngtòng qiānyǐn gāowán huò yīnbù|ปวดร้าวไปอัณฑะหรืออวัยวะเพศ|Pain radiating to the testes or genital region',
+    neck:'头痛连及项背|tóutòng liánjí xiàngbèi|ปวดศีรษะร้าวไปต้นคอและหลัง|Headache extending to the neck and back',
+    dullhead:'头痛隐隐|tóutòng yǐnyǐn|ปวดศีรษะตื้อ ๆ|Dull headache',
+    blurred:'头晕眼花|tóuyūn yǎnhuā|เวียนศีรษะ ตาพร่า|Dizziness and blurred vision',
+    stabhead:'头痛如刺|tóutòng rú cì|ปวดศีรษะเหมือนเข็มแทง|Stabbing headache',
+    persistent:'日久不愈|rì jiǔ bù yù|เป็นมานานไม่หาย|Persistent symptoms',
+    awakesweat:'白天容易出汗|báitiān róngyì chūhàn|เหงื่อออกง่ายขณะตื่นในตอนกลางวัน|Easy sweating during the day',
+    activity:'活动后加重|huódòng hòu jiāzhòng|ทำกิจกรรมแล้วอาการมากขึ้น|Worse after activity',
+    sleepsweat:'入睡后出汗，醒后汗止|rùshuì hòu chūhàn, xǐng hòu hàn zhǐ|เหงื่อออกขณะหลับและหยุดเมื่อตื่น|Sweating during sleep, stopping on waking',
+    tidal:'潮热|cháorè|ร้อนเป็นช่วงเวลา|Tidal heat',
+    yellowsweat:'汗液发黄|hànyè fāhuáng|เหงื่อมีสีเหลือง|Yellow-colored sweat',
+    stained:'衣服被汗液染黄|yīfu bèi hànyè rǎn huáng|เหงื่อทำให้เสื้อเป็นคราบเหลือง|Sweat stains clothing yellow',
+    darkface:'面色晦暗|miànsè huì’àn|ใบหน้าหมองคล้ำ|Dusky complexion',
+    edema:'身体浮肿|shēntǐ fúzhǒng|ตัวบวม|Edema',
+    urine:'小便不利|xiǎobiàn bù lì|ปัสสาวะไม่คล่องหรือออกน้อย|Impaired urination',
+    afterbloat:'饭后腹胀|fàn hòu fùzhàng|ท้องอืดหลังอาหาร|Post-meal bloating',
+    fewwords:'少气懒言|shǎoqì lǎnyán|พูดน้อยเพราะไม่มีแรง|Weak breath and reluctance to speak',
+    loudEar:'耳鸣突然发生，声音响亮|ěrmíng tūrán fāshēng, shēngyīn xiǎngliàng|มีเสียงในหูฉับพลันและเสียงดัง|Sudden loud tinnitus',
+    roar:'耳中轰鸣|ěr zhōng hōngmíng|เสียงในหูคล้ายเสียงคำราม|Roaring tinnitus',
+    longEar:'耳鸣日久，声音细小|ěrmíng rì jiǔ, shēngyīn xìxiǎo|เสียงในหูเรื้อรังและค่อนข้างเบา|Chronic faint tinnitus',
+    cicada:'如蝉鸣|rú chánmíng|คล้ายเสียงจักจั่น|Resembling cicadas',
+    hearing:'听力下降|tīnglì xiàjiàng|การได้ยินลดลง|Reduced hearing',
+    stuffy:'胃脘痞闷|wèiwǎn pǐmèn|แน่นอึดอัดลิ้นปี่|Epigastric stuffiness',
+    stickystool:'大便黏滞|dàbiàn niánzhì|อุจจาระเหนียว|Sticky stools',
+    badtaste:'口中有异味|kǒu zhōng yǒu yìwèi|รสหรือกลิ่นผิดปกติในปาก|Unpleasant taste or odor in the mouth'
+  };
+  Object.entries(rawTerms).forEach(([id,s])=>term(id,s));
+  const tongues = {
+    redScant:L('舌红少苔','shé hóng shǎo tāi','ลิ้นแดง ฝ้าน้อย','Red tongue with scanty coating'),
+    paleThin:L('舌淡，苔薄白','shé dàn, tāi bó bái','ลิ้นซีด ฝ้าบางขาว','Pale tongue with thin white coating'),
+    yellowGreasy:L('苔黄腻','tāi huáng nì','ฝ้าเหลืองเหนียว','Yellow greasy coating'),
+    thickGreasy:L('苔厚腻','tāi hòu nì','ฝ้าหนาเหนียว','Thick greasy coating'),
+    redTip:L('舌尖红，苔黄','shéjiān hóng, tāi huáng','ปลายลิ้นแดง ฝ้าเหลือง','Red tongue tip with yellow coating'),
+    teeth:L('舌淡，有齿痕','shé dàn, yǒu chǐhén','ลิ้นซีด มีรอยฟัน','Pale tongue with teeth marks'),
+    thinWhite:L('苔薄白','tāi bó bái','ฝ้าบางขาว','Thin white coating'),
+    redYellowGreasy:L('舌红，苔黄腻','shé hóng, tāi huáng nì','ลิ้นแดง ฝ้าเหลืองเหนียว','Red tongue with yellow greasy coating'),
+    paleSwollenWhite:L('舌淡胖，苔白','shé dàn pàng, tāi bái','ลิ้นซีดบวม ฝ้าขาว','Pale swollen tongue with white coating'),
+    whiteGreasy:L('苔白腻','tāi bái nì','ฝ้าขาวเหนียว','White greasy coating'),
+    redYellow:L('舌红，苔黄','shé hóng, tāi huáng','ลิ้นแดง ฝ้าเหลือง','Red tongue with yellow coating'),
+    red:L('舌红','shé hóng','ลิ้นแดง','Red tongue'),
+    pale:L('舌淡','shé dàn','ลิ้นซีด','Pale tongue'),
+    either:L('舌淡或舌红少苔','shé dàn huò shé hóng shǎo tāi','อาจซีดหรือแดงฝ้าน้อย ขึ้นกับภาวะพร่องร่วม','Pale, or red with scanty coating, depending on associated deficiency'),
+    tipThinYellow:L('舌尖红，苔薄黄','shéjiān hóng, tāi bó huáng','ปลายลิ้นแดง ฝ้าบางเหลือง','Red tip with thin yellow coating'),
+    dry:L('舌干少津','shé gān shǎo jīn','ลิ้นแห้ง สารน้ำบนลิ้นน้อย','Dry tongue with reduced moisture'),
+    whiteSlippery:L('苔白滑','tāi bái huá','ฝ้าขาวลื่นชุ่ม','White slippery coating'),
+    paleWhite:L('舌淡，苔白','shé dàn, tāi bái','ลิ้นซีด ฝ้าขาว','Pale tongue with white coating'),
+    paleSwollen:L('舌淡胖','shé dàn pàng','ลิ้นซีดบวม','Pale swollen tongue'),
+    paleDark:L('舌淡暗，苔白','shé dàn àn, tāi bái','ลิ้นซีดคล้ำ ฝ้าขาว','Pale dusky tongue with white coating'),
+    thin:L('苔薄','tāi bó','ฝ้าบาง','Thin coating'),
+    purple:L('舌质紫暗','shézhì zǐ’àn','เนื้อลิ้นม่วงคล้ำ','Purplish-dark tongue body'),
+    white:L('苔白','tāi bái','ฝ้าขาว','White coating'),
+    thinYellow:L('苔薄黄','tāi bó huáng','ฝ้าบางเหลือง','Thin yellow coating'),
+    swollenSlippery:L('舌淡胖，苔白滑','shé dàn pàng, tāi bái huá','ลิ้นซีดบวม ฝ้าขาวลื่นชุ่ม','Pale swollen tongue with white slippery coating'),
+    swollenGreasy:L('舌淡胖，苔白腻','shé dàn pàng, tāi bái nì','ลิ้นซีดบวม ฝ้าขาวเหนียว','Pale swollen tongue with white greasy coating')
+  };
+  const pulses = {
+    fineRapid:L('脉细数','mài xì shuò','ชีพจรเล็กเร็ว','Fine rapid pulse'),
+    fineWeak:L('脉细弱','mài xì ruò','ชีพจรเล็กอ่อน','Fine weak pulse'),
+    wirySlippery:L('脉弦滑','mài xián huá','ชีพจรตึงลื่น','Wiry slippery pulse'),
+    slippery:L('脉滑','mài huá','ชีพจรลื่น','Slippery pulse'),
+    rapid:L('脉数','mài shuò','ชีพจรเร็ว','Rapid pulse'),
+    wiry:L('脉弦','mài xián','ชีพจรตึง','Wiry pulse'),
+    slipperyRapid:L('脉滑数','mài huá shuò','ชีพจรลื่นเร็ว','Slippery rapid pulse'),
+    deepSlow:L('脉沉迟','mài chén chí','ชีพจรจมช้า','Deep slow pulse'),
+    wiryRapid:L('脉弦数','mài xián shuò','ชีพจรตึงเร็ว','Wiry rapid pulse'),
+    floatingTight:L('脉浮紧','mài fú jǐn','ชีพจรลอยแน่น','Floating tight pulse'),
+    floatingRapid:L('脉浮数','mài fú shuò','ชีพจรลอยเร็ว','Floating rapid pulse'),
+    dryEither:L('脉浮数或浮紧','mài fú shuò huò fú jǐn','ลอยเร็วเมื่อแห้งร่วมร้อน หรือลอยแน่นเมื่อแห้งร่วมเย็น','Floating rapid with warm dryness, or floating tight with cool dryness'),
+    rapidStrong:L('脉数有力','mài shuò yǒulì','ชีพจรเร็วมีแรง','Rapid forceful pulse'),
+    deficientWeak:L('脉虚弱','mài xūruò','ชีพจรพร่องอ่อน','Deficient weak pulse'),
+    wiryTight:L('脉弦紧','mài xián jǐn','ชีพจรตึงแน่น','Wiry tight pulse'),
+    deepFineWeak:L('脉沉细无力','mài chén xì wúlì','ชีพจรจมเล็กไม่มีแรง','Deep fine weak pulse'),
+    deepTight:L('脉沉紧','mài chén jǐn','ชีพจรจมแน่น','Deep tight pulse'),
+    rough:L('脉涩','mài sè','ชีพจรฝืด','Choppy pulse'),
+    deepFine:L('脉沉细','mài chén xì','ชีพจรจมเล็ก','Deep fine pulse'),
+    wiryRough:L('脉弦涩','mài xián sè','ชีพจรตึงฝืด','Wiry choppy pulse'),
+    deepWiry:L('脉沉弦','mài chén xián','ชีพจรจมตึง','Deep wiry pulse'),
+    deficient:L('脉虚','mài xū','ชีพจรพร่อง','Deficient pulse'),
+    water:L('脉沉弦或沉弱','mài chén xián huò chén ruò','ชีพจรจมตึงหรือจมอ่อน','Deep wiry or deep weak pulse'),
+    weak:L('脉弱','mài ruò','ชีพจรอ่อน','Weak pulse'),
+    fine:L('脉细','mài xì','ชีพจรเล็ก','Fine pulse'),
+    soggy:L('脉濡','mài rú','ชีพจรนุ่มลอยเล็กไม่มีแรง','Soggy pulse')
+  };
+  const questions = {};
+  function q(id,zh,py,th,en,why) { questions[id]={id,...L(zh,py,th,en),why}; }
+  q('open','请问您哪里不舒服？','Qǐngwèn nín nǎlǐ bù shūfu?','ไม่สบายตรงไหน เล่าให้ฟังได้ไหมครับ','What is troubling you?','เริ่มด้วยคำถามปลายเปิด ให้ผู้ป่วยเล่าอาการสำคัญโดยไม่ชี้นำ');
+  q('duration','这种情况多久了？是突然出现还是慢慢出现的？','Zhè zhǒng qíngkuàng duō jiǔ le? Shì tūrán chūxiàn háishì mànmàn chūxiàn de?','เป็นมานานเท่าไร เริ่มทันทีหรือค่อย ๆ เป็นครับ','How long has this been happening? Was onset sudden or gradual?','ระยะเวลาและรูปแบบการเริ่มป่วยช่วยแยกอาการเฉียบพลันกับเรื้อรัง แต่ไม่ใช้ตัดสินพร่องหรือแกร่งเพียงข้อเดียว');
+  q('modifiers','什么情况下会加重或减轻？','Shénme qíngkuàng xià huì jiāzhòng huò jiǎnqīng?','อะไรทำให้อาการมากขึ้นหรือลดลงครับ','What makes it worse or better?','ความสัมพันธ์กับอาหาร อารมณ์ ความเย็น ความอุ่น การออกแรง หรือเวลากลางคืนช่วยแยกกลไกที่คล้ายกัน');
+  q('tongue','我想看一下您的舌头，可以吗？','Wǒ xiǎng kàn yíxià nín de shétou, kěyǐ ma?','ขอดูลิ้นได้ไหมครับ','May I examine your tongue?','ลิ้นและฝ้าช่วยประกอบการแยกร้อน เย็น พร่อง ชื้น และเลือดคั่ง ต้องเชื่อมกับประวัติที่ซักมา');
+  q('pulse','我想给您把脉，可以吗？','Wǒ xiǎng gěi nín bǎmài, kěyǐ ma?','ขอจับชีพจรได้ไหมครับ','May I take your pulse?','ชีพจรเป็นหลักฐานประกอบสุดท้ายในแบบฝึกนี้ ใช้ยืนยันภาพรวม ไม่ใช้ชีพจรหนึ่งชนิดแทนข้อมูลทั้งหมด');
+  q('sleep','是难以入睡、容易醒，还是多梦？','Shì nányǐ rùshuì, róngyì xǐng, háishì duōmèng?','หลับยาก ตื่นง่าย หรือฝันมากครับ','Is it difficulty falling asleep, waking easily, or frequent dreams?','แยกลักษณะการนอนไม่หลับก่อน แล้วค้นอาการร่วมที่ชี้ตำแหน่งและภาวะพร่องหรือแกร่ง');
+  q('stool','大便是什么样的？有没有臭味或肛门灼热？','Dàbiàn shì shénme yàng de? Yǒu méiyǒu chòuwèi huò gāngmén zhuórè?','อุจจาระเป็นอย่างไร มีกลิ่นแรงหรือแสบทวารไหมครับ','What are the stools like? Any foul smell or anal burning?','ลักษณะ กลิ่น ความเร่งด่วน และอาการแสบทวารช่วยแยกความชื้นร้อน อาหารสะสม และภาวะพร่อง');
+  q('dizzy','头晕时有没有头重、头痛或眼花？','Tóuyūn shí yǒu méiyǒu tóuzhòng, tóutòng huò yǎnhuā?','เวียนหัวร่วมกับหนักหัว ปวดหัว หรือตาพร่าไหมครับ','Does dizziness come with head heaviness, headache, or blurred vision?','หนักศีรษะสัมพันธ์กับเสมหะชื้น ส่วนปวดแน่นหรือหน้าซีดต้องถามต่อเพื่อแยกร้อน หยาง และพร่อง');
+  q('sputum','有痰吗？痰的颜色、多少和稀稠怎么样？','Yǒu tán ma? Tán de yánsè, duōshǎo hé xīchóu zěnmeyàng?','มีเสมหะไหม สี ปริมาณ และความข้นเป็นอย่างไรครับ','Is there sputum? What color, amount and consistency?','สี ปริมาณ และความข้นของเสมหะช่วยแยกเย็น ร้อน แห้ง และเสมหะคั่ง ร่วมกับอาการทั่วร่างกาย');
+  q('pain','请描述疼痛的位置和性质。','Qǐng miáoshù téngtòng de wèizhi hé xìngzhì.','ช่วยบอกตำแหน่งและลักษณะการปวดครับ','Please describe the location and character of the pain.','ตำแหน่งช่วยกำหนดอวัยวะหรือเส้นลมปราณ ลักษณะปวดแน่น แทง เย็น แสบ หรือตื้อช่วยวางแนว辨证');
+  q('sweat','什么时候出汗？睡醒后会停止吗？汗是什么颜色？','Shénme shíhou chūhàn? Shuì xǐng hòu huì tíngzhǐ ma? Hàn shì shénme yánsè?','เหงื่อออกเวลาใด ตื่นแล้วหยุดไหม และสีอะไรครับ','When do you sweat? Does it stop on waking, and what color is it?','ต้องรู้เวลาและลักษณะเหงื่อก่อน การเหงื่อออกกลางคืนหรือคราบเหลืองอย่างเดียวไม่ยืนยัน证型');
+  q('palp','心慌是怎样的感觉？发作时还有什么不舒服？','Xīnhuāng shì zěnyàng de gǎnjué? Fāzuò shí hái yǒu shénme bù shūfu?','ใจสั่นรู้สึกอย่างไร ตอนเป็นมีอาการอะไรอีกครับ','What do the palpitations feel like? What else happens during an episode?','อาการร่วมกับใจสั่นช่วยแยกพร่อง เสมหะ เลือดคั่ง และสารน้ำคั่ง ก่อนเชื่อมกับลิ้นและชีพจร');
+  q('bloat','胀在什么位置？吃饭以后有什么变化？','Zhàng zài shénme wèizhi? Chīfàn yǐhòu yǒu shénme biànhuà?','อืดตรงไหน หลังอาหารเปลี่ยนอย่างไรครับ','Where is the bloating? How does it change after eating?','ท้องอืดหลังอาหารพบได้ทั้งม้ามพร่องและอาหารสะสม ต้องถามกำลังร่างกาย เรอ และอุจจาระต่อ');
+  q('ear','耳鸣是突然发生的吗？声音响不响？听力有变化吗？','Ěrmíng shì tūrán fāshēng de ma? Shēngyīn xiǎng bu xiǎng? Tīnglì yǒu biànhuà ma?','เสียงในหูเริ่มทันทีไหม ดังมากไหม การได้ยินเปลี่ยนไหมครับ','Was tinnitus sudden? How loud is it? Has hearing changed?','เวลาเริ่ม ความดัง และการได้ยินช่วยตั้งแนว แต่ระดับเสียงไม่ใช้ตัดสินสูงต่ำของเสียงหรือ证型เพียงอย่างเดียว');
+  q('energy','是没有力气，还是身体沉重？活动后怎样？','Shì méiyǒu lìqi, háishì shēntǐ chénzhòng? Huódòng hòu zěnyàng?','ไม่มีแรงหรือหนักตัว ทำกิจกรรมแล้วเป็นอย่างไรครับ','Is it weakness or body heaviness? What happens after activity?','ความอ่อนแรงกับความหนักตัวช่วยแยกชี่เลือดพร่องและความชื้น โดยยังต้องดูอาหาร อุจจาระ ลิ้น และชีพจร');
+  q('appetite','是吃不下，还是吃后胃胀？有没有嗳气、恶心？','Shì chī bu xià, háishì chī hòu wèizhàng? Yǒu méiyǒu ǎiqì, ěxīn?','ไม่อยากอาหารหรือกินแล้วแน่น มีเรอหรือคลื่นไส้ไหมครับ','Is appetite poor, or is there post-meal fullness? Any belching or nausea?','เบื่ออาหารร่วมแน่นหลังอาหารและเรอเหม็นชี้อาหารสะสม ส่วนปากเหนียวหรือชายโครงปวดช่วยแยกชื้นร้อน');
+  q('yin','有没有盗汗、手脚心发热或口干？','Yǒu méiyǒu dàohàn, shǒujiǎoxīn fārè huò kǒugān?','มีเหงื่อขณะหลับ ร้อนฝ่ามือฝ่าเท้า หรือปากแห้งไหมครับ','Any sweating during sleep, palm/sole heat, or dry mouth?','ค้นชุดอาการร้อนพร่อง ไม่สรุปจากปากแห้งหรือเหงื่อกลางคืนเพียงอาการเดียว');
+  q('qi','有没有乏力、气短、自汗或声音低弱？','Yǒu méiyǒu fálì, qìduǎn, zìhàn huò shēngyīn dīruò?','มีอ่อนเพลีย หายใจสั้น เหงื่อออกเอง หรือเสียงเบาไหมครับ','Any fatigue, shortness of breath, spontaneous sweating, or weak voice?','อ่อนเพลียร่วมกับหายใจสั้น เหงื่อออกเอง และเสียงเบาช่วยสนับสนุนชี่พร่อง');
+  q('blood','有没有头晕、面色苍白或心悸？','Yǒu méiyǒu tóuyūn, miànsè cāngbái huò xīnjì?','มีเวียนหัว หน้าซีด หรือใจสั่นไหมครับ','Any dizziness, pallor, or palpitations?','หน้าซีด เวียนหัว และใจสั่นเป็นชุดอาการหล่อเลี้ยงไม่พอ ใช้แยกร่วมกับอาการชี่พร่องและผลตรวจ');
+  q('kidney','有没有腰膝酸软、耳鸣或记忆力下降？','Yǒu méiyǒu yāoxī suānruǎn, ěrmíng huò jìyìlì xiàjiàng?','มีเอวเข่าเมื่อยอ่อนแรง เสียงในหู หรือความจำลดลงไหมครับ','Any lower back/knee weakness, tinnitus, or memory decline?','อาการเอวเข่าและหูช่วยชี้ความเกี่ยวข้องกับไต ต้องดูร้อนพร่อง เย็นพร่อง หรือสารจิงพร่องต่อ');
+  q('phlegm','有没有胸闷、恶心、痰多或身体困重？','Yǒu méiyǒu xiōngmèn, ěxīn, tán duō huò shēntǐ kùnzhòng?','มีแน่นอก คลื่นไส้ เสมหะมาก หรือหนักตัวไหมครับ','Any chest tightness, nausea, abundant sputum, or body heaviness?','แน่นอก คลื่นไส้ หนักตัว ร่วมฝ้าเหนียวช่วยสนับสนุนเสมหะหรือความชื้น');
+  q('fire','有没有口苦、口渴、目赤或口舌生疮？','Yǒu méiyǒu kǒukǔ, kǒukě, mùchì huò kǒushé shēngchuāng?','มีปากขม กระหายน้ำ ตาแดง หรือแผลในปากไหมครับ','Any bitter taste, thirst, red eyes, or mouth ulcers?','ค้นอาการร้อนเด่นและตำแหน่ง เช่น แผลในปากกับปลายลิ้นแดง หรือปากขมตาแดงร่วมชายโครงปวด');
+  q('cold','有没有怕冷、手脚冷？热敷后会好些吗？','Yǒu méiyǒu pà lěng, shǒujiǎo lěng? Rèfū hòu huì hǎo xiē ma?','ขี้หนาว มือเท้าเย็นไหม อุ่นแล้วดีขึ้นไหมครับ','Do you feel cold or have cold hands/feet? Does warmth help?','ความหนาวและอุ่นแล้วดีขึ้นสนับสนุนลักษณะเย็น ต้องใช้ความเรื้อรัง กำลัง และชีพจรแยกพร่องเย็นกับเย็นแกร่ง');
+  q('food','有没有嗳腐、吞酸、腹胀或大便酸臭？','Yǒu méiyǒu ǎifǔ, tūnsuān, fùzhàng huò dàbiàn suānchòu?','มีเรอเหม็น น้ำเปรี้ยวย้อน ท้องอืด หรืออุจจาระเปรี้ยวเหม็นไหมครับ','Any foul belching, acid regurgitation, bloating, or sour-smelling stools?','ชุดอาหารคั่งต่างจากพร่องตรงเรอเหม็น แน่นมากหลังอาหาร และฝ้าหนาเหนียว');
+  q('emotion','和情绪有关系吗？有没有胸胁胀满、嗳气或叹气？','Hé qíngxù yǒu guānxi ma? Yǒu méiyǒu xiōngxié zhàngmǎn, ǎiqì huò tànqì?','สัมพันธ์กับอารมณ์ไหม มีแน่นชายโครง เรอ หรือถอนหายใจไหมครับ','Is it related to emotions? Any flank fullness, belching or sighing?','ความสัมพันธ์กับอารมณ์ร่วมปวดแน่น เรอ และถอนหายใจสนับสนุนชี่ตับติดขัด');
+  q('stasis','疼痛像针刺吗？位置固定吗？晚上会加重吗？','Téngtòng xiàng zhēncì ma? Wèizhi gùdìng ma? Wǎnshang huì jiāzhòng ma?','ปวดเหมือนเข็มแทงไหม อยู่จุดเดิมไหม กลางคืนมากขึ้นไหมครับ','Is pain stabbing, fixed in location, or worse at night?','ปวดแทงตำแหน่งเดิมร่วมลิ้นม่วงคล้ำและชีพจรฝืดช่วยชี้เลือดคั่ง');
+  q('water','有没有浮肿、小便不利或怕冷？','Yǒu méiyǒu fúzhǒng, xiǎobiàn bù lì huò pà lěng?','มีบวม ปัสสาวะไม่คล่อง หรือขี้หนาวไหมครับ','Any edema, impaired urination, or cold intolerance?','บวมและปัสสาวะผิดปกติเป็นตัวแยกสำคัญของน้ำคั่งรบกวนหัวใจจากกลุ่มใจสั่นอื่น');
+  q('dampheat','有没有口苦口黏、身体困重或小便黄？','Yǒu méiyǒu kǒukǔ kǒunián, shēntǐ kùnzhòng huò xiǎobiàn huáng?','ปากขมปากเหนียว หนักตัว หรือปัสสาวะเหลืองไหมครับ','Any bitter sticky mouth, body heaviness or yellow urine?','ชื้นร่วมร้อนต้องมีหลักฐานทั้งความชื้น เช่น หนักตัวฝ้าเหนียว และความร้อน เช่น ขม เหลือง แสบ');
+  q('dry','有没有咽干、鼻燥、口干或皮肤干燥？','Yǒu méiyǒu yāngān, bízào, kǒugān huò pífū gānzào?','คอ จมูก ปาก หรือผิวแห้งไหมครับ','Any dryness of throat, nose, mouth or skin?','ไอแห้งร่วมจมูกคอแห้งชี้ความแห้ง ต้องแยกจากหยินพร่องด้วยระยะเวลาและอาการร้อนพร่อง');
+  q('genital','疼痛会牵引到腹股沟或阴部吗？遇冷会加重吗？','Téngtòng huì qiānyǐn dào fùgǔgōu huò yīnbù ma? Yù lěng huì jiāzhòng ma?','ปวดร้าวไปขาหนีบหรืออวัยวะเพศไหม เย็นแล้วมากขึ้นไหมครับ','Does pain radiate to the groin/genitals and worsen with cold?','ตำแหน่งท้องน้อยและแนวร้าวร่วมความเย็นช่วยแยกเย็นคั่งในเส้นลมปราณตับ');
+  const patterns = {};
+  function p(id,title,symptoms,keys,tongue,pulse,focus,kind,why) {
+    patterns[id]={id,name:L(...title.split('|')),symptoms:symptoms.split(' '),keys:keys.split(' '),tongue,pulse,focus,kind,why};
+  }
+  p('heart-kidney','心肾不交证|xīn shèn bù jiāo zhèng|หัวใจและไตไม่ประสานกัน|Heart–Kidney disharmony','insomnia restless falling kidney tinnitus fiveheat nightsweat drymouth','kidney fiveheat nightsweat','redScant','fineRapid','kidney','yin','นอนไม่หลับร่วมอาการร้อนพร่องและเอวเข่าเมื่อยอ่อนแรง เชื่อมอาการหัวใจกับไต ต่างจากไฟหัวใจแกร่งที่แผลในปากและฝ้าเหลืองเด่น');
+  p('heart-spleen','心脾两虚证|xīn pí liǎng xū zhèng|หัวใจและม้ามพร่อง|Heart–Spleen deficiency','insomnia dreams waking palp forget fatigue appetite sallow','palp fatigue appetite','paleThin','fineWeak','blood','qi','ใจสั่นและนอนหลับไม่ดีร่วมอ่อนเพลีย เบื่ออาหาร ลิ้นซีด สื่อถึงการหล่อเลี้ยงหัวใจไม่พอร่วมหน้าที่ม้ามพร่อง');
+  p('gall-phlegm','胆郁痰扰证|dǎn yù tán rǎo zhèng|ถุงน้ำดีติดขัดและเสมหะรบกวน|Gallbladder constraint with phlegm disturbance','insomnia restless fright tightchest nausea bitter dizzy phlegm palp dreams','fright tightchest nausea','yellowGreasy','wirySlippery','phlegm','phlegm','ตกใจง่าย แน่นอก คลื่นไส้ ร่วมฝ้าเหนียวและชีพจรตึงลื่น ชี้เสมหะรบกวน มากกว่าการพร่องอย่างเดียว');
+  p('food-inner','食滞内停证|shízhì nèi tíng zhèng|อาหารคั่งสะสมภายใน|Internal food stagnation','insomnia epifull afterfood foulbelch acid nausea appetite','afterfood foulbelch epifull','thickGreasy','slippery','food','food','นอนไม่หลับสัมพันธ์กับแน่นลิ้นปี่หลังอาหารและเรอเหม็น ร่วมฝ้าหนาเหนียว ชี้อาหารคั่งทำให้กระเพาะไม่สงบ');
+  p('heart-fire','心火亢盛证|xīnhuǒ kàngshèng zhèng|ไฟหัวใจกำเริบ|Exuberant Heart fire','insomnia agitation restless ulcers thirst darkurine redface','ulcers agitation darkurine','redTip','rapid','fire','heat','แผลปากลิ้น ปลายลิ้นแดง ปัสสาวะน้อยเข้ม และกระสับกระส่ายเด่น ช่วยแยกไฟหัวใจจากร้อนพร่อง');
+  p('spleen-qi','脾气虚证|píqì xū zhèng|ชี่ม้ามพร่อง|Spleen qi deficiency','diarrhea recurrent loose appetite bloating fatigue sallow','recurrent appetite fatigue','teeth','fineWeak','qi','qi','ท้องเสียซ้ำร่วมเบื่ออาหาร อ่อนเพลีย ลิ้นซีดรอยฟัน และชีพจรอ่อน สนับสนุนหน้าที่ม้ามพร่อง โดยไม่มีเย็นไตเด่น');
+  p('liver-spleen','肝郁乘脾证|gān yù chéng pí zhèng|ชี่ตับติดขัดและข่มม้าม|Liver constraint overacting on the Spleen','diarrhea abdominal stress abdDistend afterstool flankfull sigh','stress afterstool sigh','thinWhite','wiry','emotion','qi-stag','ปวดท้องท้องเสียเมื่อเครียด ร่วมแน่นชายโครง ถอนหายใจ และชีพจรตึง เชื่อมตับกับม้าม ต่างจากอาหารคั่งที่เรอเหม็นเด่น');
+  p('food-diarrhea','饮食积滞证|yǐnshí jīzhì zhèng|อาหารสะสม|Food accumulation','diarrhea abdominal bloating foulbelch acid sourstool appetite afterstool afterfood','foulbelch sourstool bloating','thickGreasy','slippery','food','food','ท้องเสียร่วมเรอเหม็น อุจจาระเปรี้ยวเหม็น แน่นท้อง และฝ้าหนาเหนียว เป็นหลักฐานอาหารสะสม ไม่ใช่ความชื้นร้อนจากกลิ่นเพียงอย่างเดียว');
+  p('intestine-dampheat','大肠湿热证|dàcháng shīrè zhèng|ลำไส้ใหญ่ชื้นร้อน|Large Intestine damp-heat','abdominal diarrhea urgentstool foulstool analburn thirst yellowurine','urgentstool analburn foulstool','redYellowGreasy','slipperyRapid','dampheat','dampheat','ท้องเสียเร่งด่วน แสบทวาร อุจจาระเหม็น ร่วมลิ้นแดงฝ้าเหลืองเหนียว เป็นชุดอาการชื้นร้อน');
+  p('kidney-yang','肾阳虚证|shènyáng xū zhèng|หยางไตพร่อง|Kidney yang deficiency','dawn diarrhea coldabd cold limbs kidney fatigue','dawn cold kidney','paleSwollenWhite','deepSlow','kidney','yang','ท้องเสียเช้ามืดร่วมหนาว แขนขาเย็น และเอวเข่าอ่อนแรง ช่วยแยกหยางไตพร่องจากชี่ม้ามพร่อง');
+  p('phlegm-damp','痰湿内阻证|tánshī nèi zǔ zhèng|เสมหะชื้นอุดกั้นภายใน|Internal phlegm-dampness obstruction','dizzy heavyhead tightchest nausea vomiting appetite heavy','heavyhead nausea heavy','whiteGreasy','slippery','phlegm','phlegm','เวียนหัวแบบหนักเหมือนห่อ แน่นอก คลื่นไส้ หนักตัว ร่วมฝ้าขาวเหนียวและชีพจรลื่น ชี้เสมหะชื้น');
+  p('liver-fire','肝火上炎证|gānhuǒ shàngyán zhèng|ไฟตับลุกขึ้นด้านบน|Liver fire flaming upward','dizzy headache redeyes anger bitter drymouth tinnitus insomnia','redeyes bitter anger','redYellow','wiryRapid','fire','heat','หน้าและตาแดง ปากขม หงุดหงิด ร่วมฝ้าเหลืองและชีพจรตึงเร็ว แสดงร้อนแกร่งเด่นกว่าหยางกำเริบร่วมฐานพร่อง');
+  p('liver-yang','肝阳上亢证|gānyáng shàngkàng zhèng|หยางตับกำเริบขึ้นบน|Hyperactive Liver yang','vertigo dizzy headDistend tinnitus redface anger kidney insomnia','headDistend tinnitus kidney','red','wiry','kidney','yin','ปวดหัวแน่น เวียนหัว หูมีเสียง ร่วมเอวเข่าอ่อนแรง ช่วยชี้หยางขึ้นบนบนฐานพร่อง ควรถามอาการฐานพร่องเพิ่มเพื่อแยกจากไฟตับ');
+  p('qi-blood','气血亏虚证|qìxuè kuīxū zhèng|ชี่และเลือดพร่อง|Qi and blood deficiency','dizzy pale fatigue palp breath appetite exertion insomnia','pale fatigue palp breath','pale','fineWeak','blood','qi','หน้าซีด เวียนหัว ใจสั่น ร่วมอ่อนเพลียหายใจสั้น และชีพจรเล็กอ่อน สนับสนุนชี่และเลือดพร่องร่วมกัน');
+  p('kidney-essence','肾精亏虚证|shènjīng kuīxū zhèng|สารจิงไตพร่อง|Kidney essence deficiency','dizzy tinnitus kidney forget memory fatigue','tinnitus kidney memory','either','fineWeak','kidney','essence','เวียนหัวเรื้อรัง หูมีเสียง เอวเข่าอ่อนแรง และความจำลดลงช่วยชี้สารจิงไตพร่อง ลิ้นอาจต่างกันตามหยินหรือหยางพร่องร่วม');
+  p('windcold-lung','风寒犯肺证|fēnghán fàn fèi zhèng|ลมเย็นรุกรานปอด|Wind-cold invading the Lung','cough heavycough thinwhite clearnose chills fever nosweat headache','thinwhite clearnose chills','thinWhite','floatingTight','cold','external-cold','ไอเสมหะขาวใส น้ำมูกใส หนาวสะท้าน ไม่มีเหงื่อ ร่วมชีพจรลอยแน่น ชี้ลมเย็นภายนอกรุกรานปอด');
+  p('windheat-lung','风热犯肺证|fēngrè fàn fèi zhèng|ลมร้อนรุกรานปอด|Wind-heat invading the Lung','cough yellowphlegm throat fever thirst wind','yellowphlegm throat wind','tipThinYellow','floatingRapid','fire','external-heat','ไอเสมหะเหลือง เจ็บคอ มีไข้ กลัวลม และชีพจรลอยเร็ว ชี้ลมร้อนภายนอก ต่างจากร้อนสะสมในปอดที่ร้อนและหอบเด่น');
+  p('dry-lung','燥邪犯肺证|zàoxié fàn fèi zhèng|ความแห้งรุกรานปอด|Dryness invading the Lung','drycough scantphlegm drythroat drynose drymouth dryskin','drycough drythroat drynose','dry','dryEither','dry','dry','ไอแห้งร่วมคอจมูกแห้งและสารน้ำน้อยเด่น ตำรานี้รวมแห้งร่วมร้อนกับแห้งร่วมเย็น จึงไม่บังคับชีพจรแบบเดียวทุกเคส');
+  p('lung-heat','肺热壅盛证|fèirè yōngshèng zhèng|ความร้อนสะสมรุนแรงในปอด|Exuberant Lung heat','severecough yellowphlegm highheat thirst chestpain rapidbreath','highheat yellowphlegm rapidbreath','redYellow','rapidStrong','fire','heat','ไอรุนแรง ไข้เด่น เสมหะเหลืองข้น ร่วมชีพจรเร็วมีแรง ชี้ร้อนสะสมในปอด ต้องประเมินความรุนแรงทางระบบหายใจในคนไข้จริง');
+  p('coldphlegm-lung','寒痰阻肺证|hántán zǔ fèi zhèng|เสมหะเย็นอุดกั้นปอด|Cold-phlegm obstructing the Lung','cough wheeze phlegm thinwhite tightchest cold worsecold','phlegm thinwhite worsecold','whiteSlippery','wirySlippery','cold','cold','เสมหะขาวเหลวปริมาณมาก ไอหอบ แน่นอก และเย็นแล้วมากขึ้น ร่วมฝ้าขาวลื่น สนับสนุนเสมหะเย็นภายใน มากกว่าลมเย็นภายนอก');
+  p('lung-qi','肺气不足证|fèiqì bùzú zhèng|ชี่ปอดไม่เพียงพอ|Lung qi deficiency','weakcough breath lowvoice fatigue spontaneous frequentcolds','weakcough lowvoice spontaneous','pale','deficientWeak','qi','qi','ไอไม่มีแรง เสียงเบา เหนื่อยง่าย เหงื่อออกเอง และเป็นหวัดง่าย ร่วมลิ้นซีดชีพจรอ่อน ชี้ชี่ปอดไม่พอ');
+  p('stomach-cold','寒邪客胃证|hánxié kè wèi zhèng|ความเย็นรุกรานกระเพาะ|Cold invading the Stomach','coldepi worsecold warmth warmdrink nothirst','coldepi worsecold warmth','thinWhite','wiryTight','cold','cold','ปวดเย็นลิ้นปี่ค่อนข้างเฉียบพลัน เย็นแล้วมาก อุ่นแล้วดี ร่วมชีพจรตึงแน่น ชี้เย็นแกร่ง มากกว่าปวดตื้อเรื้อรังจากพร่อง');
+  p('stomach-food','饮食停滞证|yǐnshí tíngzhì zhèng|อาหารคั่งค้าง|Food stagnation','epidistend afterfood foulbelch acid nausea vomiting appetite','afterfood foulbelch epidistend','thickGreasy','slippery','food','food','ปวดแน่นลิ้นปี่หลังอาหารร่วมเรอเหม็น น้ำเปรี้ยวย้อน และฝ้าหนาเหนียว ชี้อาหารคั่ง');
+  p('liver-stomach','肝气犯胃证|gānqì fàn wèi zhèng|ชี่ตับรุกรานกระเพาะ|Liver qi invading the Stomach','epidistend epifull stress belch flankfull sigh','stress belch flankfull','thinWhite','wiry','emotion','qi-stag','อาการกระเพาะสัมพันธ์กับอารมณ์ ร่วมเรอบ่อย แน่นชายโครง ถอนหายใจ และชีพจรตึง ช่วยแยกชี่ติดขัดจากอาหารสะสม');
+  p('spleenstomach-dampheat','脾胃湿热证|píwèi shīrè zhèng|ม้ามและกระเพาะชื้นร้อน|Spleen–Stomach damp-heat','burningepi stuffy bitter sticky nausea appetite heavy stickystool','sticky heavy bitter','yellowGreasy','slipperyRapid','dampheat','dampheat','อาการแน่นหรือแสบบริเวณกระเพาะร่วมปากเหนียว หนักตัว ปากขม และฝ้าเหลืองเหนียว สนับสนุนชื้นร้อนที่ม้ามกระเพาะ');
+  p('spleenstomach-cold','脾胃虚寒证|píwèi xūhán zhèng|ม้ามและกระเพาะพร่องเย็น|Spleen–Stomach deficiency-cold','dullepi dullabd pressure appetite fatigue loose cold limbs','pressure fatigue loose cold','paleWhite','deepFineWeak','cold','yang','ปวดตื้อเรื้อรัง อุ่นหรือกดแล้วดี ร่วมอ่อนเพลีย ถ่ายเหลว ลิ้นซีด ชีพจรไม่มีแรง ชี้พร่องเย็น');
+  p('heart-phlegm','痰阻心脉证|tán zǔ xīnmài zhèng|เสมหะอุดกั้นหลอดชีพจรหัวใจ|Phlegm obstructing Heart vessels','tightchest chestpain chestheavy phlegm breath heavy','chestheavy phlegm heavy','whiteGreasy','slippery','phlegm','phlegm','แน่นหนักหน้าอกเด่น เสมหะมาก หนักตัว และฝ้าขาวเหนียวชีพจรลื่น ช่วยชี้เสมหะอุดกั้นในกรอบ辨证ของโจทย์');
+  p('heart-yang','心阳不振证|xīnyáng bùzhèn zhèng|หยางหัวใจอ่อนกำลัง|Heart yang deficiency','tightchest chestpain palp breath cold limbs fatigue spontaneous','palp cold fatigue','paleSwollen','deepFineWeak','cold','yang','เจ็บแน่นอกร่วมใจสั่น หนาว แขนขาเย็น อ่อนเพลีย และชีพจรจมไม่มีแรง ชี้หยางหัวใจพร่อง');
+  p('heart-cold','寒凝心脉证|hánníng xīnmài zhèng|ความเย็นคั่งในหลอดชีพจรหัวใจ|Cold congealing in Heart vessels','severeChest worsecold warmth chestback limbs','severeChest worsecold chestback','paleDark','deepTight','cold','cold','ปวดหน้าอกรุนแรงสัมพันธ์ความเย็น ร้าวหลัง อุ่นแล้วลด ร่วมชีพจรจมแน่น ชี้เย็นคั่งในโจทย์ ต้องประเมินฉุกเฉินในคนไข้จริง');
+  p('heart-qistag','气滞心脉证|qìzhì xīnmài zhèng|ชี่ติดขัดในหลอดชีพจรหัวใจ|Qi stagnation in Heart vessels','chestdistend tightchest stress sigh flankfull','stress sigh chestdistend','thin','wiry','emotion','qi-stag','ปวดแน่นอกร่วมอารมณ์ ถอนหายใจ และชีพจรตึง ชี้ชี่ติดขัด ไม่ได้ใช้ความสัมพันธ์อารมณ์ตัดโรคหัวใจจริงออก');
+  p('liver-qistag','肝郁气滞证|gān yù qìzhì zhèng|ชี่ตับติดขัด|Liver qi stagnation','flankdistend stress tightchest sigh anger','flankdistend stress sigh','thinWhite','wiry','emotion','qi-stag','ปวดชายโครงแบบแน่นและมากเมื่ออารมณ์ไม่ดี ร่วมถอนหายใจและชีพจรตึง ชี้ชี่ตับติดขัด');
+  p('livergall-dampheat','肝胆湿热证|gāndǎn shīrè zhèng|ตับและถุงน้ำดีชื้นร้อน|Liver–Gallbladder damp-heat','flankdistend bitter nausea appetite yellowurine heavy','flankdistend bitter heavy','yellowGreasy','wiryRapid','dampheat','dampheat','ปวดแน่นชายโครงร่วมปากขม คลื่นไส้ หนักตัว ปัสสาวะเหลือง และฝ้าเหลืองเหนียว ชี้ตำแหน่งตับถุงน้ำดีร่วมชื้นร้อน');
+  p('livergall-fire','肝胆火旺证|gāndǎn huǒwàng zhèng|ไฟตับและถุงน้ำดีกำเริบ|Liver–Gallbladder fire','flankburn anger redeyes bitter headache tinnitus','flankburn redeyes anger','redYellow','wiryRapid','fire','heat','ปวดแสบร้อนชายโครง ตาแดงหน้าแดง หงุดหงิด และชีพจรตึงเร็ว มีร้อนเด่น ส่วนชื้นร้อนจะมีหนักตัวและฝ้าเหนียวเด่น');
+  p('liver-stasis','肝血瘀阻证|gānxuè yūzǔ zhèng|เลือดตับคั่งอุดกั้น|Liver blood stasis','flankstab fixed nightworse','flankstab fixed nightworse','purple','rough','stasis','stasis','ปวดชายโครงแทงตำแหน่งเดิมและมากกลางคืน ร่วมลิ้นม่วงชีพจรฝืด เป็นชุดเลือดคั่ง');
+  p('cold-damp','寒湿阻滞证|hánshī zǔzhì zhèng|เย็นชื้นอุดกั้น|Cold-dampness obstruction','coldabd worsecold warmth bloating loose heavy','coldabd heavy loose','whiteGreasy','deepTight','cold','cold','ปวดเย็นร่วมหนักตัว ท้องอืด ถ่ายเหลว ฝ้าขาวเหนียวและชีพจรจมแน่น สื่อเย็นชื้นอุดกั้น');
+  p('qi-bloodstasis','气滞血瘀证|qìzhì xuèyū zhèng|ชี่ติดขัดและเลือดคั่ง|Qi stagnation with blood stasis','abdDistend stabbing fixed stress resistpressure','stabbing fixed resistpressure','purple','wiryRough','stasis','stasis','ปวดแน่นร่วมปวดแทงตำแหน่งเดิม ไม่ชอบให้กด ลิ้นม่วงและชีพจรตึงฝืด สื่อทั้งชี่ติดขัดและเลือดคั่ง');
+  p('liverchannel-cold','寒凝肝脉证|hánníng gānmài zhèng|ความเย็นคั่งในเส้นลมปราณตับ|Cold congealing in the Liver channel','lowercold genital worsecold warmth','lowercold genital worsecold','white','deepWiry','genital','cold','ปวดเย็นท้องน้อยร้าวสู่อวัยวะเพศหรือขาหนีบและมากเมื่อเย็น ชี้แนวเส้นลมปราณตับ ต่างจากปวดท้องเย็นทั่วไป');
+  p('wind-cold','风寒证|fēnghán zhèng|ลมเย็น|Wind-cold','neck chills fever clearnose nosweat worsecold','neck chills clearnose','thinWhite','floatingTight','cold','external-cold','ปวดศีรษะร้าวต้นคอ หนาวสะท้าน น้ำมูกใส ไม่มีเหงื่อ และชีพจรลอยแน่น เป็นชุดลมเย็นภายนอก');
+  p('wind-heat','风热证|fēngrè zhèng|ลมร้อน|Wind-heat','headDistend fever wind thirst throat redface','fever throat thirst','thinYellow','floatingRapid','fire','external-heat','ปวดหัวแน่นร่วมไข้ เจ็บคอ กระหายน้ำ กลัวลม และชีพจรลอยเร็ว สนับสนุนลมร้อนภายนอก');
+  p('blood-nourish','血虚不荣证|xuèxū bù róng zhèng|เลือดพร่องไม่พอหล่อเลี้ยง|Blood deficiency failing to nourish','dullhead blurred pale palp insomnia fatigue','pale blurred palp','pale','fineWeak','blood','blood','ปวดหัวตื้อร่วมหน้าซีด ตาพร่า ใจสั่น และชีพจรเล็กอ่อน เน้นเลือดหล่อเลี้ยงไม่พอ ต่างจากชี่พร่องที่หายใจสั้นเหงื่อเองเด่น');
+  p('bloodstasis','瘀血阻滞证|yūxuè zǔzhì zhèng|เลือดคั่งอุดกั้น|Blood stasis obstruction','stabhead fixed persistent nightworse','stabhead fixed nightworse','purple','rough','stasis','stasis','ปวดหัวแทงจุดเดิมเรื้อรัง มากกลางคืน ลิ้นม่วงชีพจรฝืด สนับสนุนเลือดคั่ง');
+  p('qi-nourish','气虚不荣证|qìxū bù róng zhèng|ชี่พร่องไม่พอหล่อเลี้ยง|Qi deficiency failing to nourish','dullhead exertion fatigue breath spontaneous appetite','exertion breath spontaneous','pale','deficientWeak','qi','qi','ปวดหัวตื้อหลังเหนื่อย ร่วมไม่มีแรง หายใจสั้น เหงื่อออกเอง ลิ้นซีดชีพจรอ่อน ชี้ชี่พร่อง');
+  p('qi-sweat','自汗（气虚证）|zìhàn (qìxū zhèng)|เหงื่อออกเองจากชี่พร่อง|Spontaneous sweating / qi deficiency','awakesweat spontaneous activity breath fatigue lowvoice','awakesweat activity breath','pale','deficient','qi','qi','เหงื่อออกขณะตื่นโดยไม่ได้ร้อนหรือออกแรงมาก ร่วมเหนื่อย เสียงเบาและชีพจรพร่อง สนับสนุนชี่พร่องในโจทย์');
+  p('yin-sweat','盗汗（阴虚证）|dàohàn (yīnxū zhèng)|เหงื่อออกขณะหลับจากหยินพร่อง|Sleep sweating / yin deficiency','sleepsweat nightsweat fiveheat drymouth drythroat tidal','sleepsweat fiveheat drymouth','redScant','fineRapid','yin','yin','เหงื่อขณะหลับหยุดเมื่อตื่นร่วมร้อนฝ่ามือฝ่าเท้า ปากคอแห้ง ลิ้นแดงฝ้าน้อย ชี้หยินพร่อง ไม่ใช้เหงื่อกลางคืนเพียงอย่างเดียว');
+  p('yellow-sweat','黄汗（湿热证）|huánghàn (shīrè zhèng)|เหงื่อเหลืองตามแบบฝึกชื้นร้อน|Yellow sweating / curriculum damp-heat pattern','yellowsweat stained heavy sticky yellowurine','yellowsweat heavy sticky','yellowGreasy','slipperyRapid','dampheat','dampheat','ยึดแบบฝึกนี้: เหงื่อเหลืองร่วมหนักตัว ปากเหนียว ฝ้าเหลืองเหนียว จัดเป็นชื้นร้อน คราบเหลืองเพียงอย่างเดียวมีหลายสาเหตุ และ黄汗ในคัมภีร์มีการจำแนกอื่นได้');
+  p('qi-blood-palp','气血两虚证|qìxuè liǎng xū zhèng|ชี่และเลือดพร่อง|Qi and blood deficiency','palp breath fatigue pale dizzy insomnia','pale fatigue breath','pale','fineWeak','blood','qi','ใจสั่นร่วมหน้าซีด เวียนหัว เหนื่อยและหายใจสั้น ลิ้นซีดชีพจรเล็กอ่อน สนับสนุนชี่เลือดพร่อง');
+  p('heart-yin','心阴不足证|xīnyīn bùzú zhèng|หยินหัวใจไม่เพียงพอ|Heart yin deficiency','palp restless insomnia fiveheat nightsweat drymouth','palp fiveheat nightsweat','redScant','fineRapid','yin','yin','ใจสั่นนอนหลับไม่ดีร่วมเหงื่อขณะหลับ ร้อนฝ่ามือฝ่าเท้า ลิ้นแดงฝ้าน้อยชีพจรเล็กเร็ว ชี้หยินหัวใจพร่อง');
+  p('heart-stasis','心脉瘀阻证|xīnmài yūzǔ zhèng|เลือดคั่งอุดกั้นหลอดชีพจรหัวใจ|Blood stasis obstructing Heart vessels','palp chestpain fixed stabbing darkface','fixed stabbing chestpain','purple','rough','stasis','stasis','ใจสั่นร่วมเจ็บอกแทงจุดเดิม ลิ้นม่วงและชีพจรฝืด สนับสนุนเลือดคั่งในกรอบ辨证 ต้องประเมินโรคหัวใจในคนไข้จริง');
+  p('heart-water','水气凌心证|shuǐqì líng xīn zhèng|น้ำคั่งรบกวนหัวใจ|Water qi harassing the Heart','palp dizzy tightchest cold limbs edema urine','edema urine cold','swollenSlippery','water','water','yang','ใจสั่นร่วมบวม ปัสสาวะไม่คล่อง หนาว และลิ้นซีดบวมฝ้าขาวลื่น ช่วยแยกน้ำคั่งจากพร่องหรือเสมหะอย่างเดียว');
+  p('spleenstomach-qi','脾胃气虚证|píwèi qìxū zhèng|ชี่ม้ามกระเพาะพร่อง|Spleen–Stomach qi deficiency','afterbloat appetite fatigue loose fewwords','afterbloat fatigue loose','pale','weak','qi','qi','ท้องอืดหลังอาหารร่วมกินได้น้อย เหนื่อย ถ่ายเหลว เสียงพูดไม่มีแรง ลิ้นซีดชีพจรอ่อน ชี้ชี่ม้ามกระเพาะพร่อง');
+  p('spleenstomach-yang','脾胃阳虚证|píwèi yángxū zhèng|หยางม้ามกระเพาะพร่อง|Spleen–Stomach yang deficiency','bloating coldabd pressure cold limbs loose fatigue','coldabd pressure cold','paleSwollen','deepSlow','cold','yang','ท้องอืดร่วมปวดเย็น อุ่นหรือกดแล้วสบาย หนาวและถ่ายเหลว ลิ้นซีดบวมชีพจรจมช้า เพิ่มลักษณะเย็นจากชี่พร่องทั่วไป');
+  p('food-gut','食积胃肠证|shíjī wèicháng zhèng|อาหารสะสมในกระเพาะและลำไส้|Food accumulation in the Stomach and intestines','bloating afterfood foulbelch acid nausea sourstool appetite','afterfood foulbelch sourstool','thickGreasy','slippery','food','food','ท้องอืดมากหลังอาหาร เรอเหม็นและอุจจาระเปรี้ยวเหม็นร่วมฝ้าหนาเหนียว ชี้อาหารสะสม ต่างจากพร่องที่เหนื่อยถ่ายเหลวเด่น');
+  p('livergall-excessheat','肝胆实热证|gāndǎn shírè zhèng|ตับและถุงน้ำดีร้อนแกร่ง|Liver–Gallbladder excess heat','loudEar roar anger bitter redeyes','loudEar bitter redeyes','redYellow','wiryRapid','fire','heat','เสียงในหูเกิดเร็วและดังร่วมปากขม ตาแดง หงุดหงิด ลิ้นแดงฝ้าเหลืองชีพจรตึงเร็ว ชี้ร้อนแกร่งในโจทย์ การได้ยินลดฉับพลันต้องเร่งตรวจ');
+  p('liverkidney-def','肝肾不足证|gānshèn bùzú zhèng|ตับและไตไม่เพียงพอ|Liver–Kidney deficiency','longEar cicada hearing dizzy kidney','longEar kidney hearing','either','fine','kidney','essence','เสียงในหูเรื้อรังค่อนข้างเบา ร่วมเอวเข่าเมื่อยอ่อนแรงและเวียนหัว ชี้ตับไตพร่อง ความดังเบาไม่ได้หมายถึงระดับเสียงสูงต่ำ');
+  p('spleen-damp','脾虚湿困证|píxū shīkùn zhèng|ม้ามพร่องและความชื้นรบกวน|Spleen deficiency with dampness','fatigue heavy appetite bloating loose heavyhead','heavy appetite bloating','swollenGreasy','soggy','phlegm','phlegm','อ่อนเพลียร่วมหนักตัว หนักหัว ท้องอืด ถ่ายเหลว ลิ้นซีดบวมฝ้าขาวเหนียวและชีพจร濡 ชี้ม้ามพร่องร่วมชื้น');
+  p('food-stomachloss','食滞胃脘证|shízhì wèiwǎn zhèng|อาหารคั่งบริเวณกระเพาะ|Food stagnation in the Stomach','appetite epifull afterfood foulbelch acid nausea badtaste','epifull afterfood foulbelch','thickGreasy','slippery','food','food','เบื่ออาหารร่วมแน่นหลังอาหาร เรอเหม็น น้ำเปรี้ยวย้อน และฝ้าหนาเหนียว ชี้อาหารคั่ง มากกว่าชื้นร้อนที่ปากเหนียวหนักตัวเด่น');
+  const groups = [];
+  function g(id,title,icon,feature,ids,note='') {groups.push({id,name:L(...title.split('|')),icon,feature,patternIds:ids.split(' '),note});}
+  g(1,'失眠|shīmián|นอนไม่หลับ|Insomnia','moon','sleep','heart-kidney heart-spleen gall-phlegm food-inner heart-fire');
+  g(2,'腹泻|fùxiè|ท้องเสีย|Diarrhea','waves','stool','spleen-qi liver-spleen food-diarrhea intestine-dampheat kidney-yang');
+  g(3,'头晕|tóuyūn|เวียนศีรษะ|Dizziness','orbit','dizzy','phlegm-damp liver-fire liver-yang qi-blood kidney-essence');
+  g(4,'咳嗽|késou|ไอ|Cough','lungs','sputum','windcold-lung windheat-lung dry-lung lung-heat coldphlegm-lung lung-qi');
+  g(5,'胃痛|wèitòng|ปวดกระเพาะ|Stomach pain','stomach','pain','stomach-cold stomach-food liver-stomach spleenstomach-dampheat spleenstomach-cold');
+  g(6,'胸痛|xiōngtòng|เจ็บหน้าอก|Chest pain','heart','pain','heart-phlegm heart-yang heart-cold heart-qistag','คงชื่อไม่ซ้ำ 4 รายการตามข้อความที่ให้มา; ไม่เพิ่ม证型แทนบรรทัดที่ซ้ำ');
+  g(7,'胁痛|xiétòng|ปวดชายโครง|Flank pain','ribs','pain','liver-qistag livergall-dampheat livergall-fire liver-stasis');
+  g(8,'腹痛|fùtòng|ปวดท้อง|Abdominal pain','stomach','pain','cold-damp spleenstomach-cold qi-bloodstasis liverchannel-cold');
+  g(9,'头痛|tóutòng|ปวดศีรษะ|Headache','head','pain','wind-cold wind-heat blood-nourish bloodstasis qi-nourish liver-yang');
+  g(10,'出汗异常（一）|chūhàn yìcháng (yī)|เหงื่อผิดปกติ 1|Sweating I','drop','sweat','qi-sweat yin-sweat');
+  g(11,'出汗异常（二）|chūhàn yìcháng (èr)|เหงื่อผิดปกติ 2|Sweating II','drop','sweat','qi-sweat yin-sweat yellow-sweat','คงกลุ่ม 10–11 แยกตามเอกสาร แม้自汗และ盗汗ซ้ำกัน');
+  g(12,'心悸|xīnjì|ใจสั่น|Palpitations','pulse','palp','qi-blood-palp heart-yin gall-phlegm heart-stasis heart-water');
+  g(13,'腹胀|fùzhàng|ท้องอืด|Bloating','stomach','bloat','spleenstomach-qi spleenstomach-yang liver-stomach food-gut');
+  g(14,'耳鸣|ěrmíng|เสียงในหู|Tinnitus','ear','ear','livergall-excessheat liverkidney-def');
+  g(15,'乏力|fálì|อ่อนเพลีย|Fatigue','leaf','energy','qi-blood spleen-damp');
+  g(16,'厌食|yànshí|เบื่ออาหาร|Poor appetite','bowl','appetite','food-stomachloss spleenstomach-dampheat livergall-dampheat');
+  const durations = {
+    acute:[L('三天前突然出现。','Sān tiān qián tūrán chūxiàn.','เริ่มค่อนข้างทันทีเมื่อ 3 วันก่อน','It started suddenly three days ago.'),L('五天前开始，这几天比较明显。','Wǔ tiān qián kāishǐ, zhè jǐ tiān bǐjiào míngxiǎn.','เริ่มเมื่อ 5 วันก่อน ช่วงนี้อาการเด่นขึ้น','It started five days ago and is noticeable this week.'),L('两天前开始，以前没有这次这么明显。','Liǎng tiān qián kāishǐ, yǐqián méiyǒu zhè cì zhème míngxiǎn.','เริ่มเมื่อ 2 วันก่อน ครั้งนี้ชัดกว่าที่เคย','It started two days ago, more noticeably than before.')],
+    chronic:[L('已经半年了，是慢慢出现的。','Yǐjīng bàn nián le, shì mànmàn chūxiàn de.','เป็นมาครึ่งปี ค่อย ๆ เริ่มมีอาการ','It developed gradually over six months.'),L('大约三个月，反反复复。','Dàyuē sān ge yuè, fǎnfǎnfùfù.','ประมาณ 3 เดือน เป็นซ้ำ ๆ','About three months, with recurrent symptoms.'),L('有一年左右，最近比较明显。','Yǒu yì nián zuǒyòu, zuìjìn bǐjiào míngxiǎn.','ประมาณหนึ่งปี ช่วงนี้ชัดขึ้น','About a year, more noticeable recently.')],
+    episodic:[L('近两个月反复发作。','Jìn liǎng ge yuè fǎnfù fāzuò.','ช่วงสองเดือนนี้เป็น ๆ หาย ๆ','Recurrent over the last two months.'),L('这个月出现过好几次。','Zhè ge yuè chūxiàn guo hǎo jǐ cì.','เดือนนี้เกิดขึ้นหลายครั้งแล้ว','It has happened several times this month.'),L('近三个星期时轻时重。','Jìn sān ge xīngqī shí qīng shí zhòng.','สามสัปดาห์นี้อาการมากน้อยสลับกัน','It has fluctuated over the last three weeks.')]
+  };
+  const modifiers = new Set(['afterfood','stress','exertion','activity','worsecold','warmth','pressure','nightworse','dawn','sleepsweat','awakesweat','afterstool']);
+  const meta = {
+    title:'Jade Clinic 3D',version:'1.0.0',
+    note:'แบบฝึกสอบจากรายการที่ผู้เรียนให้มา ผู้ป่วยและประวัติเป็นเรื่องสมมติ ไม่ใช่เครื่องมือวินิจฉัยหรือคำแนะนำการรักษา',
+    source:'User-supplied 16-group curriculum, 28 October 2026; source images were not independently re-read.',
+    terminology:'https://www.who.int/publications/i/item/9789240042322'
+  };
+  const api={L,terms,tongues,pulses,questions,patterns,groups,durations,modifiers,meta};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;
+  root.TCMData=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+(function(root){
+  'use strict';
+  const D=typeof module!=='undefined'&&module.exports?require('./data.js'):root.TCMData;
+  const L=D.L;
+  const names=['林','陈','王','李','周','苏','吴','赵','黄','许','张','刘'];
+  const namePinyin=['Lín','Chén','Wáng','Lǐ','Zhōu','Sū','Wú','Zhào','Huáng','Xǔ','Zhāng','Liú'];
+  function hash(s){let n=2166136261;for(const c of String(s)){n^=c.charCodeAt(0);n=Math.imul(n,16777619);}return n>>>0;}
+  function rng(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function shuffle(list,seed){const a=[...list],r=typeof seed==='function'?seed:rng(hash(seed));for(let i=a.length-1;i>0;i--){let j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function join(ids){return L(ids.map(x=>D.terms[x].zh).join('，'),ids.map(x=>D.terms[x].py).join(', '),ids.map(x=>D.terms[x].th).join(' • '),ids.map(x=>D.terms[x].en).join('; '));}
+  const negatives={
+    yin:L('没有明显的口舌生疮。','Méiyǒu míngxiǎn de kǒushé shēngchuāng.','ไม่มีแผลในปากหรือลิ้นเด่นชัด','No prominent mouth or tongue ulcers.'),
+    qi:L('没有明显的口苦或口舌生疮。','Méiyǒu míngxiǎn de kǒukǔ huò kǒushé shēngchuāng.','ไม่มีปากขมหรือแผลในปากเด่นชัด','No prominent bitter taste or mouth ulcers.'),
+    blood:L('没有明显的自汗。','Méiyǒu míngxiǎn de zìhàn.','ไม่มีเหงื่อออกเองเด่นชัด','No prominent spontaneous sweating.'),
+    yang:L('没有明显的口渴喜冷饮。','Méiyǒu míngxiǎn de kǒukě xǐ lěngyǐn.','ไม่มีอาการกระหายน้ำและอยากดื่มเย็นเด่น','No prominent thirst with preference for cold drinks.'),
+    cold:L('没有明显的口渴喜冷饮。','Méiyǒu míngxiǎn de kǒukě xǐ lěngyǐn.','ไม่มีอาการกระหายน้ำและอยากดื่มเย็นเด่น','No prominent thirst with preference for cold drinks.'),
+    heat:L('没有明显的腰膝酸软。','Méiyǒu míngxiǎn de yāoxī suānruǎn.','ไม่มีเอวเข่าเมื่อยอ่อนแรงเด่น','No prominent soreness or weakness of the lower back and knees.'),
+    stasis:L('不是游走不定的疼痛。','Bú shì yóuzǒu bù dìng de téngtòng.','ไม่ได้ปวดเคลื่อนตำแหน่งไปเรื่อย ๆ','The pain does not migrate.'),
+    food:L('这次不适和进食有关系。','Zhè cì bùshì hé jìnshí yǒu guānxi.','ครั้งนี้อาการสัมพันธ์กับอาหาร','This episode is related to eating.'),
+    essence:L('这些症状是慢慢出现的。','Zhèxiē zhèngzhuàng shì mànmàn chūxiàn de.','อาการเหล่านี้ค่อย ๆ เกิดขึ้น','These symptoms developed gradually.'),
+    'external-cold':L('没有明显的咽喉肿痛。','Méiyǒu míngxiǎn de yānhóu zhǒngtòng.','ไม่มีเจ็บคอบวมเด่นชัด','No prominent swollen sore throat.'),
+    'external-heat':L('没有大量清稀白痰。','Méiyǒu dàliàng qīngxī bái tán.','ไม่มีเสมหะขาวใสเหลวปริมาณมาก','No abundant thin white sputum.'),
+    phlegm:L('没有明显的口舌生疮。','Méiyǒu míngxiǎn de kǒushé shēngchuāng.','ไม่มีแผลในปากหรือลิ้นเด่นชัด','No prominent mouth or tongue ulcers.'),
+    dry:L('没有痰多清稀的表现。','Méiyǒu tán duō qīngxī de biǎoxiàn.','ไม่ได้มีเสมหะใสเหลวปริมาณมาก','No abundant thin sputum.'),
+    dampheat:L('不以怕冷为主要不适。','Bù yǐ pà lěng wéi zhǔyào bùshì.','ความหนาวไม่ใช่อาการเด่น','Cold intolerance is not the main complaint.'),
+    'qi-stag':L('不是固定的针刺样疼痛。','Bú shì gùdìng de zhēncì yàng téngtòng.','ไม่ใช่อาการปวดแทงตำแหน่งเดิม','The pain is not fixed and stabbing.')
+  };
+  const featureIds={
+    1:['falling','dreams','waking','restless','insomnia'],
+    2:['loose','dawn','urgentstool','sourstool','diarrhea','abdominal'],
+    3:['heavyhead','headDistend','vertigo','dizzy','blurred'],
+    4:['thinwhite','yellowphlegm','drycough','scantphlegm','weakcough','phlegm','cough','severecough'],
+    5:['coldepi','epidistend','dullepi','burningepi','epifull'],
+    6:['chestheavy','severeChest','chestback','chestdistend','chestpain','tightchest'],
+    7:['flankdistend','flankburn','flankstab'],
+    8:['coldabd','dullabd','abdDistend','stabbing','lowercold'],
+    9:['neck','headDistend','dullhead','stabhead'],
+    10:['awakesweat','sleepsweat','spontaneous','nightsweat'],
+    11:['awakesweat','sleepsweat','yellowsweat','stained'],
+    12:['palp','breath','fright','tightchest','chestpain'],
+    13:['afterbloat','epifull','bloating','coldabd','epidistend'],
+    14:['loudEar','longEar','roar','cicada','hearing'],
+    15:['fatigue','heavy','pale'],
+    16:['appetite','epifull','stuffy','nausea']
+  };
+  const catalogue=[];
+  for(const group of D.groups)for(const pid of group.patternIds)for(let variant=0;variant<3;variant++){
+    const p=D.patterns[pid],id=`g${String(group.id).padStart(2,'0')}-${pid}-${variant+1}`,seed=hash(id),idx=seed%names.length;
+    let features=featureIds[group.id].filter(x=>p.symptoms.includes(x)).slice(0,2);
+    if(!features.length)features=p.symptoms.slice(0,2);
+    let extras=p.symptoms.filter(x=>!p.keys.includes(x)&&!features.includes(x));
+    if(variant)extras=extras.filter((_,i)=>i%2===variant-1);
+    let present=[...new Set([...features,...p.keys,...extras])];
+    const mods=present.filter(x=>D.modifiers.has(x));
+    const associated=present.filter(x=>!features.includes(x)&&!mods.includes(x));
+    const tempo=['external-cold','external-heat','food','cold','dry'].includes(p.kind)?'acute':p.kind==='qi-stag'?'episodic':'chronic';
+    catalogue.push({id,groupId:group.id,patternId:pid,variant,seed,features,present,mods,associated,
+      duration:D.durations[tempo][variant],age:22+seed%49,sex:seed%2?'female':'male',
+      patient:L(names[idx]+(seed%2?'女士':'先生'),namePinyin[idx]+(seed%2?' nǚshì':' xiānsheng'),'คุณ'+namePinyin[idx],(seed%2?'Ms. ':'Mr. ')+namePinyin[idx]),
+      negative:variant===2?negatives[p.kind]:null,
+      style:['Core presentation','Focused history','Differential clues'][variant]
+    });
+  }
+  const caseById=Object.fromEntries(catalogue.map(c=>[c.id,c]));
+  const stepDefs=[
+    {id:'open',label:'เปิดการสนทนา',en:'Chief complaint',goal:'เริ่มด้วยคำถามปลายเปิด เพื่อทราบอาการสำคัญ'},
+    {id:'duration',label:'ระยะเวลา',en:'Timeline',goal:'ค้นระยะเวลาและลักษณะการเริ่มมีอาการ'},
+    {id:'features',label:'ลักษณะอาการ',en:'Character',goal:'เจาะลักษณะอาการสำคัญก่อนหาตัวแยก'},
+    {id:'modifiers',label:'ปัจจัยกระตุ้น',en:'Modifiers',goal:'ค้นสิ่งที่ทำให้อาการมากขึ้นหรือลดลง'},
+    {id:'associated',label:'อาการร่วม',en:'Associated clues',goal:'ค้นอาการร่วมที่ช่วยแยกกลุ่มอาการ'},
+    {id:'tongue',label:'ตรวจลิ้น',en:'Tongue',goal:'ขออนุญาตดูลิ้นและฝ้าลิ้น'},
+    {id:'pulse',label:'ตรวจชีพจร',en:'Pulse',goal:'ขออนุญาตจับชีพจรเพื่อประกอบภาพรวม'}
+  ];
+  const bads={
+    assume:{id:'assume',...L('您一定是上火了，对吧？','Nín yídìng shì shànghuǒ le, duì ba?','คุณต้องเป็นเพราะร้อนในแน่ ๆ ใช่ไหมครับ','It must be internal heat, right?'),why:'เป็นคำถามชี้นำและสรุปสาเหตุก่อนเก็บข้อมูล'},
+    treat:{id:'treat',...L('先不用问了，直接决定治疗吧。','Xiān bú yòng wèn le, zhíjiē juédìng zhìliáo ba.','ไม่ต้องซักก่อน ตัดสินใจรักษาเลยครับ','Skip the history and decide treatment immediately.'),why:'ยังมีข้อมูลไม่พอสำหรับการวิเคราะห์ ไม่ควรข้ามประวัติ'},
+    ignore:{id:'ignore',...L('舌象和脉象都不需要看。','Shéxiàng hé màixiàng dōu bù xūyào kàn.','ไม่ต้องดูลิ้นและชีพจรก็ได้ครับ','There is no need to assess tongue or pulse.'),why:'ข้ามหลักฐานที่เป็นส่วนหนึ่งของการสอบนี้'},
+    force:{id:'force',...L('不需要征求同意，马上检查。','Bù xūyào zhēngqiú tóngyì, mǎshàng jiǎnchá.','ตรวจทันทีโดยไม่ขออนุญาตครับ','Examine without asking permission.'),why:'ควรอธิบายและขออนุญาตก่อนตรวจ'}
+  };
+  function getCase(id){return typeof id==='string'&&Object.hasOwn(caseById,id)?caseById[id]:null;}
+  function getPattern(c){return D.patterns[c.patternId];}
+  function getGroup(c){return D.groups.find(g=>g.id===c.groupId);}
+  function newSession(caseId,mode='practice'){
+    if(!getCase(caseId))throw Error('Unknown case');
+    return{caseId,mode,stage:0,cleared:false,score:100,errors:0,hints:0,failedChoices:[],hinted:false,revealed:[],log:[],completed:false,startedAt:Date.now(),endedAt:null};
+  }
+  function questionFor(c,step){const p=getPattern(c);return step==='features'?getGroup(c).feature:step==='associated'?p.focus:step;}
+  const focusGoals={kidney:'สำรวจเอวเข่า หู และความจำ เพื่อค้นอาการที่สัมพันธ์กับไต',blood:'สำรวจหน้าซีด เวียนหัว และใจสั่น เพื่อประเมินการหล่อเลี้ยง',qi:'สำรวจกำลังร่างกาย การหายใจ และเหงื่อ เพื่อค้นอาการชี่พร่อง',yin:'สำรวจเหงื่อขณะหลับ ความร้อนฝ่ามือฝ่าเท้า และปากแห้ง',phlegm:'สำรวจแน่นอก คลื่นไส้ เสมหะ และความหนักตัว',fire:'สำรวจอาการร้อน ปาก ตา และการกระหายน้ำ',cold:'สำรวจความหนาว มือเท้าเย็น และการตอบสนองต่อความอุ่น',food:'สำรวจเรอเหม็น น้ำเปรี้ยวย้อน และลักษณะอุจจาระ',emotion:'สำรวจความสัมพันธ์กับอารมณ์ แน่นชายโครง เรอ และถอนหายใจ',stasis:'สำรวจอาการปวดแทง ตำแหน่งคงที่ และเวลากลางคืน',water:'สำรวจอาการบวม ปัสสาวะ และความหนาว',dampheat:'สำรวจปากขมปากเหนียว หนักตัว และสีปัสสาวะ',dry:'สำรวจความแห้งของคอ จมูก ปาก และผิว',genital:'สำรวจแนวปวดร้าวจากท้องน้อยไปขาหนีบหรืออวัยวะเพศ'};
+  function getStep(s){if(s.completed)return{id:'complete',label:'ผ่านเคสแล้ว',index:8};if(s.stage===7)return{id:'diagnosis',label:'วินิจฉัยกลุ่มอาการ',en:'Pattern differentiation',index:7,goal:'เลือก证型ที่อธิบายหลักฐานรวมได้ดีที่สุด'};const step={...stepDefs[s.stage],index:s.stage};if(step.id==='associated')step.goal=focusGoals[getPattern(getCase(s.caseId)).focus]||step.goal;return step;}
+  function options(s){
+    const c=getCase(s.caseId),step=getStep(s);if(step.id==='complete')return[];
+    if(step.id==='diagnosis')return shuffle(getGroup(c).patternIds.map(id=>({id,...D.patterns[id].name})),c.id+'dx');
+    const right=questionFor(c,step.id);let distractors;
+    if(step.id==='open')distractors=[D.questions.fire,D.questions.stool,bads.assume];
+    else if(step.id==='duration')distractors=[D.questions.modifiers,D.questions.tongue,bads.treat];
+    else if(step.id==='tongue')distractors=[D.questions.pulse,bads.force,bads.ignore];
+    else if(step.id==='pulse')distractors=[D.questions.tongue,bads.ignore,bads.treat];
+    else{
+      const pool=Object.values(D.questions).filter(q=>!['open','duration','modifiers','tongue','pulse',right,getGroup(c).feature,getPattern(c).focus].includes(q.id));
+      distractors=shuffle(pool,c.id+step.id).slice(0,2).concat(bads.assume);
+    }
+    return shuffle([D.questions[right],...distractors],c.id+step.id+'order');
+  }
+  function answerText(c,step){
+    const p=getPattern(c),g=getGroup(c);
+    if(step==='open')return L('主要是'+g.name.zh.replace(/（.*）/g,'')+'。','Zhǔyào shì '+g.name.py.replace(/\(.*\)/g,'')+'.','อาการสำคัญคือ '+g.name.th,'My main complaint is '+g.name.en.toLowerCase()+'.');
+    if(step==='duration')return c.duration;
+    if(step==='features')return join(c.features);
+    if(step==='modifiers')return c.mods.length?join(c.mods):L('目前没有提供更明确的加重或缓解因素。','Mùqián méiyǒu tígōng gèng míngquè de jiāzhòng huò huǎnjiě yīnsù.','โจทย์ไม่ได้ระบุปัจจัยกระตุ้นหรือบรรเทาที่ชัดเจนเพิ่มเติม','No further clear aggravating or relieving factors are specified in this case.');
+    if(step==='associated')return join(c.associated.length?c.associated:p.keys);
+    if(step==='tongue')return D.tongues[p.tongue];
+    return D.pulses[p.pulse];
+  }
+  function penalize(s,n){s.score=Math.max(0,s.score-n);s.errors++;}
+  function chooseQuestion(s,id){
+    if(s.completed||s.stage>=7||s.cleared)return{ok:false,blocked:true};
+    const offered=options(s).find(x=>x.id===id);if(!offered||s.failedChoices.includes(id))return{ok:false,blocked:true};
+    const c=getCase(s.caseId),step=getStep(s),right=questionFor(c,step.id);
+    if(id!==right){penalize(s,8);s.failedChoices.push(id);const reason=offered.why&&bads[id]?offered.why:'คำถามนี้อาจมีประโยชน์ในประวัติเต็ม แต่ยังไม่ตอบเป้าหมายของรอบนี้: '+step.goal;s.log.push({type:'question-error',stage:step.id,selected:id,reason});return{ok:false,penalty:8,reason};}
+    s.cleared=true;const text=answerText(c,step.id),record={step:step.id,label:step.label,text};
+    if(step.id==='associated'&&c.negative)record.negative=c.negative;
+    s.revealed.push(record);s.log.push({type:'question-correct',stage:step.id,selected:id});
+    return{ok:true,text,negative:record.negative||null,reason:D.questions[right].why};
+  }
+  function advance(s){if(!s.cleared||s.completed||s.stage>=7)return false;s.stage++;s.cleared=false;s.failedChoices=[];s.hinted=false;return true;}
+  function hint(s){if(s.completed||s.cleared||s.hinted)return null;s.hinted=true;s.hints++;s.score=Math.max(0,s.score-5);const c=getCase(s.caseId);return s.stage===7?c.patternId:questionFor(c,getStep(s).id);}
+  function wrongDiagnosis(c,selected){
+    const p=getPattern(c),other=D.patterns[selected],available=new Set(c.present),missing=other.keys.filter(x=>!available.has(x));
+    const collected=p.keys.filter(x=>available.has(x));
+    return 'คำตอบที่เลือกมักต้องพิจารณา '+join(other.keys).th+' แต่ในเคสนี้หลักฐานเด่นคือ '+join(collected).th+(missing.length?' และยังไม่มีหลักฐานสนับสนุน '+join(missing).th:'')+' จึงควรชั่งน้ำหนักอาการร่วมกับลิ้นและชีพจรใหม่ ไม่ใช่เลือกจากอาการสำคัญเพียงข้อเดียว';
+  }
+  function diagnose(s,id){
+    if(s.stage!==7||s.completed||s.revealed.length!==7)return{ok:false,blocked:true};
+    const c=getCase(s.caseId),g=getGroup(c);if(!g.patternIds.includes(id)||s.failedChoices.includes(id))return{ok:false,blocked:true};
+    if(id!==c.patternId){penalize(s,15);s.failedChoices.push(id);let reason=wrongDiagnosis(c,id);s.log.push({type:'diagnosis-error',selected:id,reason});return{ok:false,penalty:15,reason};}
+    s.completed=true;s.endedAt=Date.now();s.log.push({type:'diagnosis-correct',selected:id});return{ok:true,reason:getPattern(c).why,stars:stars(s)};
+  }
+  function stars(s){return s.score>=90&&s.hints===0?3:s.score>=65?2:1;}
+  function formula(c){
+    const p=getPattern(c),t=D.tongues[p.tongue],u=D.pulses[p.pulse],e=join([...new Set([...c.features,...p.keys])]);
+    let zh=p.name.zh,py=p.name.py;
+    if(zh.includes('（')){zh=zh.match(/（(.+)）/)[1];py=py.match(/\((.+)\)/)[1];}
+    return L('初步辨证为'+zh+'。依据是：'+e.zh+'，'+t.zh+'，'+u.zh+'。','Chūbù biànzhèng wéi '+py+'. Yījù shì: '+e.py+', '+t.py+', '+u.py+'.','เบื้องต้นวิเคราะห์เป็น '+p.name.th+' หลักฐานคือ '+e.th+' • '+t.th+' • '+u.th,'My preliminary pattern is '+p.name.en+'. Supporting evidence: '+e.en+'; '+t.en+'; '+u.en+'.');
+  }
+  function contrast(a,b){const p=D.patterns[a],q=D.patterns[b];return{shared:p.symptoms.filter(x=>q.symptoms.includes(x)),onlyA:p.keys.filter(x=>!q.symptoms.includes(x)),onlyB:q.keys.filter(x=>!p.symptoms.includes(x))};}
+  function randomQueue({groupId=0,count=5,weakIds=[],seed=Date.now()}={}){
+    const pool=catalogue.filter(c=>!groupId||c.groupId===Number(groupId));
+    const shuffled=shuffle(pool,seed);const prioritized=weakIds.length?shuffled.filter(c=>weakIds.includes(c.patternId)).concat(shuffled.filter(c=>!weakIds.includes(c.patternId))):shuffled;
+    const chosen=[],seen=new Set();for(const c of prioritized)if(!seen.has(c.patternId)){chosen.push(c.id);seen.add(c.patternId);if(chosen.length===count)return chosen;}
+    for(const c of prioritized)if(!chosen.includes(c.id)){chosen.push(c.id);if(chosen.length===count)break;}return chosen;
+  }
+  function validSession(s){
+    if(!s||!getCase(s.caseId)||!['practice','exam'].includes(s.mode)||!Number.isInteger(s.stage)||s.stage<0||s.stage>7||!Number.isFinite(s.score)||s.score<0||s.score>100)return false;
+    if(!Array.isArray(s.revealed)||!Array.isArray(s.failedChoices)||!Array.isArray(s.log)||s.revealed.length!==s.stage+(s.cleared?1:0)||typeof s.completed!=='boolean'||typeof s.cleared!=='boolean')return false;
+    if(s.completed&&(s.stage!==7||s.cleared))return false;
+    if(!Number.isInteger(s.errors)||s.errors<0||!Number.isInteger(s.hints)||s.hints<0||!Number.isFinite(s.startedAt))return false;
+    return s.revealed.every((r,i)=>r&&stepDefs[i]&&r.step===stepDefs[i].id&&r.text&&['zh','py','th','en'].every(k=>typeof r.text[k]==='string'));
+  }
+  const api={catalogue,caseById,stepDefs,shuffle,hash,getCase,getPattern,getGroup,newSession,getStep,options,chooseQuestion,advance,hint,diagnose,stars,formula,join,contrast,randomQueue,validSession};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;root.ClinicEngine=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+/* Original dependency-free WebGL clinic. All meshes are created locally. */
+(function(root){
+  'use strict';
+  const mul=(a,b)=>{let o=new Float32Array(16);for(let c=0;c<4;c++)for(let r=0;r<4;r++)o[c*4+r]=a[r]*b[c*4]+a[4+r]*b[c*4+1]+a[8+r]*b[c*4+2]+a[12+r]*b[c*4+3];return o;};
+  const norm=a=>{let n=Math.hypot(...a)||1;return a.map(v=>v/n);};
+  const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+  function look(eye,at){let z=norm(eye.map((v,i)=>v-at[i])),x=norm(cross([0,1,0],z)),y=cross(z,x);return new Float32Array([x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-x.reduce((s,v,i)=>s+v*eye[i],0),-y.reduce((s,v,i)=>s+v*eye[i],0),-z.reduce((s,v,i)=>s+v*eye[i],0),1]);}
+  function ortho(l,r,b,t,n,f){return new Float32Array([2/(r-l),0,0,0,0,2/(t-b),0,0,0,0,-2/(f-n),0,-(r+l)/(r-l),-(t+b)/(t-b),-(f+n)/(f-n),1]);}
+  function model(p,s,ry=0,rz=0){let c=Math.cos(ry),t=Math.sin(ry),d=Math.cos(rz),e=Math.sin(rz);return new Float32Array([c*d*s[0],e*s[0],-t*d*s[0],0,-c*e*s[1],d*s[1],t*e*s[1],0,t*s[2],0,c*s[2],0,...p,1]);}
+  function normal(m){const a=m[0],b=m[4],c=m[8],d=m[1],e=m[5],f=m[9],g=m[2],h=m[6],i=m[10];const det=a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g),v=1/(det||1);return new Float32Array([(e*i-f*h)*v,(b*-i+c*h)*v,(b*f-c*e)*v,(f*g-d*i)*v,(a*i-c*g)*v,(c*d-a*f)*v,(d*h-e*g)*v,(b*g-a*h)*v,(a*e-b*d)*v]);}
+  function rgb(hex){return[(hex>>16&255)/255,(hex>>8&255)/255,(hex&255)/255];}
+  function boxGeo(){let p=[],n=[];const faces=[[[1,0,0],[[.5,-.5,-.5],[.5,.5,-.5],[.5,.5,.5],[.5,-.5,.5]]],[[-1,0,0],[[-.5,-.5,.5],[-.5,.5,.5],[-.5,.5,-.5],[-.5,-.5,-.5]]],[[0,1,0],[[-.5,.5,-.5],[-.5,.5,.5],[.5,.5,.5],[.5,.5,-.5]]],[[0,-1,0],[[-.5,-.5,.5],[-.5,-.5,-.5],[.5,-.5,-.5],[.5,-.5,.5]]],[[0,0,1],[[.5,-.5,.5],[.5,.5,.5],[-.5,.5,.5],[-.5,-.5,.5]]],[[0,0,-1],[[-.5,-.5,-.5],[-.5,.5,-.5],[.5,.5,-.5],[.5,-.5,-.5]]]];for(const [nn,v]of faces)for(const j of[0,1,2,0,2,3]){p.push(...v[j]);n.push(...nn);}return{p,n};}
+  function sphereGeo(seg=18,rings=12){let p=[],n=[];const v=(u,j)=>{let a=u/seg*Math.PI*2,b=j/rings*Math.PI;return[Math.sin(b)*Math.cos(a),Math.cos(b),Math.sin(b)*Math.sin(a)];};for(let i=0;i<seg;i++)for(let j=0;j<rings;j++){let a=v(i,j),b=v(i+1,j),c=v(i+1,j+1),d=v(i,j+1);for(const w of[a,b,c,a,c,d]){p.push(...w);n.push(...w);}}return{p,n};}
+  function cylinderGeo(){let p=[],n=[],N=20;for(let k=0;k<N;k++){let a=k/N*2*Math.PI,b=(k+1)/N*2*Math.PI,pa=[Math.cos(a),-.5,Math.sin(a)],pb=[Math.cos(b),-.5,Math.sin(b)],pc=[pb[0],.5,pb[2]],pd=[pa[0],.5,pa[2]];for(const w of[pa,pb,pc,pa,pc,pd]){p.push(...w);n.push(w[0],0,w[2]);}for(const [y,nn,verts]of[[.5,[0,1,0],[[0,.5,0],pd,pc]],[-.5,[0,-1,0],[[0,-.5,0],pb,pa]]])for(const w of verts){p.push(...w);n.push(...nn);}}return{p,n};}
+  function torusGeo(){let p=[],n=[],N=32,M=7,v=(i,j)=>{let a=i/N*Math.PI*2,b=j/M*Math.PI*2;return{p:[(1+.1*Math.cos(b))*Math.cos(a),(1+.1*Math.cos(b))*Math.sin(a),.1*Math.sin(b)],n:[Math.cos(b)*Math.cos(a),Math.cos(b)*Math.sin(a),Math.sin(b)]};};for(let i=0;i<N;i++)for(let j=0;j<M;j++)for(const w of[v(i,j),v(i+1,j),v(i+1,j+1),v(i,j),v(i+1,j+1),v(i,j+1)]){p.push(...w.p);n.push(...w.n);}return{p,n};}
+  class Clinic3D{
+    constructor(canvas){
+      this.canvas=canvas;this.yaw=.68;this.drag=0;this.zoom=1;this.target=[0,1.4,0];this.view='room';this.motion=true;this.active=true;this.mood='idle';this.tick=0;this.avatarIndex=0;this.items=[];this.geos={};this.disposed=false;
+      const gl=canvas.getContext('webgl',{antialias:true,alpha:true,powerPreference:'low-power'});this.gl=gl;this.software=!gl;
+      this.meshData={box:boxGeo(),sphere:this.software?sphereGeo(12,8):sphereGeo(),cylinder:cylinderGeo(),torus:torusGeo()};
+      if(this.software){this.ctx=canvas.getContext('2d');if(!this.ctx)throw Error('Canvas unavailable');}else{
+      const vs=`attribute vec3 aPosition;attribute vec3 aNormal;uniform mat4 uModel;uniform mat4 uVP;uniform mat3 uNormal;varying vec3 vNormal;varying vec3 vWorld;void main(){vec4 w=uModel*vec4(aPosition,1.0);vNormal=normalize(uNormal*aNormal);vWorld=w.xyz;gl_Position=uVP*w;}`;
+      const fs=`precision mediump float;uniform vec3 uColor;uniform float uAlpha;varying vec3 vNormal;varying vec3 vWorld;void main(){vec3 n=normalize(vNormal);float light=max(dot(n,normalize(vec3(-3.0,7.0,5.0))),0.0);float side=max(dot(n,normalize(vec3(4.0,3.0,-3.0))),0.0);vec3 col=uColor*(0.69+0.25*light+0.08*side);col=mix(col,vec3(0.89,0.94,0.91),clamp((length(vWorld)-2.5)*0.018,0.0,0.09));gl_FragColor=vec4(col,uAlpha);}`;
+      const shader=(type,code)=>{let s=gl.createShader(type);gl.shaderSource(s,code);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;};
+      let v=shader(gl.VERTEX_SHADER,vs),f=shader(gl.FRAGMENT_SHADER,fs),program=gl.createProgram();gl.attachShader(program,v);gl.attachShader(program,f);gl.linkProgram(program);gl.deleteShader(v);gl.deleteShader(f);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);this.program=program;
+      this.loc={};for(const k of['aPosition','aNormal'])this.loc[k]=gl.getAttribLocation(program,k);for(const k of['uModel','uVP','uNormal','uColor','uAlpha'])this.loc[k]=gl.getUniformLocation(program,k);
+      for(const [k,geo]of Object.entries(this.meshData)){
+        const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);const data=[];for(let i=0;i<geo.p.length;i+=3)data.push(...geo.p.slice(i,i+3),...geo.n.slice(i,i+3));gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.STATIC_DRAW);this.geos[k]={buffer:b,count:geo.p.length/3};
+      }
+      gl.enable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.clearColor(0,0,0,0);}
+      this.build();this.dirty=true;this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas.parentElement);
+      this.onDown=e=>{this.drag=e.clientX;this.isDown=true;canvas.setPointerCapture?.(e.pointerId);};
+      this.onMove=e=>{if(this.isDown){this.yaw=Math.max(.05,Math.min(1.35,this.yaw+(e.clientX-this.drag)*.006));this.drag=e.clientX;this.dirty=true;}};
+      this.onUp=()=>{this.isDown=false;};canvas.addEventListener('pointerdown',this.onDown);canvas.addEventListener('pointermove',this.onMove);canvas.addEventListener('pointerup',this.onUp);canvas.addEventListener('pointercancel',this.onUp);
+      canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();this.active=false;canvas.dispatchEvent(new CustomEvent('scene-unavailable',{bubbles:true}));});
+      this.animate=t=>{if(this.disposed)return;this.frame=requestAnimationFrame(this.animate);if(t-this.tick<(this.software?160:33)||!this.active||document.hidden||!canvas.clientWidth||((!this.motion||this.software)&&!this.dirty))return;this.tick=t;this.render(t/1000);};this.resize();this.frame=requestAnimationFrame(this.animate);
+    }
+    add(geo,p,s,color,ry=0,rz=0,parent=null,extra={}){let obj={geo,p,s,color:rgb(color),ry,rz,parent,alpha:1,...extra};this.items.push(obj);return obj;}
+    box(p,s,c,ry=0,rz=0,parent=null){return this.add('box',p,s,c,ry,rz,parent);}
+    ball(p,s,c,parent=null){return this.add('sphere',p,s,c,0,0,parent);}
+    cyl(p,s,c,parent=null){return this.add('cylinder',p,s,c,0,0,parent);}
+    build(){
+      const cream=0xf5f0df,wood=0xd6b88a,jade=0x82b8a6,dark=0x244d44;
+      this.box([0,-.16,0],[5.6,.32,4.7],0xd0dacc);this.box([0,.025,0],[5.5,.08,4.6],0xede8d9);
+      for(let x=-2.3;x<=2.4;x+=.8)this.box([x,.072,0],[.012,.008,4.55],0xdcdacb);
+      for(let z=-2;z<=2.2;z+=.8)this.box([0,.072,z],[5.45,.008,.012],0xdcdacb);
+      this.box([0,1.5,-2.3],[5.6,3,.13],cream);this.box([-2.73,1.5,0],[.13,3,4.7],0xe1ebe0);
+      this.box([0,.16,-2.2],[5.5,.16,.08],0xadc6b6);this.box([-2.63,.16,0],[.08,.16,4.6],0xadc6b6);
+      // Round clinic sign. A simple cross stays legible from every language.
+      this.cyl([-2.58,2.2,.4],[.38,.035,.38],0xe8eee4);
+      this.box([-2.52,2.2,.4],[.06,.4,.11],0x5c9887);this.box([-2.51,2.2,.4],[.07,.11,.4],0x5c9887);
+      // Window, sky, sun and distant soft hills.
+      this.box([.98,1.92,-2.2],[2.3,1.7,.12],wood);this.box([.98,1.92,-2.11],[2.12,1.52,.04],0xc9e3db);
+      this.ball([1.56,2.28,-2.045],[.2,.2,.025],0xf7dca2);
+      this.ball([.4,1.47,-2.055],[.7,.25,.025],0xa8c9b0);this.ball([1.4,1.45,-2.05],[.8,.3,.025],0x8bb39b);
+      this.box([.98,1.92,-2.0],[.055,1.6,.1],0xf9f4e8);this.box([.98,1.9,-1.99],[2.15,.055,.1],0xf9f4e8);
+      this.box([.98,1.12,-1.92],[2.45,.1,.35],cream);
+      // Apothecary drawers.
+      this.box([-1.65,.85,-1.79],[1.45,1.6,.65],wood);this.box([-1.65,1.69,-1.78],[1.57,.1,.75],0xe5cca1);
+      for(let row=0;row<4;row++)for(let col=0;col<3;col++){
+        let x=-2.12+col*.47,y=.25+row*.36;this.box([x,y,-1.44],[.435,.32,.035],row%2?0xdabf94:0xe5ceaa);
+        this.box([x,y+.04,-1.407],[.12,.05,.012],0xf4e4c3);this.ball([x,y-.055,-1.39],[.025,.022,.018],0x9c8358);
+      }
+      for(let i=0;i<3;i++){this.cyl([-2.12+i*.43,1.89,-1.78],[.13,.32,.13],i===1?0xa7c2a7:0xc8b48e);this.cyl([-2.12+i*.43,2.07,-1.78],[.14,.05,.14],0x8d9471);this.box([-2.12+i*.43,1.9,-1.64],[.12,.11,.012],0xf4e9cd);}
+      // Warm rug and table.
+      this.cyl([.05,.085,.6],[1.75,.018,1.25],0xc1d9c8);
+      this.box([-.2,.95,.25],[2,.16,1],0xf3dec1);this.box([-.2,.83,.25],[1.94,.12,.94],wood);
+      for(let x of[-.98,.58])for(let z of[-.06,.57])this.box([x,.46,z],[.1,.85,.1],wood);
+      this.box([-.2,.69,.25],[1.65,.29,.75],jade);this.box([-.2,.69,.65],[1.56,.24,.02],0x90bdac);
+      // Monitor, keyboard, paper, cup and pulse cushion.
+      this.box([-.71,1.28,.15],[.64,.46,.07],dark,0);this.box([-.71,1.29,.194],[.55,.36,.012],0xd2ece4);
+      this.box([-.71,1.04,.14],[.08,.18,.09],0x456c60);this.box([-.71,1.007,.2],[.4,.025,.26],0x456c60);
+      this.box([-.72,1.044,.52],[.53,.025,.17],0xe0e7dc);for(let i=0;i<5;i++)this.box([-.92+i*.1,1.061,.52],[.06,.006,.05],0xa3beb0);
+      for(let i=0;i<7;i++)this.box([-.94+i*.075,1.29+Math.sin(i*2)*.08,.21],[.02,.018,.006],0x59a88c);
+      this.box([.06,1.044,.3],[.33,.018,.4],0xfffcf1,-.2);for(let i=0;i<4;i++)this.box([.04,1.056,.19+i*.065],[.21,.004,.012],0xb5c7b5,-.2);
+      this.cyl([.5,1.13,.22],[.09,.19,.09],0xe1bc99);this.cyl([.5,1.232,.22],[.072,.006,.072],0x79634c);
+      this.pulsePad=this.box([.46,1.09,.57],[.41,.11,.21],0x96c5b5);
+      // Lamp.
+      this.cyl([.54,1.057,-.05],[.14,.04,.14],dark);this.box([.54,1.34,-.05],[.035,.56,.035],dark);this.ball([.54,1.64,-.05],[.23,.14,.2],0xe3c78f);
+      // Chairs and avatars.
+      this.chair(-.95,-.5,jade);this.chair(1.24,.8,0xcaa177);
+      this.doctor={p:[-.95,0,-.5],ry:.08,bob:0};this.patient={p:[1.24,0,.8],ry:-.2,bob:0};
+      this.avatar(this.doctor,0xf8f7ec,true);this.avatar(this.patient,0xd88d75,false);
+      // Side table with books.
+      this.box([2.07,.52,-1.33],[.65,.9,.6],0xf1e2c6);this.box([2.07,1,-1.33],[.74,.08,.69],wood);
+      for(let i=0;i<3;i++)this.box([2.03,.16+i*.12,-.99],[.43,.09,.26],[0x9fbbae,0xd7aa87,0xe4ce9f][i],.05*i);
+      this.plant([2.08,1.04,-1.36],.55);this.plant([-2.16,.1,1.32],.96);
+      // Framed scroll and soft pendant.
+      this.box([-.48,2.26,-2.17],[.52,.8,.08],0xb69a72);this.box([-.48,2.26,-2.11],[.43,.7,.03],0xfff8e8);
+      this.box([-.48,2.3,-2.08],[.025,.33,.012],0x648b72);this.ball([-.55,2.4,-2.06],[.1,.035,.018],0x8aa889);this.ball([-.4,2.23,-2.06],[.1,.035,.018],0x8aa889);
+      this.box([1.8,2.98,.35],[.025,.55,.025],0xb9b7a0);this.ball([1.8,2.62,.35],[.34,.19,.29],0xf5d7a2);
+      // Small contact shadows on the floor.
+      for(const [x,z,rx,rz]of[[-.95,-.5,.48,.4],[1.24,.8,.47,.4],[-2.16,1.32,.4,.35],[2.07,-1.33,.45,.4]])this.add('cylinder',[x,.092,z],[rx,.005,rz],0x4c6c5c,0,0,null,{alpha:.08});
+    }
+    chair(x,z,c){this.box([x,.57,z],[.62,.15,.59],c);this.box([x,.96,z-.26],[.61,.77,.12],c);for(let i of[-1,1])for(let j of[-1,1])this.box([x+i*.22,.29,z+j*.2],[.055,.54,.055],0xad946d);}
+    avatar(parent,shirt,doctor){
+      const skin=doctor?0xf1c8a3:0xecc09b,hair=doctor?0x3e3935:0x493e38;
+      this.ball([0,1.03,.04],[.28,.4,.21],shirt,parent);this.box([0,.78,.04],[.44,.2,.32],shirt,0,0,parent);
+      for(let x of[-.15,.15]){this.box([x,.55,.17],[.18,.32,.2],doctor?0x5b8174:0x68868b,0,0,parent);this.ball([x,.28,.24],[.14,.08,.21],doctor?0xd6d7cd:0xefe4cf,parent);}
+      this.cyl([0,1.38,.04],[.09,.16,.09],skin,parent);
+      this.ball([0,1.74,0],[.355,.37,.315],hair,parent);this.ball([0,1.65,.105],[.31,.32,.285],skin,parent);
+      this.ball([-.14,1.91,.12],[.23,.15,.22],hair,parent);this.ball([.14,1.92,.1],[.2,.135,.21],hair,parent);
+      if(doctor){this.ball([-.28,1.57,-.025],[.12,.28,.2],hair,parent);this.ball([.28,1.57,-.025],[.12,.28,.2],hair,parent);}
+      for(const x of[-.11,.11]){
+        const eye=this.ball([x,1.69,.374],[.027,.039,.017],0x333b37,parent);eye.eye=true;this.ball([x+.007,1.705,.389],[.008,.01,.006],0xffffff,parent);
+        this.ball([x*1.65,1.58,.34],[.053,.022,.012],0xe8a38e,parent);this.box([x,1.76,.365],[.071,.013,.014],hair,0,x<0?.08:-.08,parent);
+      }
+      this.ball([0,1.625,.396],[.035,.028,.025],0xdfac86,parent);this.box([0,1.55,.383],[.069,.013,.01],0xa76858,0,0,parent);
+      if(doctor){
+        this.box([0,1.14,.245],[.035,.23,.025],0xe3e8df,0,0,parent);this.box([.17,1.1,.235],[.11,.09,.02],0xd5e2d5,0,0,parent);
+        this.box([-.13,1.3,.195],[.1,.2,.04],0xfcfbf4,0,-.5,parent);this.box([.13,1.3,.195],[.1,.2,.04],0xfcfbf4,0,.5,parent);
+        const st=this.add('torus',[0,1.15,.265],[.105,.14,.1],0x537b6d,0,0,parent);this.ball([.06,1,.274],[.039,.039,.012],0x8ca69b,parent);
+      }
+      this.box([-.33,1.02,.12],[.15,.42,.18],shirt,0,-.36,parent);this.ball([-.39,.83,.2],[.085,.095,.09],skin,parent);
+      this.box([.33,1.03,.13],[.15,.39,.18],shirt,0,.38,parent);this.ball([.39,.86,.22],[.085,.095,.09],skin,parent);
+      if(!doctor){this.tongue=this.ball([0,1.525,.405],[.035,.035,.035],0xe39083,parent);this.tongue.hidden=true;this.patientClothes=this.items.filter(o=>o.parent===parent&&o.color.join()==rgb(shirt).join());}
+    }
+    plant(pos,size){const [x,y,z]=pos;this.cyl([x,y+.16*size,z],[.19*size,.32*size,.19*size],0xdcb48e);this.cyl([x,y+.33*size,z],[.2*size,.05*size,.2*size],0xe3c49f);this.box([x,y+.59*size,z],[.035,.55*size,.035],0x759771);
+      for(let i=0;i<7;i++){let a=i*2.4,yy=y+(.46+i*.05)*size;let b=this.ball([x+Math.cos(a)*.15*size,yy,z+Math.sin(a)*.13*size],[.2*size,.08*size,.095*size],i%2?0x81a67c:0x628c70);b.ry=a;b.rz=.3*Math.sin(a);}}
+    resize(){const box=this.canvas.parentElement.getBoundingClientRect();if(!box.width||!box.height)return;const pr=Math.min(root.devicePixelRatio||1,this.software?1:1.6);this.canvas.width=Math.round(box.width*pr);this.canvas.height=Math.round(box.height*pr);this.gl?.viewport(0,0,this.canvas.width,this.canvas.height);this.dirty=true;}
+    setPatient(c){this.avatarIndex=c?.seed||0;const colors=[0xd88d75,0x96b5bb,0xc8ad7b,0x9aada0,0xb59ba9];for(const o of this.patientClothes||[])o.color=rgb(colors[this.avatarIndex%colors.length]);this.setView('room');}
+    setMood(m){this.mood=m;this.moodStart=this.tick/1000;this.dirty=true;}
+    setMotion(on){this.motion=on;this.dirty=true;}
+    setView(view){this.view=view;this.zoom=view==='room'?1:view==='patient'?1.55:2.3;this.target=view==='room'?[0,1.4,0]:view==='pulse'?[.8,.9,.5]:[1.05,1.3,.7];this.tongue.hidden=view!=='tongue';this.dirty=true;}
+    rotate(dir){this.yaw=Math.max(.05,Math.min(1.35,this.yaw+dir*.18));this.dirty=true;}
+    render(time){
+      const gl=this.gl;if(gl)gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);let aspect=this.canvas.width/this.canvas.height;let h=(aspect<1?3.8:3.15)/this.zoom,w=h*aspect;
+      const eye=[this.target[0]+Math.sin(this.yaw)*9,this.target[1]+5.3,this.target[2]+Math.cos(this.yaw)*9];const vp=mul(ortho(-w,w,-h,h,.1,30),look(eye,this.target));if(gl){gl.useProgram(this.program);gl.uniformMatrix4fv(this.loc.uVP,false,vp);}
+      const elapsed=time-(this.moodStart||0),moodScale=this.motion&&elapsed<.8?Math.sin(elapsed*9)*Math.exp(-elapsed*3):0;
+      this.doctor.bob=this.motion?Math.sin(time*1.7)*.012:0;this.patient.bob=(this.motion?Math.sin(time*1.7+1)*.012:0)+(this.mood==='happy'?Math.abs(moodScale)*.14:0);
+      let last=null;const faces=[];
+      for(const o of this.items){if(o.hidden)continue;let p=[...o.p];let s=o.s;
+        if(o.eye&&this.motion&&Math.sin(time*.73)>.998)s=[o.s[0],o.s[1]*.12,o.s[2]];
+        let m=model(p,s,o.ry,o.rz);if(o.parent){let gp=[...o.parent.p];gp[1]+=o.parent.bob;m=mul(model(gp,[1,1,1],o.parent.ry+(this.mood==='wrong'&&o.parent===this.patient?moodScale*.08:0)),m);}
+        if(this.software){this.projectObject(o,m,vp,eye,faces);continue;}
+        const geo=this.geos[o.geo];if(last!==o.geo){gl.bindBuffer(gl.ARRAY_BUFFER,geo.buffer);gl.enableVertexAttribArray(this.loc.aPosition);gl.enableVertexAttribArray(this.loc.aNormal);gl.vertexAttribPointer(this.loc.aPosition,3,gl.FLOAT,false,24,0);gl.vertexAttribPointer(this.loc.aNormal,3,gl.FLOAT,false,24,12);last=o.geo;}
+        gl.uniformMatrix4fv(this.loc.uModel,false,m);gl.uniformMatrix3fv(this.loc.uNormal,false,normal(m));gl.uniform3fv(this.loc.uColor,o.color);gl.uniform1f(this.loc.uAlpha,o.alpha);gl.drawArrays(gl.TRIANGLES,0,geo.count);
+      }
+      if(this.software)this.rasterize(faces);this.dirty=false;
+    }
+    projectObject(o,m,vp,eye,faces){
+      const geo=this.meshData[o.geo],nm=normal(m),mv=mul(vp,m),W=this.canvas.width,H=this.canvas.height,light=norm([-3,7,5]),side=norm([4,3,-3]);
+      const point=i=>{const x=geo.p[i],y=geo.p[i+1],z=geo.p[i+2];return[(mv[0]*x+mv[4]*y+mv[8]*z+mv[12]+1)*W/2,(1-mv[1]*x-mv[5]*y-mv[9]*z-mv[13])*H/2,mv[2]*x+mv[6]*y+mv[10]*z+mv[14]];};
+      const eyeDir=norm([eye[0]-m[12],eye[1]-m[13],eye[2]-m[14]]);
+      for(let i=0;i<geo.p.length;i+=9){let x=(geo.n[i]+geo.n[i+3]+geo.n[i+6])/3,y=(geo.n[i+1]+geo.n[i+4]+geo.n[i+7])/3,z=(geo.n[i+2]+geo.n[i+5]+geo.n[i+8])/3,n=norm([nm[0]*x+nm[3]*y+nm[6]*z,nm[1]*x+nm[4]*y+nm[7]*z,nm[2]*x+nm[5]*y+nm[8]*z]);
+        if(n.reduce((s,v,j)=>s+v*eyeDir[j],0)<-.05)continue;
+        let a=point(i),b=point(i+3),c=point(i+6);const l=.69+.25*Math.max(0,n.reduce((s,v,j)=>s+v*light[j],0))+.08*Math.max(0,n.reduce((s,v,j)=>s+v*side[j],0));
+        const color=o.color.map(v=>Math.round(v*l*255));faces.push({a,b,c,z:(a[2]+b[2]+c[2])/3,color,alpha:o.alpha});
+      }
+    }
+    rasterize(faces){
+      const ctx=this.ctx,W=this.canvas.width,H=this.canvas.height;
+      if(!this.pixels||this.pixels.width!==W||this.pixels.height!==H){this.pixels=ctx.createImageData(W,H);this.depth=new Float32Array(W*H);}
+      const bytes=this.pixels.data,depth=this.depth;bytes.fill(0);depth.fill(Infinity);
+      // The same meshes as WebGL, with a per-pixel depth buffer on CPU.
+      // Transparent contact shadows are blended only after all opaque surfaces.
+      faces.sort((a,b)=>b.alpha-a.alpha);
+      for(const f of faces){const [a,b,c]=[f.a,f.b,f.c],den=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1]);if(Math.abs(den)<.00001)continue;const inv=1/den;
+        const x0=Math.max(0,Math.floor(Math.min(a[0],b[0],c[0]))),x1=Math.min(W-1,Math.ceil(Math.max(a[0],b[0],c[0]))),y0=Math.max(0,Math.floor(Math.min(a[1],b[1],c[1]))),y1=Math.min(H-1,Math.ceil(Math.max(a[1],b[1],c[1])));
+        const da=(b[1]-c[1])*inv,db=(c[1]-a[1])*inv,dyA=(c[0]-b[0])*inv,dyB=(a[0]-c[0])*inv;
+        let rowA=((b[1]-c[1])*(x0+.5-c[0])+(c[0]-b[0])*(y0+.5-c[1]))*inv,rowB=((c[1]-a[1])*(x0+.5-c[0])+(a[0]-c[0])*(y0+.5-c[1]))*inv;
+        for(let y=y0;y<=y1;y++){let wa=rowA,wb=rowB,index=y*W+x0;for(let x=x0;x<=x1;x++,index++,wa+=da,wb+=db){const wc=1-wa-wb;if(wa<-.00001||wb<-.00001||wc<-.00001)continue;const z=wa*a[2]+wb*b[2]+wc*c[2];if(z>depth[index]+.000001)continue;const k=index*4;
+            if(f.alpha===1){depth[index]=z;bytes[k]=f.color[0];bytes[k+1]=f.color[1];bytes[k+2]=f.color[2];bytes[k+3]=255;}else{const alpha=f.alpha;bytes[k]=bytes[k]*(1-alpha)+f.color[0]*alpha;bytes[k+1]=bytes[k+1]*(1-alpha)+f.color[1]*alpha;bytes[k+2]=bytes[k+2]*(1-alpha)+f.color[2]*alpha;}
+          }rowA+=dyA;rowB+=dyB;}
+      }ctx.putImageData(this.pixels,0,0);
+    }
+    dispose(){this.disposed=true;cancelAnimationFrame(this.frame);this.resizeObserver.disconnect();if(this.gl){for(const g of Object.values(this.geos))this.gl.deleteBuffer(g.buffer);this.gl.deleteProgram(this.program);}}
+  }
+  root.Clinic3D=Clinic3D;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+(function(){
+  'use strict';
+  const D=window.TCMData,E=window.ClinicEngine,$=s=>document.querySelector(s);
+  const STORAGE='jade-clinic-v1',defaults={settings:{pinyin:true,thai:true,english:true,sound:false,motion:!matchMedia('(prefers-reduced-motion: reduce)').matches},records:{},weak:{},active:null,queue:[],queueAt:0};
+  let memoryOnly=false,saved={};try{saved=JSON.parse(localStorage.getItem(STORAGE)||'{}')||{};if(typeof saved!=='object'||Array.isArray(saved))saved={};}catch{memoryOnly=true;}
+  function cleanRecords(input){const result={};if(!input||typeof input!=='object')return result;for(const [id,r]of Object.entries(input)){if(E.getCase(id)&&r&&Number.isFinite(r.best)&&r.best>=0&&r.best<=100&&Number.isInteger(r.runs)&&r.runs>=1){result[id]={best:r.best,runs:Math.min(r.runs,100000),stars:r.stars>=1&&r.stars<=3?r.stars:1,last:typeof r.last==='string'?r.last:'',errors:Number.isInteger(r.errors)&&r.errors>=0?r.errors:0};}}return result;}
+  const state={...defaults,settings:{...defaults.settings},records:cleanRecords(saved.records),weak:{}};
+  for(const k of Object.keys(defaults.settings))if(typeof saved.settings?.[k]==='boolean')state.settings[k]=saved.settings[k];
+  for(const [id,n]of Object.entries(saved.weak||{}))if(Object.hasOwn(D.patterns,id)&&Number.isInteger(n)&&n>0)state.weak[id]=Math.min(n,10000);
+  if(E.validSession(saved.active)&&!saved.active.completed){state.active=saved.active;state.queue=Array.isArray(saved.queue)?saved.queue.filter(id=>E.getCase(id)):[];state.queueAt=Number.isInteger(saved.queueAt)?Math.max(0,Math.min(saved.queueAt,state.queue.length-1)):0;}
+  let route=location.hash.slice(2)||'home',studyGroup=1,studyTab='read',compareA=null,compareB=null,search='',caseGroup=0,caseFilter='all',casePage=0,flashIndex=0,flashRevealed=false,scene=null,lastFocus=null,feedback=null,hintId=null,chartOpen=innerWidth>720,toastTimer,speechBank={},speechId=0;
+  if(route==='clinic'&&!state.active)route='home';if(!['home','study','cases','progress','clinic'].includes(route))route='home';
+  function restoreRunUI(){const s=state.active;if(!s||s.completed)return;const c=E.getCase(s.caseId),step=E.getStep(s),last=s.log[s.log.length-1];feedback=last&&((last.type==='question-error'&&last.stage===step.id)||(last.type==='diagnosis-error'&&s.stage===7))?{ok:false,penalty:last.type==='diagnosis-error'?15:8,reason:last.reason}:null;hintId=s.hinted?(s.stage===7?c.patternId:step.id==='features'?E.getGroup(c).feature:step.id==='associated'?E.getPattern(c).focus:step.id):null;}
+  restoreRunUI();
+  function escape(t){return String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  const paths={
+    cross:'M9 3h6v6h6v6h-6v6H9v-6H3V9h6z',
+    home:'m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8',
+    book:'M12 5C9 2 4 3 3 4v15c4-1 7-1 9 1 2-2 5-2 9-1V4c-3-1-6-1-9 1Zm0 0v15',
+    cases:'M8 5V3h8v2M4 5h16v16H4zM8 10h8M8 14h8M8 18h4',
+    chart:'M4 3v18h17M8 17v-5M13 17V7M18 17V4',
+    arrow:'M5 12h14m-5-5 5 5-5 5',
+    left:'m14 5-7 7 7 7',
+    play:'m8 4 12 8-12 8z',
+    help:'M9 8a3 3 0 1 1 5 2c-2 1-2 1-2 4m0 3h.01M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0',
+    settings:'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M10 3h4l1 3 3-1 2 3-2 3 2 3-2 3-3-1-1 3h-4l-1-3-3 1-2-3 2-3-2-3 2-3 3 1z',
+    leaf:'M19 3C8 2 2 8 5 16c5 6 15 2 14-13ZM4 21 15 10',
+    check:'m5 12 4 4L20 5',
+    star:'m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z',
+    bulb:'M9 18h6m-6 3h6M8 14a6 6 0 1 1 8 0c-1 1-1 2-1 3H9c0-1 0-2-1-3',
+    volume:'M11 4 6 8H3v8h3l5 4ZM15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14',
+    moon:'M20 14A9 9 0 0 1 10 3 9 9 0 1 0 20 14Z',
+    waves:'M3 7q3-4 6 0t6 0 6 0M3 12q3-4 6 0t6 0 6 0M3 17q3-4 6 0t6 0 6 0',
+    orbit:'M20 12a8 8 0 1 1-8-8M12 8a4 4 0 1 1-4 4m4-4V4m0 4h4',
+    lungs:'M12 3v7m0-3-3 3m3-3 3 3M9 6C4 5 2 13 3 18c2 4 6 2 6-1Zm6 0c5-1 7 7 6 12-2 4-6 2-6-1Z',
+    stomach:'M12 3v6c-4-1-7 1-7 5 0 6 11 8 14 2 3-5-1-8-3-8V3',
+    heart:'M12 21 3 12C-2 5 7 0 12 7c5-7 14-2 9 5z',
+    pulse:'M2 12h5l3-8 4 16 3-8h5',
+    ribs:'M12 3v18M12 7C6 2 3 5 3 8m9 2C6 5 3 8 3 11m9 2C6 8 3 11 4 15m8-8c6-5 9-2 9 1m-9 2c6-5 9-2 9 1m-9 2c6-5 9-2 8 2',
+    head:'M8 21v-4c-6-4-5-12 1-14 8-3 13 3 11 9l2 3h-4v6h-5M8 8l3-2 3 2-3 2z',
+    drop:'M12 2C10 7 4 10 4 15a8 8 0 0 0 16 0c0-5-6-8-8-13ZM8 15c0 2 1 3 3 3',
+    ear:'M7 8a6 6 0 1 1 11 4c-3 2-3 3-3 5-1 5-7 5-8 1M10 9a3 3 0 1 1 5 2c-2 1-3 3-3 4',
+    bowl:'M3 12h18c0 6-4 8-9 8s-9-2-9-8ZM3 21h18M8 3c-2 2 2 3 0 5m5-5c-2 2 2 3 0 5m5-5c-2 2 2 3 0 5',
+    trophy:'M7 3h10v7c0 7-10 7-10 0ZM7 5H3v4c0 3 4 4 5 3m9-7h4v4c0 3-4 4-5 3m-4 3v6m-4 0h8',
+    clock:'M12 7v5l3 2M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0',
+    shield:'m12 3 8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6Zm-4 9 3 3 5-6',
+    download:'M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5',
+    repeat:'M3 8h15l-4-4m4 4-4 4M21 16H6l4 4m-4-4 4-4'
+  };
+  const icon=n=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[n]||paths.leaf}"/></svg>`;
+  function ml(t,cls=''){return`<span class="ml ${cls}"><span class="zh" lang="zh-Hans">${escape(t.zh)}</span><span class="py" lang="zh-Latn">${escape(t.py)}</span><span class="th" lang="th">${escape(t.th)}</span><span class="en" lang="en">${escape(t.en)}</span></span>`;}
+  function listen(t){let id=++speechId;speechBank[id]=t.zh;return`<button class="listen" data-action="speak" data-id="${id}" aria-label="ฟังภาษาจีน">${icon('volume')}</button>`;}
+  function reason(th,en){return`<span class="ml"><span class="th">${escape(th)}</span><span class="en">${escape(en)}</span></span>`;}
+  function toggle(key,label){return`<button class="toggle" data-action="toggle" data-key="${key}" aria-pressed="${state.settings[key]}" aria-label="${label}">${escape(label)}<i aria-hidden="true"></i></button>`;}
+  function applySettings(){document.body.classList.toggle('no-pinyin',!state.settings.pinyin);document.body.classList.toggle('no-thai',!state.settings.thai);document.body.classList.toggle('no-english',!state.settings.english);document.body.classList.toggle('reduced-motion',!state.settings.motion);scene?.setMotion(state.settings.motion);for(const btn of document.querySelectorAll('[data-action="toggle"]'))btn.setAttribute('aria-pressed',String(state.settings[btn.dataset.key]));}
+  function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(state));}catch{if(!memoryOnly)toast('อุปกรณ์นี้บันทึกความคืบหน้าไม่ได้ ใช้ปุ่มส่งออกในหน้าสถิติได้ครับ');memoryOnly=true;}}
+  function toast(text){$('#toast').textContent=text;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3500);}
+  function completedCount(groupId=0){return Object.keys(state.records).filter(id=>!groupId||E.getCase(id).groupId===groupId).length;}
+  function groupProgress(g){return Math.round(completedCount(g.id)/(g.patternIds.length*3)*100);}
+  function nav(){const items=[['home','home','คลินิก','Clinic'],['study','book','ห้องทบทวน','Study room'],['cases','cases','คลังเคส','Case library'],['progress','chart','พัฒนาการ','My progress']];return items.map(([id,ic,th,en])=>`<button data-action="nav" data-route="${id}" class="${route===id||(route==='clinic'&&id==='home')?'active':''}" aria-label="${th}" ${route===id?'aria-current="page"':''}>${icon(ic)}<span>${th}<span class="en-nav">${en}</span></span></button>`).join('');}
+  function shell(){
+    $('#app').innerHTML=`<div class="shell"><aside class="sidebar"><a href="#/home" class="brand"><span class="brandmark">${icon('cross')}</span><div><strong>Jade Clinic</strong><small>LEARN. ASK. DISCOVER.</small></div></a><p class="nav-label">YOUR CLINICAL JOURNEY</p><nav class="nav" aria-label="เมนูหลัก">${nav()}</nav><div class="sidebar-bottom"><div class="sidebar-card">${icon('leaf')}<h4>เก่งขึ้นทีละคำถาม</h4><p>16 กลุ่มอาการ · 195 เคสจำลอง<br>ฝึกอย่างเข้าใจ ตามจังหวะของคุณ</p></div><button class="side-help" data-action="guide">${icon('help')}วิธีเล่นและหลักการให้คะแนน</button></div></aside><div class="workspace"><header class="topbar"><div class="top-title">ห้องเรียนแพทย์แผนจีน<small>JADE CLINIC · INTERVIEW LAB</small></div><div class="top-settings">${toggle('pinyin','พินอิน')}${toggle('thai','คำแปลไทย')}<span class="divider"></span><button class="icon-btn help-top" data-action="guide" aria-label="วิธีเล่น">${icon('help')}</button><button class="icon-btn" data-action="settings" aria-label="ตั้งค่า">${icon('settings')}</button><span class="avatar-mini" aria-hidden="true">🌱</span></div></header><main id="content" tabindex="-1"></main></div><nav class="bottom-nav" aria-label="เมนูหลักบนมือถือ">${nav()}</nav></div>`;
+  }
+  function footer(){return`<p class="footer-note">${icon('shield')}<span>${escape(D.meta.note)} · จีน + พินอิน + ไทย + English<br>65 รายการตามหลักสูตร (56 ชื่อที่ไม่ซ้ำ) × 3 รูปแบบ รวม 195 เคสจำลอง</span></p>`;}
+  function mountScene(){const mount=$('[data-scene-mount]');if(mount){mount.append($('#scene-root'));scene?.resize();}else $('#scene-parking').append($('#scene-root'));}
+  function render({scroll=false}={}){
+    const parked=$('#scene-root');if(parked)$('#scene-parking').append(parked);speechBank={};speechId=0;
+    if(!$('#content'))shell();
+    const html=route==='study'?study():route==='cases'?cases():route==='progress'?progress():route==='clinic'?clinic():home();
+    $('#content').innerHTML=html;mountScene();applySettings();
+    for(const container of document.querySelectorAll('.nav,.bottom-nav'))container.innerHTML=nav();
+    if(scroll)window.scrollTo({top:0,behavior:'instant'});
+  }
+  function home(){const count=completedCount(),best=Object.values(state.records),avg=best.length?Math.round(best.reduce((s,r)=>s+r.best,0)/best.length):0;
+    return`<section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE PRACTICE. A BETTER DOCTOR.</p><h1>ทุกคำถาม<br>พาใกล้<em>คำวินิจฉัย</em></h1><p class="hero-subtitle">คลินิกจำลองสำหรับสอบถามประวัติแพทย์จีน</p><p class="tagline">สวมบทคุณหมอ ฟังคนไข้ เก็บอาการสำคัญ<br>แล้วฝึกแยกกลุ่มอาการอย่างมีเหตุผล</p><div class="hero-actions"><button class="btn primary" data-action="start" data-mode="practice">${icon('play')}เริ่มตรวจคนไข้</button><button class="btn" data-action="nav" data-route="study">${icon('book')}ทบทวนก่อนเล่น</button></div><div class="hero-foot"><span>ไม่มีเวลาบังคับ</span><span>ตอบผิด เรียนรู้ แล้วลองใหม่</span></div></div><div class="hero-visual"><div data-scene-mount></div><div class="scene-quote"><strong>ฟังให้ครบ ก่อนสรุป</strong>ประวัติ + อาการร่วม + ลิ้น + ชีพจร</div></div></section>
+    <div class="stats-strip"><div class="stat"><span class="stat-icon">${icon('book')}</span><div><strong>16</strong><p>กลุ่มอาการให้ฝึก</p></div></div><div class="stat"><span class="stat-icon">${icon('cases')}</span><div><strong>195</strong><p>เคสจำลองในคลัง</p></div></div><div class="stat"><span class="stat-icon">${icon('check')}</span><div><strong>${count}<small> / 195</small></strong><p>เคสที่ตรวจผ่าน</p></div></div><div class="stat"><span class="stat-icon">${icon('star')}</span><div><strong>${avg}<small> / 100</small></strong><p>คะแนนดีที่สุดเฉลี่ย</p></div></div></div>
+    ${state.active&&!state.active.completed?`<div class="promo mb"><span>${icon('clock')}</span><div style="flex:1"><h3>มีคนไข้รอคุณอยู่</h3><p>กลับไปซักประวัติต่อจากขั้นที่ ${state.active.stage+1}</p><button class="btn small primary" data-action="resume">ดำเนินเคสต่อ ${icon('arrow')}</button></div></div>`:''}
+    <div class="section-head"><div><h2>วันนี้อยากฝึกเรื่องไหน?</h2><p>เลือกกลุ่มเพื่อเริ่มตรวจ หรือเปิดห้องทบทวนก่อน</p></div><button class="link-btn" data-action="nav" data-route="cases">ดูเคสทั้งหมด ${icon('arrow')}</button></div>
+    <section class="groups-grid" aria-label="16 กลุ่มอาการ">${D.groups.map(g=>`<button class="group-card" data-action="group-start" data-id="${g.id}"><span class="group-icon">${icon(g.icon)}</span><div style="flex:1;min-width:0">${ml(g.name)}<div class="card-count">${String(g.id).padStart(2,'0')} · ${g.patternIds.length} กลุ่มอาการ · ${g.patternIds.length*3} เคส</div><div class="mini-progress"><span style="width:${groupProgress(g)}%"></span></div></div></button>`).join('')}</section>
+    <section class="home-bottom"><div class="promo">${icon('trophy')}<div><h3>เข้าเวรท้าทาย 5 เคส</h3><p>สุ่มคนไข้หลายกลุ่ม ซ่อนคำอธิบายก่อนตอบ</p><button class="link-btn" data-action="start" data-mode="exam" data-count="5">เริ่มเวรจำลอง ${icon('arrow')}</button></div></div><div class="promo">${icon('repeat')}<div><h3>เปลี่ยนจุดพลาดให้เป็นความเข้าใจ</h3><p>ฝึกซ้ำกลุ่มอาการที่เคยตอบผิด</p><button class="link-btn" data-action="weak-start">ทบทวนจุดที่ยังสับสน ${icon('arrow')}</button></div></div></section>${footer()}`;
+  }
+  function groupSelect(id,action='case-group'){return`<select class="field" data-change="${action}" aria-label="เลือกกลุ่มอาการ"><option value="0">ทั้งหมด 16 กลุ่ม</option>${D.groups.map(g=>`<option value="${g.id}" ${Number(id)===g.id?'selected':''}>${g.id}. ${escape(g.name.zh)} · ${escape(g.name.th)}</option>`).join('')}</select>`;}
+  function normalize(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function matches(obj,q){return!q||normalize(Object.values(obj).join(' ')).includes(normalize(q));}
+  function study(){const g=D.groups.find(x=>x.id===studyGroup),ps=g.patternIds.map(id=>D.patterns[id]);
+    if(!compareA||!g.patternIds.includes(compareA))compareA=ps[0].id;if(!compareB||!g.patternIds.includes(compareB)||compareB===compareA)compareB=ps[1]?.id||ps[0].id;
+    const menu=`<aside class="group-list" aria-label="หัวข้อทบทวน">${D.groups.map(x=>`<button data-action="study-group" data-id="${x.id}" class="${x.id===g.id?'active':''}"><span class="number">${x.id}</span>${escape(x.name.zh)} · ${escape(x.name.th)}</button>`).join('')}</aside>`;
+    const heading=`<div class="study-heading">${ml(g.name)}${icon(g.icon)}</div>${g.note?`<p class="read-note">${escape(g.note)}</p>`:''}`;
+    return`<div class="page-title"><p class="eyebrow">STUDY ROOM</p><h1>เข้าใจอาการ ก่อนจำชื่อ</h1><p>อ่านจุดแยก เปรียบเทียบสิ่งที่คล้ายกัน แล้วลองทดสอบความจำ</p></div><div class="toolbar"><div class="tabs" role="group" aria-label="โหมดทบทวน">${[['read','อ่านทบทวน'],['compare','เปรียบเทียบ'],['flash','แฟลชการ์ด'],['vocab','คำศัพท์']].map(([id,l])=>`<button data-action="study-tab" data-tab="${id}" class="${studyTab===id?'active':''}" aria-pressed="${studyTab===id}">${l}</button>`).join('')}</div></div>
+    ${studyTab==='vocab'?vocab():`<div class="study-layout">${menu}<section class="study-content">${heading}${studyTab==='compare'?comparison(g):studyTab==='flash'?flash(g):`<div class="pattern-grid">${ps.map(p=>patternCard(p,g)).join('')}</div>`}</section></div>`}${footer()}`;
+  }
+  function patternCard(p,g){return`<article class="pattern-card"><div class="pattern-top"><h3>${ml(p.name)}</h3>${listen(p.name)}</div><div class="pattern-key">⭐ ${reason(E.join(p.keys).th,E.join(p.keys).en)}</div><div class="pair-grid"><div>${ml(D.tongues[p.tongue])}</div><div>${ml(D.pulses[p.pulse])}</div></div><div class="pattern-actions mt"><button class="row gap-sm" data-action="pattern-detail" data-id="${p.id}">${icon('book')}อ่านอาการทั้งหมด</button><button class="row gap-sm" data-action="pattern-start" data-id="${p.id}" data-group="${g.id}">ฝึกเคสนี้ ${icon('arrow')}</button></div></article>`;}
+  function detail(p){return`<div class="pattern-top"><h2>${ml(p.name)}</h2>${listen(p.name)}</div><p class="section-label">อาการสำคัญ · Main findings</p><div class="term-list">${p.symptoms.map(id=>`<div class="term-item ${p.keys.includes(id)?'key':''}">${ml(D.terms[id])}</div>`).join('')}</div><p class="legend">พื้นสีทอง = อาการที่ช่วยแยกในแบบฝึกนี้ อาการไม่จำเป็นต้องพบครบทุกข้อ</p><div class="pair-grid"><div class="panel"><p class="section-label">ลิ้น · Tongue</p>${ml(D.tongues[p.tongue])}</div><div class="panel"><p class="section-label">ชีพจร · Pulse</p>${ml(D.pulses[p.pulse])}</div></div><div class="why-box"><strong>เหตุผลที่ควรนึกถึงกลุ่มอาการนี้</strong>${reason(p.why,'In this curriculum, the combination of '+E.join(p.keys).en.toLowerCase()+' supports '+p.name.en+'. Interpret the tongue and pulse together with the history; no single finding confirms a pattern.')}</div>`;}
+  function comparison(g){const a=D.patterns[compareA],b=D.patterns[compareB],c=E.contrast(a.id,b.id),sel=(which,val)=>`<select class="field" data-change="compare-${which}" aria-label="เลือกกลุ่มอาการด้าน ${which}">${g.patternIds.map(id=>`<option value="${id}" ${id===val?'selected':''}>${escape(D.patterns[id].name.zh)} · ${escape(D.patterns[id].name.th)}</option>`).join('')}</select>`;
+    return`<div class="compare-selects">${sel('a',a.id)}${sel('b',b.id)}</div><div class="compare-columns">${[[a,c.onlyA],[b,c.onlyB]].map(([p,ids])=>`<section class="panel"><h3>${ml(p.name)}</h3><p class="section-label">จุดต่างที่ควรถามเพิ่ม</p>${ids.length?ml(E.join(ids)):'<p class="small muted">อาการซ้อนกันมาก ให้ดูตำแหน่ง อาการร่วม ลิ้น และชีพจรประกอบ</p>'}<div class="pair-grid"><div>${ml(D.tongues[p.tongue])}</div><div>${ml(D.pulses[p.pulse])}</div></div><div class="why-box">${reason(p.why,'Look for '+E.join(p.keys).en+'. Weigh the full pattern rather than a single symptom.')}</div></section>`).join('')}</div><div class="panel mt"><h3 class="small">อาการที่พบร่วมกันได้</h3>${c.shared.length?ml(E.join(c.shared)):'<p class="small muted">ไม่มีคำศัพท์อาการร่วมตรงกันในชุดข้อมูลนี้ แต่ไม่ได้แปลว่าโรคจริงจะไม่มีอาการทับซ้อน</p>'}</div>`;
+  }
+  function flash(g){const ps=g.patternIds.map(id=>D.patterns[id]),p=ps[flashIndex%ps.length];return`<div class="flash"><span class="chip gold">${flashIndex%ps.length+1} / ${ps.length} · RECALL THE PATTERN</span><h3>ชุดอาการนี้ชวนให้นึกถึงอะไร?</h3>${ml(E.join(p.keys))}${listen(E.join(p.keys))}${flashRevealed?`<div class="flash-back"><h3>${ml(p.name)}</h3><div class="why-box">${reason(p.why,'These combined clues support '+p.name.en+'.')}</div></div>`:`<button class="btn primary mt" data-action="flash-reveal">แสดงคำตอบ</button>`}<button class="link-btn mt" data-action="flash-next">การ์ดถัดไป ${icon('arrow')}</button></div>`;}
+  function vocab(){const rows=Object.entries(D.terms).filter(([,t])=>matches(t,search));return`<div class="toolbar"><input id="search" class="field search" placeholder="ค้นจีน / พินอิน / ไทย / English" aria-label="ค้นหาคำศัพท์" value="${escape(search)}"><span class="small muted">${rows.length} คำ</span></div><p class="legend">กดลำโพงเพื่อฟังเสียงจีนจากอุปกรณ์ · ตัวอย่างคำ HSK 5: 情绪 (qíngxù) อารมณ์ / emotion, 记忆 (jìyì) ความจำ / memory, 疲劳 (píláo) เหนื่อยล้า / fatigue · ศัพท์แพทย์ส่วนมากอยู่นอกระดับ HSK</p><div class="glossary">${rows.map(([,t])=>`<div class="term-item"><div class="between">${ml(t)}${listen(t)}</div></div>`).join('')||'<p class="empty">ไม่พบคำศัพท์ ลองค้นด้วยคำอื่น</p>'}</div>`;}
+  function filteredCases(){return E.catalogue.filter(c=>(!caseGroup||c.groupId===caseGroup)&&(caseFilter==='all'||(caseFilter==='new'&&!state.records[c.id])||(caseFilter==='done'&&state.records[c.id])||(caseFilter==='weak'&&state.weak[c.patternId]))&&matches({...E.getGroup(c).name,caseId:c.id,num:String(E.catalogue.indexOf(c)+1)},search));}
+  function cases(){const filtered=filteredCases(),pageSize=18,pages=Math.max(1,Math.ceil(filtered.length/pageSize));casePage=Math.min(casePage,pages-1);const slice=filtered.slice(casePage*pageSize,(casePage+1)*pageSize);
+    return`<div class="page-title"><p class="eyebrow">THE CASE LIBRARY</p><h1>คนไข้ทุกคน มีเรื่องให้เรียนรู้</h1><p>195 เคสจำลองจาก 65 แบบหลัก × 3 รูปแบบ · ครบทุกชื่อในรายการของคุณ</p></div><div class="toolbar">${groupSelect(caseGroup)}<select class="field" data-change="case-filter" aria-label="กรองความคืบหน้า">${[['all','ทุกเคส'],['new','ยังไม่เคยผ่าน'],['done','ผ่านแล้ว'],['weak','กลุ่มที่เคยพลาด']].map(([id,l])=>`<option value="${id}" ${caseFilter===id?'selected':''}>${l}</option>`).join('')}</select><input id="search" class="field search" aria-label="ค้นเคส" placeholder="ค้นหัวข้อ เช่น 咳嗽 / ไอ / cough" value="${escape(search)}"></div><div class="between mb"><p class="small muted">พบ ${filtered.length} เคส · หน้า ${casePage+1}/${pages}</p><button class="link-btn" data-action="start-filtered">สุ่มจากกลุ่มนี้ ${icon('arrow')}</button></div><div class="case-grid">${slice.map(c=>{const g=E.getGroup(c),r=state.records[c.id];return`<article class="case-card ${r?'complete':''}"><div class="between"><span class="chip">CASE ${String(E.catalogue.indexOf(c)+1).padStart(3,'0')}</span>${r?`<span class="complete-tick">✓ ${r.best}/100</span>`:`<span class="tiny muted">รูปแบบ ${c.variant+1}</span>`}</div><div class="case-title">${ml(g.name)}</div><div class="case-meta"><span>${escape(c.patient.th)}</span><span>${c.age} ปี</span><span>${c.sex==='female'?'หญิง':'ชาย'}</span></div><details><summary>เปิดชื่อกลุ่มอาการสำหรับฝึกเจาะจง</summary>${ml(E.getPattern(c).name)}</details><button class="btn ${r?'':'primary'}" data-action="case-start" data-id="${c.id}">${r?'ฝึกเคสนี้อีกครั้ง':'เรียกคนไข้'} ${icon('arrow')}</button></article>`;}).join('')||'<div class="empty">ไม่พบเคสที่ตรงตัวกรอง ลองเลือกทุกเคส</div>'}</div><div class="case-pages"><button class="btn small" data-action="page" data-dir="-1" ${casePage===0?'disabled':''}>${icon('left')}ก่อนหน้า</button><span class="small muted">${casePage+1} / ${pages}</span><button class="btn small" data-action="page" data-dir="1" ${casePage===pages-1?'disabled':''}>ถัดไป ${icon('arrow')}</button></div>${footer()}`;
+  }
+  function clinic(){const s=state.active;if(!s)return home();if(s.completed)return result(s);const c=E.getCase(s.caseId),g=E.getGroup(c),step=E.getStep(s),opts=E.options(s),letters=['A','B','C','D','E','F'];const isDx=step.id==='diagnosis';
+    const correctId=isDx?c.patternId:step.id==='features'?g.feature:step.id==='associated'?E.getPattern(c).focus:step.id;
+    return`<div class="clinic-head"><div><p class="case-label">${s.mode==='exam'?'CHALLENGE SHIFT':'GUIDED CLINIC'} · ${state.queue.length>1?`CASE ${state.queueAt+1}/${state.queue.length}`:`CASE ${String(E.catalogue.indexOf(c)+1).padStart(3,'0')}`}</p><h1>${escape(g.name.th)} <span class="muted small">· ${escape(g.name.en)}</span></h1></div><div class="row gap-sm"><div class="score-box"><span>คะแนน</span><div><strong class="score-num ${s.score<65?'low':''}" id="score">${s.score}</strong><small> / 100</small></div></div><button class="btn small" data-action="nav" data-route="home">พักเคส</button></div></div><div class="stepper" role="img" aria-label="ขั้นที่ ${s.stage+1} จาก 8">${Array.from({length:8},(_,i)=>`<div class="${i<s.stage?'done':i===s.stage?'current':''}"></div>`).join('')}</div><div class="clinic-grid"><div class="clinic-left"><section class="patient-room"><div data-scene-mount></div><div class="patient-id">${ml(c.patient)}<small>${c.age} ปี · ${c.sex==='female'?'หญิง':'ชาย'} · ผู้ป่วยจำลอง</small></div></section><section class="chart"><button class="chart-title" data-action="chart-toggle" aria-expanded="${chartOpen}" style="width:100%;text-align:left"><h3>${icon('cases')} แฟ้มคนไข้</h3><small>${s.revealed.length}/7 รายการ ${chartOpen?'▴':'▾'}</small></button><div class="chart-body ${!chartOpen?'mobile-collapsed':''}">${s.revealed.length?s.revealed.map(r=>`<div class="chart-entry"><small>${escape(r.label)}</small>${ml(r.text)}${r.negative?`<div class="negative">${ml(r.negative)}</div>`:''}</div>`).join(''):'<div class="chart-empty">เริ่มถามคนไข้เพื่อเปิดหลักฐาน<br>ข้อมูลจะเพิ่มที่นี่ทีละขั้น</div>'}</div></section><p class="education-note">${s.mode==='exam'?'โหมดท้าทาย: คำอธิบายเปิดหลังตอบ':'โหมดฝึก: มีเป้าหมายและคำอธิบายทุกขั้น'}<br>${[6,12].includes(c.groupId)?'โจทย์จำลองเพื่อ辨证: เจ็บหน้าอกจริงต้องประเมินหัวใจและปอดฉุกเฉินก่อน':c.groupId===14?'หูมีเสียงร่วมได้ยินลดฉับพลันในคนไข้จริงต้องได้รับการตรวจเร่งด่วน':'อาการ ลิ้น และชีพจรเป็นข้อมูลสมมติ ไม่ใช่เครื่องมือวินิจฉัยจริง'}</p></div>
+    <section class="question-panel" aria-labelledby="question-title"><div class="question-header"><span class="step-number">${s.stage+1}</span><div><h2 id="question-title" tabindex="-1">${step.label}</h2><small>${escape(step.en||'')} · ${s.stage+1}/8</small></div></div><div class="question-goal">${isDx?'เก็บหลักฐานครบแล้ว เลือกกลุ่มอาการที่อธิบายภาพรวมได้ดีที่สุด':escape(step.goal)}${!isDx&&s.mode==='practice'?'<br><span class="tiny">เลือกคำถามที่ตรงเป้าหมายของขั้นนี้ที่สุด คำถามอื่นอาจถามเพิ่มภายหลังได้</span>':''}</div><div class="question-options">${opts.map((o,i)=>`<button class="option ${s.failedChoices.includes(o.id)?'wrong':''} ${s.cleared&&o.id===correctId?'correct':''} ${hintId===o.id?'hinted':''}" data-action="${isDx?'diagnose':'question'}" data-id="${o.id}" ${s.failedChoices.includes(o.id)||s.cleared?'disabled':''}><span class="letter">${s.failedChoices.includes(o.id)?'×':s.cleared&&o.id===correctId?'✓':letters[i]}</span>${ml(o)}</button>`).join('')}</div>${renderFeedback(s)}<div class="question-tools"><span>คำถามผิด −8 · วินิจฉัยผิด −15</span><button class="hint-btn" data-action="hint" ${s.hinted||s.cleared?'disabled':''}>${icon('bulb')} ขอคำใบ้ −5</button></div>${isDx?'<p class="diagnosis-note">ตอบผิดยังไม่ผ่าน เลือกใหม่ได้จนถูก แม้คะแนนเหลือ 0</p>':''}</section></div>`;
+  }
+  function renderFeedback(s){let f=feedback;if(!f&&s.cleared){const r=s.revealed[s.revealed.length-1],c=E.getCase(s.caseId),step=E.getStep(s),qid=step.id==='features'?E.getGroup(c).feature:step.id==='associated'?E.getPattern(c).focus:step.id;f={ok:true,text:r.text,negative:r.negative,reason:D.questions[qid].why};}if(!f)return'';
+    return`<div class="feedback ${f.ok?'good':''}" role="status" aria-live="polite"><h3>${f.ok?'✓ ถามได้ตรงเป้าหมาย':'ลองใหม่อีกครั้ง'}${f.ok?'':` · −${f.penalty} คะแนน`}</h3>${f.text?`<div class="between">${ml(f.text)}${listen(f.text)}</div>`:''}${f.negative?`<div class="negative">${ml(f.negative)}</div>`:''}<div class="explain">${reason(f.reason,f.ok?'This question gathers evidence for the current interview goal. Combine the response with the other findings before choosing a pattern.':'This choice does not best match the current task or the collected evidence. Review the goal and the chart, then try another option.')}</div>${f.ok?`<button class="btn primary" data-action="next">${s.stage===6?'เก็บข้อมูลครบแล้ว · วินิจฉัย':'บันทึกแล้ว · ถามต่อ'} ${icon('arrow')}</button>`:''}</div>`;
+  }
+  function result(s){const c=E.getCase(s.caseId),p=E.getPattern(c),mistakes=s.log.filter(r=>r.type.includes('error')),elapsed=Math.max(1,Math.round(((s.endedAt||Date.now())-s.startedAt)/60000)),stars=E.stars(s),hasNext=state.queueAt+1<state.queue.length;
+    return`<section class="result"><div class="result-banner"><div class="result-icon">${icon('check')}</div><p class="eyebrow">CASE COMPLETED</p><h1>คุณอ่านหลักฐานได้แล้ว</h1><div class="stars" aria-label="${stars} ดาวจาก 3">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div><p class="result-score">${s.score}/100 คะแนน · พลาด ${s.errors} ครั้ง · คำใบ้ ${s.hints} ครั้ง · ประมาณ ${elapsed} นาที</p><div class="result-name">${ml(p.name)}${listen(p.name)}</div></div><div class="why-box result-evidence"><strong>ทำไมจึงเป็นกลุ่มอาการนี้?</strong>${reason(p.why,'The combination of '+E.join(p.keys).en.toLowerCase()+', together with '+D.tongues[p.tongue].en.toLowerCase()+' and '+D.pulses[p.pulse].en.toLowerCase()+', supports '+p.name.en+' in this fictional case.')}</div><div class="panel"><h3>หลักฐานที่เชื่อมคำตอบ</h3><div class="term-list mt">${p.keys.map(id=>`<div class="term-item key">${ml(D.terms[id])}</div>`).join('')}</div><div class="pair-grid"><div class="panel">${ml(D.tongues[p.tongue])}</div><div class="panel">${ml(D.pulses[p.pulse])}</div></div></div><div class="formula"><div class="between mb"><h3>ประโยคฝึกตอบอาจารย์</h3>${listen(E.formula(c))}</div>${ml(E.formula(c))}</div>${mistakes.length?`<details class="panel mt"><summary>ย้อนดูจุดที่พลาด ${mistakes.length} ครั้ง</summary><ul class="mistake-list">${mistakes.map(m=>`<li>${reason(m.reason,'Review the interview goal and the case evidence. The final explanation above shows the supporting pattern.')}</li>`).join('')}</ul></details>`:''}<div class="result-actions">${hasNext?'<button class="btn primary" data-action="queue-next">เรียกคนไข้คนถัดไป '+icon('arrow')+'</button>':`<button class="btn primary" data-action="start" data-mode="${s.mode}">ตรวจเคสใหม่ ${icon('arrow')}</button>`}<button class="btn" data-action="replay">${icon('repeat')}ฝึกเคสเดิม</button><button class="btn" data-action="study-this">${icon('book')}ทบทวนกลุ่มนี้</button><button class="btn" data-action="nav" data-route="home">กลับคลินิก</button></div>${state.queue.length>1&&!hasNext?`<p class="read-note">จบเวรจำลอง ${state.queue.length} เคสแล้วครับ ความคืบหน้าของแต่ละเคสอยู่ในหน้าพัฒนาการ</p>`:''}${footer()}</section>`;
+  }
+  function progress(){const rs=Object.values(state.records),count=rs.length,total=rs.reduce((a,r)=>a+r.best,0),avg=count?Math.round(total/count):0,master=rs.filter(r=>r.best===100).length,weak=Object.keys(state.weak).sort((a,b)=>state.weak[b]-state.weak[a]);return`<div class="page-title"><p class="eyebrow">GROW AT YOUR OWN PACE</p><h1>ทุกเคส คืออีกก้าวของคุณ</h1><p>เก็บคะแนนดีที่สุดต่อเคสบนอุปกรณ์นี้ กรณีเปิดคนละเบราว์เซอร์ ความคืบหน้าจะแยกกัน</p></div><div class="report-grid"><div class="report-card"><strong>${count}<small>/195</small></strong><p>เคสที่ผ่านแล้ว</p></div><div class="report-card"><strong>${avg}<small>/100</small></strong><p>คะแนนดีที่สุดเฉลี่ย</p></div><div class="report-card"><strong>${master}</strong><p>เคสที่ทำได้เต็ม 100</p></div><div class="report-card"><strong>${total.toLocaleString()}</strong><p>คะแนนสะสมจากสถิติดีที่สุด</p></div></div><div class="section-head"><h2>ความคืบหน้าทั้ง 16 กลุ่ม</h2><button class="link-btn" data-action="export">${icon('download')}ส่งออกความคืบหน้า</button></div><div class="progress-list">${D.groups.map(g=>`<div class="progress-row"><div class="between">${ml(g.name)}<small>${completedCount(g.id)}/${g.patternIds.length*3} เคส</small></div><div class="progress-track" role="img" aria-label="ผ่าน ${groupProgress(g)} เปอร์เซ็นต์"><span style="width:${groupProgress(g)}%"></span></div></div>`).join('')}</div><section class="panel mt"><div class="between"><h2>กลุ่มที่ควรฝึกซ้ำ</h2><button class="btn small soft" data-action="weak-start">${icon('repeat')}ฝึกจุดพลาด</button></div><p class="legend">แสดงกลุ่มที่ผ่านโดยยังมีข้อผิดพลาด ลองผ่านแบบไม่ผิดและไม่ใช้คำใบ้เพื่อล้างรายการนั้น</p><div class="weak-list">${weak.map(id=>`<div class="weak-row"><div>${ml(D.patterns[id].name)}<small class="muted">พลาดสะสม ${state.weak[id]} ครั้ง</small></div><button class="btn small" data-action="pattern-start" data-id="${id}">ลองใหม่ ${icon('arrow')}</button></div>`).join('')||'<p class="small muted">ยังไม่มีจุดพลาดที่บันทึกไว้ เริ่มตรวจคนไข้ได้เลยครับ</p>'}</div></section><section class="panel mt"><h3>ย้ายความคืบหน้าไปอีกอุปกรณ์</h3><p class="small muted">ส่งออกไฟล์ JSON แล้วนำเข้าในอุปกรณ์ใหม่ ข้อมูลจะรวมโดยเก็บคะแนนที่ดีกว่า</p><input type="file" id="import-progress" class="file-input" accept="application/json,.json" aria-label="นำเข้าความคืบหน้า"></section>${footer()}`;}
+  function navigate(to){route=to;search='';location.hash='/'+to;render({scroll:true});}
+  function begin(id,mode='practice',queue=[id],at=0){state.active=E.newSession(id,mode);state.queue=queue;state.queueAt=at;feedback=null;hintId=null;chartOpen=innerWidth>720;scene?.setPatient(E.getCase(id));persist();navigate('clinic');}
+  function launch(groupId=0,mode='practice',count=1,weak=false){let queue=E.randomQueue({groupId,count,weakIds:weak?Object.keys(state.weak):[],seed:Date.now()});if(!weak&&count===1){const fresh=E.catalogue.filter(c=>(!groupId||c.groupId===Number(groupId))&&!state.records[c.id]);if(fresh.length)queue=[fresh[Math.floor(Math.random()*fresh.length)].id];}if(!queue.length){toast('ยังไม่มีเคสในกลุ่มนี้');return;}begin(queue[0],mode,queue);}
+  function recordCompletion(){const s=state.active,c=E.getCase(s.caseId),old=state.records[c.id];if(s.recorded)return;state.records[c.id]={best:Math.max(old?.best||0,s.score),runs:(old?.runs||0)+1,stars:Math.max(old?.stars||0,E.stars(s)),last:new Date().toISOString(),errors:s.errors};if(s.errors||s.hints)state.weak[c.patternId]=(state.weak[c.patternId]||0)+s.errors+s.hints;else delete state.weak[c.patternId];s.recorded=true;persist();}
+  let audioContext;
+  function chime(good){if(!state.settings.sound)return;try{audioContext=audioContext||new(window.AudioContext||window.webkitAudioContext)();audioContext.resume();const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.connect(gain);gain.connect(audioContext.destination);osc.frequency.setValueAtTime(good?523:220,audioContext.currentTime);osc.frequency.exponentialRampToValueAtTime(good?784:180,audioContext.currentTime+.13);gain.gain.setValueAtTime(.045,audioContext.currentTime);gain.gain.exponentialRampToValueAtTime(.001,audioContext.currentTime+.22);osc.start();osc.stop(audioContext.currentTime+.23);}catch{}}
+  function speak(text){if(!('speechSynthesis'in window)){toast('เบราว์เซอร์นี้ไม่รองรับเสียงอ่าน ใช้พินอินแทนได้ครับ');return;}const voices=speechSynthesis.getVoices(),voice=voices.find(v=>/^zh[-_]CN/i.test(v.lang))||voices.find(v=>/^zh/i.test(v.lang));if(!voice){toast('ไม่พบเสียงจีนในอุปกรณ์ เปิดเสียงภาษาจีนในการตั้งค่าของเครื่องก่อนครับ');return;}speechSynthesis.cancel();let utter=new SpeechSynthesisUtterance(text);utter.voice=voice;utter.lang=voice.lang;utter.rate=.82;utter.onerror=()=>toast('เสียงจีนยังไม่พร้อม กรุณาใช้พินอินหรือลองอีกครั้ง');speechSynthesis.speak(utter);}
+  function openModal(title,body){lastFocus=document.activeElement;$('#modal-content').innerHTML=`<div class="modal-head"><h2 id="modal-title">${escape(title)}</h2><button class="close" data-action="modal-close" aria-label="ปิดหน้าต่าง">×</button></div><div class="modal-body">${body}</div>`;$('#modal').showModal();applySettings();}
+  function closeModal(){if($('#modal').open)$('#modal').close();lastFocus?.focus?.();}
+  function guide(){openModal('เริ่มเวรแรกของคุณ',`<p class="small muted">เกมนี้ฝึกการถามประวัติและแยกกลุ่มอาการตามรายการที่คุณให้มา</p>${[['เลือกเคสหรือทบทวนก่อน','อ่านอาการสำคัญ จุดแยก ลิ้น และชีพจรในห้องทบทวน สลับพินอินและคำแปลไทยได้ตลอด'],['ซักประวัติทีละเป้าหมาย','เปิดการสนทนา → ระยะเวลา → ลักษณะอาการ → ปัจจัยกระตุ้น → อาการร่วม → ลิ้น → ชีพจร ต้องตอบคำถามให้ถูกในแต่ละขั้นจึงไปต่อ'],['เลือกผิด ยังเรียนต่อได้','เริ่มที่ 100 คะแนน เลือกคำถามไม่ตรงเป้าหมาย −8 วินิจฉัยผิด −15 ขอคำใบ้ −5 คะแนนต่ำสุด 0 ไม่มีเกมโอเวอร์ ต้องเลือกคำตอบถูกก่อนผ่าน'],['เชื่อมหลักฐานก่อนวินิจฉัย','เมื่อเก็บครบ 7 ขั้น เลือก证型 (zhèngxíng) แล้วอ่านเหตุผลและฝึกประโยคตอบอาจารย์ ได้ 3 ดาวเมื่อคะแนน ≥90 และไม่ใช้คำใบ้; 2 ดาวเมื่อ ≥65; นอกนั้น 1 ดาว']].map(([h,p],i)=>`<div class="intro-step"><span class="number">${i+1}</span><div><h3>${h}</h3><p>${p}</p></div></div>`).join('')}<div class="read-note">คำถามอื่นอาจมีประโยชน์ในคลินิกจริง การหักคะแนนในเกมหมายถึง “ไม่ตรงเป้าหมายที่กำหนดในรอบนี้” ไม่ใช่ตัดสินว่าเป็นคำถามที่ผิดทางการแพทย์เสมอไป</div><div class="why-box">${D.meta.note}<br>กลุ่มเหงื่อที่ซ้ำและชื่อ证型คงตามข้อความต้นฉบับ การวินิจฉัยโรคจริงต้องประเมินสาเหตุอื่นและความเร่งด่วนด้วย</div><div class="mt"><a href="${D.meta.terminology}" target="_blank" rel="noopener">WHO: เอกสารอ้างอิงคำศัพท์แพทย์แผนจีน</a><p class="tiny muted">ใช้เป็นแหล่งคำศัพท์เพิ่มเติม ไม่ได้หมายถึงรับรองความถูกต้องหรือประสิทธิผลของเคสในเกม</p></div><button class="btn primary mt" data-action="modal-close" style="width:100%">พร้อมเรียนรู้แล้ว ${icon('arrow')}</button>`);}
+  function settings(){openModal('จัดห้องเรียนให้เหมาะกับคุณ',`<div class="settings-list">${[['pinyin','พินอิน','แสดงคำอ่านใต้ข้อความจีน'],['thai','คำแปลไทย','เปิด–ปิดคำแปลของบทเรียน คำถาม และคำตอบ'],['english','English','แสดงคำแปลอังกฤษควบคู่กัน'],['sound','เสียงเอฟเฟกต์','เสียงสั้นเมื่อเลือกคำตอบ'],['motion','แอนิเมชัน 3D','ปิดเพื่อลดการเคลื่อนไหวของตัวละคร']].map(([key,title,desc])=>`<div class="settings-row"><div><strong>${title}</strong><p>${desc}</p></div>${toggle(key,'เปิด / ปิด')}</div>`).join('')}</div><p class="read-note">เสียงอ่านจีนใช้เสียงที่มีในเครื่อง หากไม่พบเสียงจีน เกมจะแจ้งให้ทราบและยังอ่านพินอินได้</p><button class="btn mt" data-action="guide">วิธีเล่นและแหล่งข้อมูล</button>`);}
+  function exportProgress(){const payload={app:'jade-clinic',version:1,exportedAt:new Date().toISOString(),records:state.records,weak:state.weak};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='jade-clinic-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  async function importProgress(file){try{if(file.size>2e6)throw Error('File too large');const data=JSON.parse(await file.text());if(data.app!=='jade-clinic'||data.version!==1)throw Error('Invalid format');const cleaned=cleanRecords(data.records);for(const [id,r]of Object.entries(cleaned)){const old=state.records[id];if(!old||old.best<r.best)state.records[id]=r;}for(const [id,n]of Object.entries(data.weak||{}))if(Object.hasOwn(D.patterns,id)&&Number.isInteger(n)&&n>0)state.weak[id]=Math.min(10000,Math.max(state.weak[id]||0,n));persist();render();toast('นำเข้าความคืบหน้าแล้วครับ');}catch{toast('นำเข้าไม่ได้ กรุณาเลือกไฟล์ความคืบหน้าจาก Jade Clinic');}}
+  document.addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(!el||el.disabled)return;const a=el.dataset.action,id=el.dataset.id;
+    if(a==='toggle'){let k=el.dataset.key;state.settings[k]=!state.settings[k];persist();applySettings();return;}
+    if(a==='nav'){navigate(el.dataset.route);return;}
+    if(a==='guide'){if($('#modal').open)closeModal();guide();return;}
+    if(a==='settings'){settings();return;}
+    if(a==='modal-close'){closeModal();return;}
+    if(a==='speak'){speak(speechBank[id]);return;}
+    if(a==='rotate-left'||a==='rotate-right'){scene?.rotate(a==='rotate-left'?-1:1);return;}
+    if(a==='scene-reset'){scene?.setView('room');return;}
+    if(a==='start'){launch(0,el.dataset.mode||'practice',Number(el.dataset.count)||1);return;}
+    if(a==='group-start'){launch(Number(id));return;}
+    if(a==='resume'){restoreRunUI();scene?.setPatient(E.getCase(state.active.caseId));navigate('clinic');return;}
+    if(a==='weak-start'){if(!Object.keys(state.weak).length){toast('ยังไม่มีจุดพลาด เริ่มเวรฝึก 1 เคสได้เลยครับ');launch();}else launch(0,'practice',5,true);return;}
+    if(a==='study-group'){studyGroup=Number(id);flashIndex=0;flashRevealed=false;render();return;}
+    if(a==='study-tab'){studyTab=el.dataset.tab;search='';render();return;}
+    if(a==='pattern-detail'){openModal('อาการและเหตุผล',detail(D.patterns[id]));return;}
+    if(a==='pattern-start'){const gid=Number(el.dataset.group)||D.groups.find(g=>g.patternIds.includes(id)).id,pool=E.catalogue.filter(c=>c.groupId===gid&&c.patternId===id),fresh=pool.filter(c=>!state.records[c.id]);begin((fresh[0]||pool[Math.floor(Math.random()*pool.length)]).id);return;}
+    if(a==='flash-reveal'){flashRevealed=true;render();return;}
+    if(a==='flash-next'){flashIndex++;flashRevealed=false;render();return;}
+    if(a==='case-start'){begin(id);return;}
+    if(a==='start-filtered'){const pool=filteredCases();if(pool.length)begin(pool[Math.floor(Math.random()*pool.length)].id);else toast('ไม่มีเคสตรงตัวกรองนี้');return;}
+    if(a==='page'){casePage+=Number(el.dataset.dir);render({scroll:true});return;}
+    if(a==='chart-toggle'){chartOpen=!chartOpen;render();return;}
+    if(a==='question'){const r=E.chooseQuestion(state.active,id);if(r.blocked)return;feedback=r;chime(r.ok);scene?.setMood(r.ok?'happy':'wrong');if(r.ok&&E.getStep(state.active).id==='tongue')scene?.setView('tongue');if(r.ok&&E.getStep(state.active).id==='pulse')scene?.setView('pulse');persist();render();requestAnimationFrame(()=>$('.feedback')?.scrollIntoView({block:'nearest',behavior:state.settings.motion?'smooth':'instant'}));return;}
+    if(a==='next'){if(!E.advance(state.active))return;feedback=null;hintId=null;scene?.setView('room');persist();render();requestAnimationFrame(()=>{$('#question-title')?.focus({preventScroll:true});if(innerWidth<721)$('.question-panel')?.scrollIntoView({block:'start',behavior:state.settings.motion?'smooth':'instant'});});return;}
+    if(a==='hint'){const id=E.hint(state.active);if(id){hintId=id;persist();render();toast('ขอบสีทองคือคำถามหรือกลุ่มอาการที่แนะนำ ลองเชื่อมกับหลักฐานดูครับ');}return;}
+    if(a==='diagnose'){const r=E.diagnose(state.active,id);if(r.blocked)return;feedback=r;chime(r.ok);scene?.setMood(r.ok?'happy':'wrong');if(r.ok){recordCompletion();render({scroll:true});}else{persist();render();requestAnimationFrame(()=>$('.feedback')?.scrollIntoView({block:'nearest',behavior:state.settings.motion?'smooth':'instant'}));}return;}
+    if(a==='queue-next'){const i=state.queueAt+1;if(i<state.queue.length)begin(state.queue[i],state.active.mode,state.queue,i);return;}
+    if(a==='replay'){begin(state.active.caseId,state.active.mode,state.queue,state.queueAt);return;}
+    if(a==='study-this'){studyGroup=E.getCase(state.active.caseId).groupId;studyTab='read';navigate('study');return;}
+    if(a==='export'){exportProgress();return;}
+  });
+  document.addEventListener('change',e=>{const el=e.target,a=el.dataset.change;if(el.id==='import-progress'&&el.files[0]){importProgress(el.files[0]);return;}if(!a)return;if(a==='case-group'){caseGroup=Number(el.value);casePage=0;}else if(a==='case-filter'){caseFilter=el.value;casePage=0;}else if(a==='compare-a')compareA=el.value;else if(a==='compare-b')compareB=el.value;render();});
+  document.addEventListener('input',e=>{if(e.target.id!=='search')return;const value=e.target.value,pos=e.target.selectionStart;search=value;casePage=0;render();$('#search')?.focus({preventScroll:true});$('#search')?.setSelectionRange(pos,pos);});
+  $('#modal').addEventListener('click',e=>{if(e.target===$('#modal')){const r=$('#modal').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeModal();}});
+  $('#modal').addEventListener('cancel',()=>lastFocus?.focus?.());
+  window.addEventListener('hashchange',()=>{const next=location.hash.slice(2);if(next!==route){route=['home','study','cases','progress','clinic'].includes(next)?next:'home';if(route==='clinic'&&!state.active)route='home';render({scroll:true});}});
+  window.addEventListener('pagehide',()=>{persist();window.speechSynthesis?.cancel();});
+  $('#scene-root').addEventListener('scene-unavailable',()=>{if(scene)scene.active=false;$('#scene-fallback').hidden=false;});
+  shell();render();
+  try{scene=new window.Clinic3D($('#clinic-canvas'));scene.setMotion(state.settings.motion);if(state.active)scene.setPatient(E.getCase(state.active.caseId));}catch(error){$('#scene-fallback').hidden=false;console.warn('3D fallback:',error.message);}
+  window.addEventListener('resize',()=>scene?.resize());
+  if(memoryOnly)toast('ความคืบหน้าจะอยู่ในรอบนี้ ส่งออกจากหน้าพัฒนาการเพื่อเก็บไว้ได้ครับ');
+})();
+</script>
+</body>
+</html>

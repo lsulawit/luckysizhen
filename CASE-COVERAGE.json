@@ -1,0 +1,964 @@
+{
+  "groups": 16,
+  "templates": 65,
+  "distinctNames": 56,
+  "fictionalCases": 195,
+  "coverage": [
+    {
+      "group": 1,
+      "zh": "失眠",
+      "pinyin": "shīmián",
+      "thai": "นอนไม่หลับ",
+      "english": "Insomnia",
+      "templates": 5,
+      "cases": 15,
+      "patterns": [
+        {
+          "id": "heart-kidney",
+          "zh": "心肾不交证",
+          "py": "xīn shèn bù jiāo zhèng",
+          "th": "หัวใจและไตไม่ประสานกัน",
+          "en": "Heart–Kidney disharmony",
+          "cases": [
+            "g01-heart-kidney-1",
+            "g01-heart-kidney-2",
+            "g01-heart-kidney-3"
+          ]
+        },
+        {
+          "id": "heart-spleen",
+          "zh": "心脾两虚证",
+          "py": "xīn pí liǎng xū zhèng",
+          "th": "หัวใจและม้ามพร่อง",
+          "en": "Heart–Spleen deficiency",
+          "cases": [
+            "g01-heart-spleen-1",
+            "g01-heart-spleen-2",
+            "g01-heart-spleen-3"
+          ]
+        },
+        {
+          "id": "gall-phlegm",
+          "zh": "胆郁痰扰证",
+          "py": "dǎn yù tán rǎo zhèng",
+          "th": "ถุงน้ำดีติดขัดและเสมหะรบกวน",
+          "en": "Gallbladder constraint with phlegm disturbance",
+          "cases": [
+            "g01-gall-phlegm-1",
+            "g01-gall-phlegm-2",
+            "g01-gall-phlegm-3"
+          ]
+        },
+        {
+          "id": "food-inner",
+          "zh": "食滞内停证",
+          "py": "shízhì nèi tíng zhèng",
+          "th": "อาหารคั่งสะสมภายใน",
+          "en": "Internal food stagnation",
+          "cases": [
+            "g01-food-inner-1",
+            "g01-food-inner-2",
+            "g01-food-inner-3"
+          ]
+        },
+        {
+          "id": "heart-fire",
+          "zh": "心火亢盛证",
+          "py": "xīnhuǒ kàngshèng zhèng",
+          "th": "ไฟหัวใจกำเริบ",
+          "en": "Exuberant Heart fire",
+          "cases": [
+            "g01-heart-fire-1",
+            "g01-heart-fire-2",
+            "g01-heart-fire-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "zh": "腹泻",
+      "pinyin": "fùxiè",
+      "thai": "ท้องเสีย",
+      "english": "Diarrhea",
+      "templates": 5,
+      "cases": 15,
+      "patterns": [
+        {
+          "id": "spleen-qi",
+          "zh": "脾气虚证",
+          "py": "píqì xū zhèng",
+          "th": "ชี่ม้ามพร่อง",
+          "en": "Spleen qi deficiency",
+          "cases": [
+            "g02-spleen-qi-1",
+            "g02-spleen-qi-2",
+            "g02-spleen-qi-3"
+          ]
+        },
+        {
+          "id": "liver-spleen",
+          "zh": "肝郁乘脾证",
+          "py": "gān yù chéng pí zhèng",
+          "th": "ชี่ตับติดขัดและข่มม้าม",
+          "en": "Liver constraint overacting on the Spleen",
+          "cases": [
+            "g02-liver-spleen-1",
+            "g02-liver-spleen-2",
+            "g02-liver-spleen-3"
+          ]
+        },
+        {
+          "id": "food-diarrhea",
+          "zh": "饮食积滞证",
+          "py": "yǐnshí jīzhì zhèng",
+          "th": "อาหารสะสม",
+          "en": "Food accumulation",
+          "cases": [
+            "g02-food-diarrhea-1",
+            "g02-food-diarrhea-2",
+            "g02-food-diarrhea-3"
+          ]
+        },
+        {
+          "id": "intestine-dampheat",
+          "zh": "大肠湿热证",
+          "py": "dàcháng shīrè zhèng",
+          "th": "ลำไส้ใหญ่ชื้นร้อน",
+          "en": "Large Intestine damp-heat",
+          "cases": [
+            "g02-intestine-dampheat-1",
+            "g02-intestine-dampheat-2",
+            "g02-intestine-dampheat-3"
+          ]
+        },
+        {
+          "id": "kidney-yang",
+          "zh": "肾阳虚证",
+          "py": "shènyáng xū zhèng",
+          "th": "หยางไตพร่อง",
+          "en": "Kidney yang deficiency",
+          "cases": [
+            "g02-kidney-yang-1",
+            "g02-kidney-yang-2",
+            "g02-kidney-yang-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 3,
+      "zh": "头晕",
+      "pinyin": "tóuyūn",
+      "thai": "เวียนศีรษะ",
+      "english": "Dizziness",
+      "templates": 5,
+      "cases": 15,
+      "patterns": [
+        {
+          "id": "phlegm-damp",
+          "zh": "痰湿内阻证",
+          "py": "tánshī nèi zǔ zhèng",
+          "th": "เสมหะชื้นอุดกั้นภายใน",
+          "en": "Internal phlegm-dampness obstruction",
+          "cases": [
+            "g03-phlegm-damp-1",
+            "g03-phlegm-damp-2",
+            "g03-phlegm-damp-3"
+          ]
+        },
+        {
+          "id": "liver-fire",
+          "zh": "肝火上炎证",
+          "py": "gānhuǒ shàngyán zhèng",
+          "th": "ไฟตับลุกขึ้นด้านบน",
+          "en": "Liver fire flaming upward",
+          "cases": [
+            "g03-liver-fire-1",
+            "g03-liver-fire-2",
+            "g03-liver-fire-3"
+          ]
+        },
+        {
+          "id": "liver-yang",
+          "zh": "肝阳上亢证",
+          "py": "gānyáng shàngkàng zhèng",
+          "th": "หยางตับกำเริบขึ้นบน",
+          "en": "Hyperactive Liver yang",
+          "cases": [
+            "g03-liver-yang-1",
+            "g03-liver-yang-2",
+            "g03-liver-yang-3"
+          ]
+        },
+        {
+          "id": "qi-blood",
+          "zh": "气血亏虚证",
+          "py": "qìxuè kuīxū zhèng",
+          "th": "ชี่และเลือดพร่อง",
+          "en": "Qi and blood deficiency",
+          "cases": [
+            "g03-qi-blood-1",
+            "g03-qi-blood-2",
+            "g03-qi-blood-3"
+          ]
+        },
+        {
+          "id": "kidney-essence",
+          "zh": "肾精亏虚证",
+          "py": "shènjīng kuīxū zhèng",
+          "th": "สารจิงไตพร่อง",
+          "en": "Kidney essence deficiency",
+          "cases": [
+            "g03-kidney-essence-1",
+            "g03-kidney-essence-2",
+            "g03-kidney-essence-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 4,
+      "zh": "咳嗽",
+      "pinyin": "késou",
+      "thai": "ไอ",
+      "english": "Cough",
+      "templates": 6,
+      "cases": 18,
+      "patterns": [
+        {
+          "id": "windcold-lung",
+          "zh": "风寒犯肺证",
+          "py": "fēnghán fàn fèi zhèng",
+          "th": "ลมเย็นรุกรานปอด",
+          "en": "Wind-cold invading the Lung",
+          "cases": [
+            "g04-windcold-lung-1",
+            "g04-windcold-lung-2",
+            "g04-windcold-lung-3"
+          ]
+        },
+        {
+          "id": "windheat-lung",
+          "zh": "风热犯肺证",
+          "py": "fēngrè fàn fèi zhèng",
+          "th": "ลมร้อนรุกรานปอด",
+          "en": "Wind-heat invading the Lung",
+          "cases": [
+            "g04-windheat-lung-1",
+            "g04-windheat-lung-2",
+            "g04-windheat-lung-3"
+          ]
+        },
+        {
+          "id": "dry-lung",
+          "zh": "燥邪犯肺证",
+          "py": "zàoxié fàn fèi zhèng",
+          "th": "ความแห้งรุกรานปอด",
+          "en": "Dryness invading the Lung",
+          "cases": [
+            "g04-dry-lung-1",
+            "g04-dry-lung-2",
+            "g04-dry-lung-3"
+          ]
+        },
+        {
+          "id": "lung-heat",
+          "zh": "肺热壅盛证",
+          "py": "fèirè yōngshèng zhèng",
+          "th": "ความร้อนสะสมรุนแรงในปอด",
+          "en": "Exuberant Lung heat",
+          "cases": [
+            "g04-lung-heat-1",
+            "g04-lung-heat-2",
+            "g04-lung-heat-3"
+          ]
+        },
+        {
+          "id": "coldphlegm-lung",
+          "zh": "寒痰阻肺证",
+          "py": "hántán zǔ fèi zhèng",
+          "th": "เสมหะเย็นอุดกั้นปอด",
+          "en": "Cold-phlegm obstructing the Lung",
+          "cases": [
+            "g04-coldphlegm-lung-1",
+            "g04-coldphlegm-lung-2",
+            "g04-coldphlegm-lung-3"
+          ]
+        },
+        {
+          "id": "lung-qi",
+          "zh": "肺气不足证",
+          "py": "fèiqì bùzú zhèng",
+          "th": "ชี่ปอดไม่เพียงพอ",
+          "en": "Lung qi deficiency",
+          "cases": [
+            "g04-lung-qi-1",
+            "g04-lung-qi-2",
+            "g04-lung-qi-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "zh": "胃痛",
+      "pinyin": "wèitòng",
+      "thai": "ปวดกระเพาะ",
+      "english": "Stomach pain",
+      "templates": 5,
+      "cases": 15,
+      "patterns": [
+        {
+          "id": "stomach-cold",
+          "zh": "寒邪客胃证",
+          "py": "hánxié kè wèi zhèng",
+          "th": "ความเย็นรุกรานกระเพาะ",
+          "en": "Cold invading the Stomach",
+          "cases": [
+            "g05-stomach-cold-1",
+            "g05-stomach-cold-2",
+            "g05-stomach-cold-3"
+          ]
+        },
+        {
+          "id": "stomach-food",
+          "zh": "饮食停滞证",
+          "py": "yǐnshí tíngzhì zhèng",
+          "th": "อาหารคั่งค้าง",
+          "en": "Food stagnation",
+          "cases": [
+            "g05-stomach-food-1",
+            "g05-stomach-food-2",
+            "g05-stomach-food-3"
+          ]
+        },
+        {
+          "id": "liver-stomach",
+          "zh": "肝气犯胃证",
+          "py": "gānqì fàn wèi zhèng",
+          "th": "ชี่ตับรุกรานกระเพาะ",
+          "en": "Liver qi invading the Stomach",
+          "cases": [
+            "g05-liver-stomach-1",
+            "g05-liver-stomach-2",
+            "g05-liver-stomach-3"
+          ]
+        },
+        {
+          "id": "spleenstomach-dampheat",
+          "zh": "脾胃湿热证",
+          "py": "píwèi shīrè zhèng",
+          "th": "ม้ามและกระเพาะชื้นร้อน",
+          "en": "Spleen–Stomach damp-heat",
+          "cases": [
+            "g05-spleenstomach-dampheat-1",
+            "g05-spleenstomach-dampheat-2",
+            "g05-spleenstomach-dampheat-3"
+          ]
+        },
+        {
+          "id": "spleenstomach-cold",
+          "zh": "脾胃虚寒证",
+          "py": "píwèi xūhán zhèng",
+          "th": "ม้ามและกระเพาะพร่องเย็น",
+          "en": "Spleen–Stomach deficiency-cold",
+          "cases": [
+            "g05-spleenstomach-cold-1",
+            "g05-spleenstomach-cold-2",
+            "g05-spleenstomach-cold-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 6,
+      "zh": "胸痛",
+      "pinyin": "xiōngtòng",
+      "thai": "เจ็บหน้าอก",
+      "english": "Chest pain",
+      "templates": 4,
+      "cases": 12,
+      "patterns": [
+        {
+          "id": "heart-phlegm",
+          "zh": "痰阻心脉证",
+          "py": "tán zǔ xīnmài zhèng",
+          "th": "เสมหะอุดกั้นหลอดชีพจรหัวใจ",
+          "en": "Phlegm obstructing Heart vessels",
+          "cases": [
+            "g06-heart-phlegm-1",
+            "g06-heart-phlegm-2",
+            "g06-heart-phlegm-3"
+          ]
+        },
+        {
+          "id": "heart-yang",
+          "zh": "心阳不振证",
+          "py": "xīnyáng bùzhèn zhèng",
+          "th": "หยางหัวใจอ่อนกำลัง",
+          "en": "Heart yang deficiency",
+          "cases": [
+            "g06-heart-yang-1",
+            "g06-heart-yang-2",
+            "g06-heart-yang-3"
+          ]
+        },
+        {
+          "id": "heart-cold",
+          "zh": "寒凝心脉证",
+          "py": "hánníng xīnmài zhèng",
+          "th": "ความเย็นคั่งในหลอดชีพจรหัวใจ",
+          "en": "Cold congealing in Heart vessels",
+          "cases": [
+            "g06-heart-cold-1",
+            "g06-heart-cold-2",
+            "g06-heart-cold-3"
+          ]
+        },
+        {
+          "id": "heart-qistag",
+          "zh": "气滞心脉证",
+          "py": "qìzhì xīnmài zhèng",
+          "th": "ชี่ติดขัดในหลอดชีพจรหัวใจ",
+          "en": "Qi stagnation in Heart vessels",
+          "cases": [
+            "g06-heart-qistag-1",
+            "g06-heart-qistag-2",
+            "g06-heart-qistag-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 7,
+      "zh": "胁痛",
+      "pinyin": "xiétòng",
+      "thai": "ปวดชายโครง",
+      "english": "Flank pain",
+      "templates": 4,
+      "cases": 12,
+      "patterns": [
+        {
+          "id": "liver-qistag",
+          "zh": "肝郁气滞证",
+          "py": "gān yù qìzhì zhèng",
+          "th": "ชี่ตับติดขัด",
+          "en": "Liver qi stagnation",
+          "cases": [
+            "g07-liver-qistag-1",
+            "g07-liver-qistag-2",
+            "g07-liver-qistag-3"
+          ]
+        },
+        {
+          "id": "livergall-dampheat",
+          "zh": "肝胆湿热证",
+          "py": "gāndǎn shīrè zhèng",
+          "th": "ตับและถุงน้ำดีชื้นร้อน",
+          "en": "Liver–Gallbladder damp-heat",
+          "cases": [
+            "g07-livergall-dampheat-1",
+            "g07-livergall-dampheat-2",
+            "g07-livergall-dampheat-3"
+          ]
+        },
+        {
+          "id": "livergall-fire",
+          "zh": "肝胆火旺证",
+          "py": "gāndǎn huǒwàng zhèng",
+          "th": "ไฟตับและถุงน้ำดีกำเริบ",
+          "en": "Liver–Gallbladder fire",
+          "cases": [
+            "g07-livergall-fire-1",
+            "g07-livergall-fire-2",
+            "g07-livergall-fire-3"
+          ]
+        },
+        {
+          "id": "liver-stasis",
+          "zh": "肝血瘀阻证",
+          "py": "gānxuè yūzǔ zhèng",
+          "th": "เลือดตับคั่งอุดกั้น",
+          "en": "Liver blood stasis",
+          "cases": [
+            "g07-liver-stasis-1",
+            "g07-liver-stasis-2",
+            "g07-liver-stasis-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 8,
+      "zh": "腹痛",
+      "pinyin": "fùtòng",
+      "thai": "ปวดท้อง",
+      "english": "Abdominal pain",
+      "templates": 4,
+      "cases": 12,
+      "patterns": [
+        {
+          "id": "cold-damp",
+          "zh": "寒湿阻滞证",
+          "py": "hánshī zǔzhì zhèng",
+          "th": "เย็นชื้นอุดกั้น",
+          "en": "Cold-dampness obstruction",
+          "cases": [
+            "g08-cold-damp-1",
+            "g08-cold-damp-2",
+            "g08-cold-damp-3"
+          ]
+        },
+        {
+          "id": "spleenstomach-cold",
+          "zh": "脾胃虚寒证",
+          "py": "píwèi xūhán zhèng",
+          "th": "ม้ามและกระเพาะพร่องเย็น",
+          "en": "Spleen–Stomach deficiency-cold",
+          "cases": [
+            "g08-spleenstomach-cold-1",
+            "g08-spleenstomach-cold-2",
+            "g08-spleenstomach-cold-3"
+          ]
+        },
+        {
+          "id": "qi-bloodstasis",
+          "zh": "气滞血瘀证",
+          "py": "qìzhì xuèyū zhèng",
+          "th": "ชี่ติดขัดและเลือดคั่ง",
+          "en": "Qi stagnation with blood stasis",
+          "cases": [
+            "g08-qi-bloodstasis-1",
+            "g08-qi-bloodstasis-2",
+            "g08-qi-bloodstasis-3"
+          ]
+        },
+        {
+          "id": "liverchannel-cold",
+          "zh": "寒凝肝脉证",
+          "py": "hánníng gānmài zhèng",
+          "th": "ความเย็นคั่งในเส้นลมปราณตับ",
+          "en": "Cold congealing in the Liver channel",
+          "cases": [
+            "g08-liverchannel-cold-1",
+            "g08-liverchannel-cold-2",
+            "g08-liverchannel-cold-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 9,
+      "zh": "头痛",
+      "pinyin": "tóutòng",
+      "thai": "ปวดศีรษะ",
+      "english": "Headache",
+      "templates": 6,
+      "cases": 18,
+      "patterns": [
+        {
+          "id": "wind-cold",
+          "zh": "风寒证",
+          "py": "fēnghán zhèng",
+          "th": "ลมเย็น",
+          "en": "Wind-cold",
+          "cases": [
+            "g09-wind-cold-1",
+            "g09-wind-cold-2",
+            "g09-wind-cold-3"
+          ]
+        },
+        {
+          "id": "wind-heat",
+          "zh": "风热证",
+          "py": "fēngrè zhèng",
+          "th": "ลมร้อน",
+          "en": "Wind-heat",
+          "cases": [
+            "g09-wind-heat-1",
+            "g09-wind-heat-2",
+            "g09-wind-heat-3"
+          ]
+        },
+        {
+          "id": "blood-nourish",
+          "zh": "血虚不荣证",
+          "py": "xuèxū bù róng zhèng",
+          "th": "เลือดพร่องไม่พอหล่อเลี้ยง",
+          "en": "Blood deficiency failing to nourish",
+          "cases": [
+            "g09-blood-nourish-1",
+            "g09-blood-nourish-2",
+            "g09-blood-nourish-3"
+          ]
+        },
+        {
+          "id": "bloodstasis",
+          "zh": "瘀血阻滞证",
+          "py": "yūxuè zǔzhì zhèng",
+          "th": "เลือดคั่งอุดกั้น",
+          "en": "Blood stasis obstruction",
+          "cases": [
+            "g09-bloodstasis-1",
+            "g09-bloodstasis-2",
+            "g09-bloodstasis-3"
+          ]
+        },
+        {
+          "id": "qi-nourish",
+          "zh": "气虚不荣证",
+          "py": "qìxū bù róng zhèng",
+          "th": "ชี่พร่องไม่พอหล่อเลี้ยง",
+          "en": "Qi deficiency failing to nourish",
+          "cases": [
+            "g09-qi-nourish-1",
+            "g09-qi-nourish-2",
+            "g09-qi-nourish-3"
+          ]
+        },
+        {
+          "id": "liver-yang",
+          "zh": "肝阳上亢证",
+          "py": "gānyáng shàngkàng zhèng",
+          "th": "หยางตับกำเริบขึ้นบน",
+          "en": "Hyperactive Liver yang",
+          "cases": [
+            "g09-liver-yang-1",
+            "g09-liver-yang-2",
+            "g09-liver-yang-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 10,
+      "zh": "出汗异常（一）",
+      "pinyin": "chūhàn yìcháng (yī)",
+      "thai": "เหงื่อผิดปกติ 1",
+      "english": "Sweating I",
+      "templates": 2,
+      "cases": 6,
+      "patterns": [
+        {
+          "id": "qi-sweat",
+          "zh": "自汗（气虚证）",
+          "py": "zìhàn (qìxū zhèng)",
+          "th": "เหงื่อออกเองจากชี่พร่อง",
+          "en": "Spontaneous sweating / qi deficiency",
+          "cases": [
+            "g10-qi-sweat-1",
+            "g10-qi-sweat-2",
+            "g10-qi-sweat-3"
+          ]
+        },
+        {
+          "id": "yin-sweat",
+          "zh": "盗汗（阴虚证）",
+          "py": "dàohàn (yīnxū zhèng)",
+          "th": "เหงื่อออกขณะหลับจากหยินพร่อง",
+          "en": "Sleep sweating / yin deficiency",
+          "cases": [
+            "g10-yin-sweat-1",
+            "g10-yin-sweat-2",
+            "g10-yin-sweat-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 11,
+      "zh": "出汗异常（二）",
+      "pinyin": "chūhàn yìcháng (èr)",
+      "thai": "เหงื่อผิดปกติ 2",
+      "english": "Sweating II",
+      "templates": 3,
+      "cases": 9,
+      "patterns": [
+        {
+          "id": "qi-sweat",
+          "zh": "自汗（气虚证）",
+          "py": "zìhàn (qìxū zhèng)",
+          "th": "เหงื่อออกเองจากชี่พร่อง",
+          "en": "Spontaneous sweating / qi deficiency",
+          "cases": [
+            "g11-qi-sweat-1",
+            "g11-qi-sweat-2",
+            "g11-qi-sweat-3"
+          ]
+        },
+        {
+          "id": "yin-sweat",
+          "zh": "盗汗（阴虚证）",
+          "py": "dàohàn (yīnxū zhèng)",
+          "th": "เหงื่อออกขณะหลับจากหยินพร่อง",
+          "en": "Sleep sweating / yin deficiency",
+          "cases": [
+            "g11-yin-sweat-1",
+            "g11-yin-sweat-2",
+            "g11-yin-sweat-3"
+          ]
+        },
+        {
+          "id": "yellow-sweat",
+          "zh": "黄汗（湿热证）",
+          "py": "huánghàn (shīrè zhèng)",
+          "th": "เหงื่อเหลืองตามแบบฝึกชื้นร้อน",
+          "en": "Yellow sweating / curriculum damp-heat pattern",
+          "cases": [
+            "g11-yellow-sweat-1",
+            "g11-yellow-sweat-2",
+            "g11-yellow-sweat-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 12,
+      "zh": "心悸",
+      "pinyin": "xīnjì",
+      "thai": "ใจสั่น",
+      "english": "Palpitations",
+      "templates": 5,
+      "cases": 15,
+      "patterns": [
+        {
+          "id": "qi-blood-palp",
+          "zh": "气血两虚证",
+          "py": "qìxuè liǎng xū zhèng",
+          "th": "ชี่และเลือดพร่อง",
+          "en": "Qi and blood deficiency",
+          "cases": [
+            "g12-qi-blood-palp-1",
+            "g12-qi-blood-palp-2",
+            "g12-qi-blood-palp-3"
+          ]
+        },
+        {
+          "id": "heart-yin",
+          "zh": "心阴不足证",
+          "py": "xīnyīn bùzú zhèng",
+          "th": "หยินหัวใจไม่เพียงพอ",
+          "en": "Heart yin deficiency",
+          "cases": [
+            "g12-heart-yin-1",
+            "g12-heart-yin-2",
+            "g12-heart-yin-3"
+          ]
+        },
+        {
+          "id": "gall-phlegm",
+          "zh": "胆郁痰扰证",
+          "py": "dǎn yù tán rǎo zhèng",
+          "th": "ถุงน้ำดีติดขัดและเสมหะรบกวน",
+          "en": "Gallbladder constraint with phlegm disturbance",
+          "cases": [
+            "g12-gall-phlegm-1",
+            "g12-gall-phlegm-2",
+            "g12-gall-phlegm-3"
+          ]
+        },
+        {
+          "id": "heart-stasis",
+          "zh": "心脉瘀阻证",
+          "py": "xīnmài yūzǔ zhèng",
+          "th": "เลือดคั่งอุดกั้นหลอดชีพจรหัวใจ",
+          "en": "Blood stasis obstructing Heart vessels",
+          "cases": [
+            "g12-heart-stasis-1",
+            "g12-heart-stasis-2",
+            "g12-heart-stasis-3"
+          ]
+        },
+        {
+          "id": "heart-water",
+          "zh": "水气凌心证",
+          "py": "shuǐqì líng xīn zhèng",
+          "th": "น้ำคั่งรบกวนหัวใจ",
+          "en": "Water qi harassing the Heart",
+          "cases": [
+            "g12-heart-water-1",
+            "g12-heart-water-2",
+            "g12-heart-water-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 13,
+      "zh": "腹胀",
+      "pinyin": "fùzhàng",
+      "thai": "ท้องอืด",
+      "english": "Bloating",
+      "templates": 4,
+      "cases": 12,
+      "patterns": [
+        {
+          "id": "spleenstomach-qi",
+          "zh": "脾胃气虚证",
+          "py": "píwèi qìxū zhèng",
+          "th": "ชี่ม้ามกระเพาะพร่อง",
+          "en": "Spleen–Stomach qi deficiency",
+          "cases": [
+            "g13-spleenstomach-qi-1",
+            "g13-spleenstomach-qi-2",
+            "g13-spleenstomach-qi-3"
+          ]
+        },
+        {
+          "id": "spleenstomach-yang",
+          "zh": "脾胃阳虚证",
+          "py": "píwèi yángxū zhèng",
+          "th": "หยางม้ามกระเพาะพร่อง",
+          "en": "Spleen–Stomach yang deficiency",
+          "cases": [
+            "g13-spleenstomach-yang-1",
+            "g13-spleenstomach-yang-2",
+            "g13-spleenstomach-yang-3"
+          ]
+        },
+        {
+          "id": "liver-stomach",
+          "zh": "肝气犯胃证",
+          "py": "gānqì fàn wèi zhèng",
+          "th": "ชี่ตับรุกรานกระเพาะ",
+          "en": "Liver qi invading the Stomach",
+          "cases": [
+            "g13-liver-stomach-1",
+            "g13-liver-stomach-2",
+            "g13-liver-stomach-3"
+          ]
+        },
+        {
+          "id": "food-gut",
+          "zh": "食积胃肠证",
+          "py": "shíjī wèicháng zhèng",
+          "th": "อาหารสะสมในกระเพาะและลำไส้",
+          "en": "Food accumulation in the Stomach and intestines",
+          "cases": [
+            "g13-food-gut-1",
+            "g13-food-gut-2",
+            "g13-food-gut-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 14,
+      "zh": "耳鸣",
+      "pinyin": "ěrmíng",
+      "thai": "เสียงในหู",
+      "english": "Tinnitus",
+      "templates": 2,
+      "cases": 6,
+      "patterns": [
+        {
+          "id": "livergall-excessheat",
+          "zh": "肝胆实热证",
+          "py": "gāndǎn shírè zhèng",
+          "th": "ตับและถุงน้ำดีร้อนแกร่ง",
+          "en": "Liver–Gallbladder excess heat",
+          "cases": [
+            "g14-livergall-excessheat-1",
+            "g14-livergall-excessheat-2",
+            "g14-livergall-excessheat-3"
+          ]
+        },
+        {
+          "id": "liverkidney-def",
+          "zh": "肝肾不足证",
+          "py": "gānshèn bùzú zhèng",
+          "th": "ตับและไตไม่เพียงพอ",
+          "en": "Liver–Kidney deficiency",
+          "cases": [
+            "g14-liverkidney-def-1",
+            "g14-liverkidney-def-2",
+            "g14-liverkidney-def-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 15,
+      "zh": "乏力",
+      "pinyin": "fálì",
+      "thai": "อ่อนเพลีย",
+      "english": "Fatigue",
+      "templates": 2,
+      "cases": 6,
+      "patterns": [
+        {
+          "id": "qi-blood",
+          "zh": "气血亏虚证",
+          "py": "qìxuè kuīxū zhèng",
+          "th": "ชี่และเลือดพร่อง",
+          "en": "Qi and blood deficiency",
+          "cases": [
+            "g15-qi-blood-1",
+            "g15-qi-blood-2",
+            "g15-qi-blood-3"
+          ]
+        },
+        {
+          "id": "spleen-damp",
+          "zh": "脾虚湿困证",
+          "py": "píxū shīkùn zhèng",
+          "th": "ม้ามพร่องและความชื้นรบกวน",
+          "en": "Spleen deficiency with dampness",
+          "cases": [
+            "g15-spleen-damp-1",
+            "g15-spleen-damp-2",
+            "g15-spleen-damp-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 16,
+      "zh": "厌食",
+      "pinyin": "yànshí",
+      "thai": "เบื่ออาหาร",
+      "english": "Poor appetite",
+      "templates": 3,
+      "cases": 9,
+      "patterns": [
+        {
+          "id": "food-stomachloss",
+          "zh": "食滞胃脘证",
+          "py": "shízhì wèiwǎn zhèng",
+          "th": "อาหารคั่งบริเวณกระเพาะ",
+          "en": "Food stagnation in the Stomach",
+          "cases": [
+            "g16-food-stomachloss-1",
+            "g16-food-stomachloss-2",
+            "g16-food-stomachloss-3"
+          ]
+        },
+        {
+          "id": "spleenstomach-dampheat",
+          "zh": "脾胃湿热证",
+          "py": "píwèi shīrè zhèng",
+          "th": "ม้ามและกระเพาะชื้นร้อน",
+          "en": "Spleen–Stomach damp-heat",
+          "cases": [
+            "g16-spleenstomach-dampheat-1",
+            "g16-spleenstomach-dampheat-2",
+            "g16-spleenstomach-dampheat-3"
+          ]
+        },
+        {
+          "id": "livergall-dampheat",
+          "zh": "肝胆湿热证",
+          "py": "gāndǎn shīrè zhèng",
+          "th": "ตับและถุงน้ำดีชื้นร้อน",
+          "en": "Liver–Gallbladder damp-heat",
+          "cases": [
+            "g16-livergall-dampheat-1",
+            "g16-livergall-dampheat-2",
+            "g16-livergall-dampheat-3"
+          ]
+        }
+      ]
+    }
+  ]
+}

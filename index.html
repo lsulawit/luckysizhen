@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#215b4d">
+  <meta name="description" content="Jade Clinic 3D — ฝึกสอบถามประวัติและ辨证 16 กลุ่ม 195 เคสจำลอง พร้อมจีน พินอิน ไทย และอังกฤษ">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Jade Clinic">
+  <title>Jade Clinic 3D · ฝึกเป็นหมอจีน</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles.css">
+  <script defer src="src/data.js"></script>
+  <script defer src="src/engine.js"></script>
+  <script defer src="src/scene.js"></script>
+  <script defer src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">ข้ามไปเนื้อหา</a>
+  <div id="app"></div>
+  <div id="scene-parking" hidden><div id="scene-root"><canvas id="clinic-canvas" aria-label="ฉากคลินิก 3 มิติ ลากซ้ายขวาเพื่อหมุน หรือใช้ปุ่มหมุนมุมกล้อง" role="img"></canvas><div class="scene-top"><span class="live-dot"></span> LIVE CLINIC <span>3D</span></div><div class="scene-bottom"><span class="scene-instruction">ลากเพื่อหมุนฉาก</span><div class="scene-controls"><button data-action="rotate-left" aria-label="หมุนฉากไปซ้าย">↶</button><button data-action="scene-reset" aria-label="มุมกล้องเริ่มต้น">⌂</button><button data-action="rotate-right" aria-label="หมุนฉากไปขวา">↷</button></div></div><div id="scene-fallback" hidden><div class="fallback-doctor">🧑🏻‍⚕️</div><strong>Jade Clinic</strong><p>อุปกรณ์นี้ไม่รองรับ WebGL<br>โหมดเรียนและเกมยังเล่นได้ครบ</p></div></div></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p>โปรดเปิด JavaScript เพื่อเล่นเกมนี้ / Please enable JavaScript.</p></noscript>
+</body>
+</html>
