@@ -314,7 +314,7 @@
   };
   const modifiers = new Set(['afterfood','stress','exertion','activity','worsecold','warmth','pressure','nightworse','dawn','sleepsweat','awakesweat','afterstool']);
   const meta = {
-    title:'Jade Clinic 3D',version:'1.0.0',
+    title:'Lucky Clinic 3D',version:'1.0.0',
     note:'แบบฝึกสอบจากรายการที่ผู้เรียนให้มา ผู้ป่วยและประวัติเป็นเรื่องสมมติ ไม่ใช่เครื่องมือวินิจฉัยหรือคำแนะนำการรักษา',
     source:'User-supplied 16-group curriculum, 28 October 2026; source images were not independently re-read.',
     terminology:'https://www.who.int/publications/i/item/9789240042322'
